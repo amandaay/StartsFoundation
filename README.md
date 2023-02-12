@@ -1,4 +1,4 @@
-# StartsFoundation
+# StartsFoundation (gatsby)
 
 Website for the Starts Foundation in Nepal
 
