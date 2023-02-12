@@ -1,0 +1,55 @@
+.aboutMainDiv {
+  background-color: #1b75bb;
+  width: 100vw;
+  height: 105vh;
+}
+
+.contentDiv {
+  transform: translateY(3vh);
+  padding-top: 5%;
+}
+
+.first-pic {
+  width: 35vw;
+  height: 45vh;
+}
+
+.first-pic-div {
+  width: 40vw;
+  height: 50vh;
+}
+
+.aboutUsDiv {
+  width: 40vw;
+  height: 40vh;
+}
+.aboutTitle {
+  color: white;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  color: #ffffff;
+  padding-bottom: 3%;
+}
+
+.aboutContent {
+  font-weight: 500;
+  color: white;
+  line-height: 2;
+  font-size: 1.05rem;
+}
+
+.small-img {
+  width: 28vw;
+  height: 35vh;
+}
+
+.small-img-class {
+  width: 28vw;
+  height: 35vh;
+}
+
+.line-break-about {
+  margin-top: 5%;
+}

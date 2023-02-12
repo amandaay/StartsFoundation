@@ -1,7 +1,7 @@
 import React from "react"
-import "./Navbar.css"
-import { NavLink } from "react-router-dom"
-import logo from "../../assets/images/whitelogo.png"
+import { Link } from "gatsby"
+import "../styles/global.css"
+import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 
 function Navbar({ scrollToSection, about, news, join }) {
@@ -14,21 +14,26 @@ function Navbar({ scrollToSection, about, news, join }) {
       >
         <div className="container-xl navContainer">
           <span className="logoSpan">
-            <img src={logo} className="logo" alt="starts foundation logo" />
+            <StaticImage
+              src="../images/logos/whitelogo.png"
+              width={50}
+              className="logo"
+              alt="starts foundation logo"
+            />
           </span>
 
           <div className="navbar-brand">
-            <NavLink className="navbrand-link" to="/">
+            <Link className="navbrand-link" to="/">
               Starts Foundation
-            </NavLink>
+            </Link>
           </div>
 
           <div className="collapse navbar-collapse" id="navLinks">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">
+                <Link className="nav-link" to="/">
                   Home
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item" onClick={() => scrollToSection(about)}>
                 <span className="dropdown">
@@ -71,19 +76,19 @@ function Navbar({ scrollToSection, about, news, join }) {
                 </span>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/projects">
+                <Link className="nav-link" to="/projects">
                   Projects
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/media">
+                <Link className="nav-link" to="/media">
                   Media
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
+                <Link className="nav-link" to="/contact">
                   Contact Us
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </div>
@@ -102,5 +107,7 @@ function Navbar({ scrollToSection, about, news, join }) {
 Navbar.propTypes = {
   scrollToSection: PropTypes.func,
   about: PropTypes.any,
+  news: PropTypes.any,
+  join: PropTypes.any,
 }
 export default Navbar
