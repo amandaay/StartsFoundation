@@ -1,15 +1,25 @@
 import * as React from "react"
-
-// import Layout from "../components/layout"
 // import Seo from "../components/seo"
+import "../styles/NotFound.css"
+import { Link } from "gatsby"
 
-const NotFoundPage = () => (
-  <div>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-)
-
+/**
+ * module that returns error page
+ * @returns error page
+ */
+function NotFound() {
+  return (
+    <div className="notFoundMainDiv">
+      <h1 className="errorHeader404">404</h1>
+      <h2 className="notFound">Page Not Found</h2>
+      <span className="backHomeSpan">
+        <Link className="backHome" to="/">
+          Back Home
+        </Link>
+      </span>
+    </div>
+  )
+}
 // export const Head = () => <Seo title="404: Not Found" />
 
-export default NotFoundPage
+export default NotFound

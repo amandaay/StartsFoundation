@@ -10,18 +10,19 @@
 }
 
 .first-pic {
-  width: 35vw;
+  min-width: 35vw;
   height: 45vh;
 }
 
 .first-pic-div {
-  width: 40vw;
+  min-width: 40vw;
   height: 50vh;
+  margin-right:1.5%
 }
 
 .aboutUsDiv {
   width: 40vw;
-  height: 40vh;
+  min-height: 40vh;
 }
 .aboutTitle {
   color: white;
@@ -46,7 +47,7 @@
 }
 
 .small-img-class {
-  width: 28vw;
+  max-width: 28vw;
   height: 35vh;
 }
 

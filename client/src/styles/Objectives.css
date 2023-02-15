@@ -1,0 +1,46 @@
+.objective-container {
+  height: 90vh;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.ObjectiveDiv {
+  background-color: #f7feff;
+  padding-top: 3%;
+}
+
+/*box containing the texts*/
+.objective-box {
+  margin: 1%;
+  background-color: rgb(226, 241, 255);
+  height: auto;
+  padding: 2% 2% 2% 2%;
+}
+
+/*vertical line in between*/
+.vertical-line {
+  width: 1.5px;
+  background-color: rgb(195, 227, 255);
+  height: auto;
+  float: left;
+  padding: 0;
+}
+
+.values-title,
+.objectives-title {
+  color: #1669a8;
+  font-size: 1.7rem;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  padding-bottom: 5%;
+}
+
+.core-p,
+.obj-p {
+  line-height: 1.7;
+}
+
+.core-title {
+  font-size: 1.1rem;
+}

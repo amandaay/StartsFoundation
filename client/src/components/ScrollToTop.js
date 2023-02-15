@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { FaAngleDoubleUp } from "react-icons/fa"
-
+import "../styles/ScrollToTop.css"
 /**
  * module that lets user scroll up to top of home page
  * @returns JSX of scroll to top icon

@@ -1,12 +1,19 @@
 import React, { useRef } from "react"
-import Navbar from "../components/Navbar"
-import About from "./About"
 import "../styles/Home.css"
-import ScrollToTop from "../components/ScrollToTop"
-import RecentNews from "../components/RecentNews"
-import JoinCause from "../components/JoinCause"
+import {
+  Navbar,
+  About,
+  ScrollToTop,
+  RecentNews,
+  JoinCause,
+  Mission,
+  Objectives,
+} from "../components/Components"
 
-
+/**
+ * Home page module
+ * @returns Home JSX
+ */
 function Home() {
   const about = useRef(null)
   const news = useRef(null)
@@ -97,13 +104,13 @@ function Home() {
         <About />
       </section>
       {/* Mission Section */}
-      {/* <section className="sectionMission">
+      <section className="sectionMission">
         <Mission />
-      </section> */}
+      </section>
       {/* Objective Section */}
-      {/* <section className="sectionObjective">
+      <section className="sectionObjective">
         <Objectives />
-      </section> */}
+      </section>
       {/* News Section */}
       <section className="sectionNews" ref={news}>
         <RecentNews />

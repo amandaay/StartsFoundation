@@ -1,0 +1,35 @@
+.errorHeader {
+  font-size: 50px;
+  margin-bottom: 0;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.errorHeader404 {
+  font-size: 90px;
+  margin-bottom: 0;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.errorDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.notFound {
+  margin-top: 0;
+  font-size: 90px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.backHome {
+  font-size: 24px;
+  text-align: center;
+}
+
+.backHomeSpan {
+  display: flex;
+  justify-content: center;
+}
