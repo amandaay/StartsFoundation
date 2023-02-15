@@ -1,55 +1,86 @@
-.aboutMainDiv {
-  background-color: #1b75bb;
+* {
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.subContainer {
+  margin-left: 10%;
+  transform: translateY(30vh);
+  /* text-align: center; */
+}
+
+body {
+  background-color: #fefffe;
+}
+
+/* main banner of landing page */
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0.5, 0.35), rgba(0, 0, 0, 0.5)),
+    url(https://i.postimg.cc/KYy4bCnC/DSC1103-292-min.jpg);
+}
+
+.banner {
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100vw;
-  height: 105vh;
+  height: 100vh;
 }
 
-.contentDiv {
-  transform: translateY(3vh);
-  padding-top: 5%;
-}
-
-.first-pic {
-  width: 35vw;
-  height: 45vh;
-}
-
-.first-pic-div {
-  width: 40vw;
-  height: 50vh;
-}
-
-.aboutUsDiv {
-  width: 40vw;
-  height: 40vh;
-}
-.aboutTitle {
+/* h1 title */
+.startsFoundation {
+  margin: 0;
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 2rem;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-thickness: 0.18rem;
-  color: #ffffff;
-  padding-bottom: 3%;
 }
 
-.aboutContent {
-  font-weight: 500;
+.tagline {
+  font-size: 1.4rem;
   color: white;
-  line-height: 2;
-  font-size: 1.05rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-top: 1%;
+  padding-bottom: 0.5%;
 }
 
-.small-img {
-  width: 28vw;
-  height: 35vh;
+/* learn more button*/
+.learnBtnMain {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #0f1111;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  line-height: 40px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  /* width: 100px; */
 }
 
-.small-img-class {
-  width: 28vw;
-  height: 35vh;
+.learnBtnMain:hover {
+  background-color: #fb8500;
+  color: white;
 }
 
-.line-break-about {
-  margin-top: 5%;
+.learnBtnMain:focus {
+  border-color: #64ccdc;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  outline: 0;
+}
+
+/* scroll to top button */
+.scrollBtnSpan {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
 }

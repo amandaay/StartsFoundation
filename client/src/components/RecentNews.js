@@ -1,9 +1,6 @@
 import React from "react"
 
-
 const RecentNews = () => {
-  
-
   return (
     <div className="aboutMainDiv">
       <div className="container containerNews">

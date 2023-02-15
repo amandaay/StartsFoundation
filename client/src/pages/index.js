@@ -6,6 +6,7 @@ import ScrollToTop from "../components/ScrollToTop"
 import RecentNews from "../components/RecentNews"
 import JoinCause from "../components/JoinCause"
 
+
 function Home() {
   const about = useRef(null)
   const news = useRef(null)
@@ -18,6 +19,13 @@ function Home() {
     })
   }
 
+  // const navBarInfo = {
+  //   about: about,
+  //   news: news,
+  //   join: join,
+  //   scroll: scrollToSection,
+  // }
+
   return (
     <div className="App">
       <Navbar
@@ -26,6 +34,7 @@ function Home() {
         news={news}
         join={join}
       />
+
       <main>
         <div className="mainContainer" role="main">
           {/* <div

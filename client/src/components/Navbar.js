@@ -4,7 +4,7 @@ import "../styles/global.css"
 import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 
-function Navbar({ scrollToSection, about, news, join }) {
+function Navbar(props) {
   return (
     <div>
       <nav
@@ -35,7 +35,7 @@ function Navbar({ scrollToSection, about, news, join }) {
                   Home
                 </Link>
               </li>
-              <li className="nav-item" onClick={() => scrollToSection(about)}>
+              <li className="nav-item">
                 <span className="dropdown">
                   <span
                     className="nav-link dropdown-toggle"
@@ -43,6 +43,7 @@ function Navbar({ scrollToSection, about, news, join }) {
                     // id="dropdownMenuLink"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    onClick={() => props.scrollToSection(props.about)}
                   >
                     About Us
                   </span>
@@ -53,7 +54,7 @@ function Navbar({ scrollToSection, about, news, join }) {
                     <li>
                       <span
                         className="dropdown-item"
-                        onClick={() => scrollToSection(news)}
+                        onClick={() => props.scrollToSection(props.news)}
                       >
                         Recent News
                       </span>
@@ -61,7 +62,7 @@ function Navbar({ scrollToSection, about, news, join }) {
                     <li>
                       <span
                         className="dropdown-item"
-                        onClick={() => scrollToSection(join)}
+                        onClick={() => props.scrollToSection(props.join)}
                       >
                         Join the Cause
                       </span>
@@ -110,4 +111,5 @@ Navbar.propTypes = {
   news: PropTypes.any,
   join: PropTypes.any,
 }
+
 export default Navbar
