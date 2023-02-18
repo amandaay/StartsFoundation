@@ -1,0 +1,14 @@
+import {GiNotebook} from 'react-icons/gi'
+export default {
+  title: 'Blog Post',
+  name: 'blog',
+  type: 'document',
+  icon: GiNotebook,
+  fields: [
+    {
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+    },
+  ],
+}
