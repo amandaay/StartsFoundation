@@ -1,7 +1,6 @@
 import React, { useRef } from "react"
 import "../styles/Home.css"
 import {
-  Navbar,
   About,
   ScrollToTop,
   RecentNews,
@@ -9,6 +8,7 @@ import {
   Mission,
   Objectives,
 } from "../components/Components"
+import Layout from "../components/layout"
 
 /**
  * Home page module
@@ -26,25 +26,17 @@ function Home() {
     })
   }
 
-  // const navBarInfo = {
-  //   about: about,
-  //   news: news,
-  //   join: join,
-  //   scroll: scrollToSection,
-  // }
-
   return (
     <div className="App">
-      <Navbar
+      <Layout
         scrollToSection={scrollToSection}
         about={about}
         news={news}
         join={join}
-      />
-
-      <main>
-        <div className="mainContainer" role="main">
-          {/* <div
+      >
+        <main>
+          <div className="mainContainer" role="main">
+            {/* <div
           id="carouselExampleControls"
           className="carousel slide"
           data-bs-ride="carousel"
@@ -89,39 +81,40 @@ function Home() {
           </button>
         </div> */}
 
-          <div className="banner">
-            <div className="subContainer">
-              <h1 className="startsFoundation">STARTS FOUNDATION</h1>
-              <p className="tagline">Helping the communities in need</p>
+            <div className="banner">
+              <div className="subContainer">
+                <h1 className="startsFoundation">STARTS FOUNDATION</h1>
+                <p className="tagline">Helping the communities in need</p>
 
-              <button className="learnBtnMain">Learn More</button>
+                <button className="learnBtnMain">Learn More</button>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-      {/* About Section */}
-      <section className="sectionAbout" ref={about}>
-        <About />
-      </section>
-      {/* Mission Section */}
-      <section className="sectionMission">
-        <Mission />
-      </section>
-      {/* Objective Section */}
-      <section className="sectionObjective">
-        <Objectives />
-      </section>
-      {/* News Section */}
-      <section className="sectionNews" ref={news}>
-        <RecentNews />
-      </section>
-      {/* Join the Cause Section */}
-      <section className="sectionJoin" ref={join}>
-        <JoinCause />
-      </section>
-      <span className="scrollBtnSpan">
-        <ScrollToTop />
-      </span>
+        </main>
+        {/* About Section */}
+        <section className="sectionAbout" ref={about}>
+          <About />
+        </section>
+        {/* Mission Section */}
+        <section className="sectionMission">
+          <Mission />
+        </section>
+        {/* Objective Section */}
+        <section className="sectionObjective">
+          <Objectives />
+        </section>
+        {/* News Section */}
+        <section className="sectionNews" ref={news}>
+          <RecentNews />
+        </section>
+        {/* Join the Cause Section */}
+        <section className="sectionJoin" ref={join}>
+          <JoinCause />
+        </section>
+        <span className="scrollBtnSpan">
+          <ScrollToTop />
+        </span>
+      </Layout>
     </div>
   )
 }
