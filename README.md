@@ -14,8 +14,11 @@ Migrated to Gatsby, currently still working on frontend
 
 ### Developer Usage
 
-Git clone or zip download file
-run `npm install` to install all dependencies
-`cd client` and run `npm install` to install dependencies in the Gatsby folder
-`cd cms` to go to the CMS folder and run `npm install` to install dependencies of the Sanity project folder
-run `npm start ` or `gatsby develop` from client folder
+1. Git clone or zip download file
+   run `npm install` to install all dependencies
+   <br>
+2. `cd client` and run `npm install` to install dependencies in the Gatsby folder
+   <br>
+3. `cd cms` to go to the CMS folder and run `npm install` to install dependencies of the Sanity project folder
+   <br>
+   4.run `npm start ` or `gatsby develop` from client folder
