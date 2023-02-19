@@ -6,6 +6,10 @@ Website for the Starts Foundation in Nepal
 
 Migrated to Gatsby, currently still working on frontend
 
+# 2023/2/20 update
+
+Finished CMS in "studio" folder using sanity
+
 ### Links
 
 - [UML](https://lucid.app/lucidchart/52d7c747-3bcb-4269-b2ab-3e3534c9f19e/edit?viewport_loc=428%2C384%2C1280%2C565%2C0_0&invitationId=inv_3a8d95b1-5912-4392-bc81-e7b41019cfea)
