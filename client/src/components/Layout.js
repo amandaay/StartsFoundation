@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 function Layout(props) {
   return (
     <div>
-      <Navbar />
+      <Navbar {...props} />
       {props.children}
     </div>
   )
