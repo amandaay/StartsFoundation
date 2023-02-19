@@ -26,7 +26,7 @@ export default {
     },
     prepare({image,title}){
         return{
-            image,
+            media:image,
             title,
             
         }
