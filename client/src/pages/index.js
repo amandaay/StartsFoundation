@@ -9,7 +9,6 @@ import {
   Mission,
   Objectives,
 } from "../components/Components"
-import Layout from "../components/layout"
 
 /**
  * Home page module
