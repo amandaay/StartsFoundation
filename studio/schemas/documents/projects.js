@@ -1,8 +1,5 @@
 import {RiHammerLine} from 'react-icons/ri'
 import {format} from 'date-fns'
-//import custom object
-import customImage from '../objects/customImage'
-
 
 export default {
   title: 'Project',

@@ -1,6 +1,4 @@
 import {SlBubbles} from 'react-icons/sl'
-//import custom objects
-import customImage from '../objects/customImage'
 
 export default {
   title: 'Testimonials',

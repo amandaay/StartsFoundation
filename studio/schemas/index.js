@@ -1,5 +1,6 @@
 // import object
 import customImage from './objects/customImage'
+import bodyText from './objects/bodyText'
 
 // import document schemas
 import blogs from './documents/blogs'
@@ -19,4 +20,5 @@ export const schemaTypes = [
   testimonials,
   //object schemas
   customImage,
+  bodyText,
 ]

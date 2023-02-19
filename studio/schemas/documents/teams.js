@@ -1,6 +1,4 @@
 import {BsPeople} from 'react-icons/bs'
-//import custom objects
-import customImage from '../objects/customImage'
 
 export default {
   title: 'Starts Foundation Team',

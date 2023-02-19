@@ -1,7 +1,5 @@
 import {GiNotebook} from 'react-icons/gi'
 import {format} from 'date-fns'
-//import custom objects
-import customImage from '../objects/customImage'
 
 export default {
   title: 'Blog Post',
@@ -32,6 +30,7 @@ export default {
       name: 'coverImage',
       type: 'customImage',
     },
+    {title: 'Blog body', name: 'body', type: 'bodyText'},
   ],
   preview: {
     select: {
