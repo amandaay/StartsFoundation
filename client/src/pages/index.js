@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import "../styles/Home.css"
 import {
+  Layout,
   About,
   ScrollToTop,
   RecentNews,
