@@ -27,9 +27,10 @@ export default {
 
     {
       title: 'Cover Image',
-      name: 'coverImage',
+      name: 'coverImage', 
       type: 'customImage',
     },
+    {title: 'Excerpt', name: 'excerpt', type: 'excerptText'},
     {title: 'Blog body', name: 'body', type: 'bodyText'},
   ],
   preview: {

@@ -23,6 +23,7 @@ export default {
       name: 'coverImage',
       type: 'customImage',
     },
+    {title: 'Project Content', name: 'body', type: 'bodyText'},
   ],
   preview: {
     select: {

@@ -12,15 +12,16 @@ export default {
       name: 'image',
       type: 'customImage',
     },
+    {title: 'Testimonial', name: 'body', type: 'normalText'},
   ],
   preview: {
     select: {
       image: 'image',
       title: 'name',
     },
-    prepare({image, name}) {
+    prepare({image, title}) {
       return {
-        title: name,
+        title,
         media: image,
       }
     },

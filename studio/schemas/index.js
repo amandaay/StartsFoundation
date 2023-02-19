@@ -1,6 +1,8 @@
 // import object
 import customImage from './objects/customImage'
 import bodyText from './objects/bodyText'
+import normalText from './objects/normalText'
+import excerptText from './objects/excerptText'
 
 // import document schemas
 import blogs from './documents/blogs'
@@ -21,4 +23,6 @@ export const schemaTypes = [
   //object schemas
   customImage,
   bodyText,
+  normalText,
+  excerptText
 ]

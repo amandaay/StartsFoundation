@@ -1,4 +1,5 @@
 import {ImNewspaper} from 'react-icons/im'
+import {format} from 'date-fns'
 
 export default {
   title: 'Recent News',
@@ -23,6 +24,7 @@ export default {
       name: 'image',
       type: 'customImage',
     },
+    {title: 'News Content', name: 'body', type: 'bodyText'},
     {
       title: 'Caption',
       name: 'caption',

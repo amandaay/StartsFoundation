@@ -6,24 +6,25 @@ export default {
   type: 'document',
   icon: BsPeople,
   fields: [
-    {title: 'Member Name', name: 'name', type: 'string'},
+    {title: 'Member Name', name: 'memberName', type: 'string'},
     {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
-      options: {source: 'title', maxLength: 96},
+      options: {source: 'memberName', maxLength: 96},
     },
     {title: 'Member Portrait', name: 'memberPortrait', type: 'customImage'},
+    {title: 'About Member', name: 'body', type: 'normalText'},
   ],
   preview: {
     select: {
       image: 'memberPortrait',
-      title: 'name',
+      title: 'memberName',
     },
-    prepare({memberPortrait, name}) {
+    prepare({image, title}) {
       return {
-        title: name,
-        media: memberPortrait,
+        title,
+        media: image,
       }
     },
   },
