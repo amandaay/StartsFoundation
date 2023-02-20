@@ -5,6 +5,7 @@ import RecentNews from "./RecentNews"
 import JoinCause from "./JoinCause"
 import Mission from "./Mission"
 import Objectives from "./Objectives"
+import OurTeam from "./OurTeam"
 
 export {
   Navbar,
@@ -14,4 +15,5 @@ export {
   JoinCause,
   Mission,
   Objectives,
+  OurTeam,
 }
