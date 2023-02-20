@@ -7,6 +7,12 @@
   font-weight: 600;
 }
 
+@media (min-width: 768) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
 #mainNavbar {
   padding-top: 1%;
   padding-bottom: 1%;
@@ -107,6 +113,22 @@ img {
   width: 100px;
 }
 
+@media only screen and (max-width: 768px) {
+  .joinBtn,
+  .donateBtn {
+    display: None;
+  }
+  .searchIcon {
+    display: None;
+  }
+  nav {
+    transform: translateX(0);
+  }
+  .open{
+    transform: translateX(0)
+  }
+}
+
 .joinBtn:hover,
 .donateBtn:hover {
   background-color: #fb8500;
@@ -122,4 +144,12 @@ img {
 
 .dropdown-item {
   cursor: pointer;
+}
+
+.searchIcon {
+  color: white;
+  cursor: pointer;
+}
+.searchIconSpan {
+  padding-left: 1.5%;
 }

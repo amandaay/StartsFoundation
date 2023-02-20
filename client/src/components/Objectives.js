@@ -46,33 +46,33 @@ function Objectives() {
             <div className="vertical-line"></div>
             <div className="col objective-box">
               <h2 className="objectives-title">Our Objectives</h2>
-              <p className="obj-p">
+              <span className="obj-p">
                 <ul>
                   <li>
                     To provide relief, rehabilitation and reconstruction
                     assistance to the victims of all kinds of natural disasters,
-                    including earthquakes, floods, landslides and fires.
+                    including earthquakes, floods, landslides and fires
                   </li>
                   <li>
                     To conduct various programs to make necessary preparations
-                    for possible natural disaster risk control.
+                    for possible natural disaster risk control
                   </li>
                   <li>
                     To conduct programs to provide educational materials as well
                     as educational training necessary for the development of
-                    education in the inaccessible areas.
+                    education in the inaccessible areas
                   </li>
                   <li>
                     To conduct necessary programs for the victims of
-                    emergencies, humanitarian incidents or accidents.
+                    emergencies, humanitarian incidents or accidents
                   </li>
                   <li>
                     To help control the atrocities of drug abuse and girls
-                    trafficking.
+                    trafficking
                   </li>
                   <li>
                     To conduct health education programs with a vision of
-                    construction of health infrastructures.
+                    construction of health infrastructures
                   </li>
                   <li>
                     To raise awareness about menstrual health while providing
@@ -85,7 +85,7 @@ function Objectives() {
                     To cooperate with organizations with similar objectives
                   </li>
                 </ul>
-              </p>
+              </span>
             </div>
           </div>
         </div>

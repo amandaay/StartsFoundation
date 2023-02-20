@@ -1,15 +1,37 @@
-import React from "react"
+import React, { useEffect, useState, useContext } from "react"
 import { Link } from "gatsby"
 import "../styles/global.css"
 import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
+import { MdSearch, MdMenu } from "react-icons/md"
 
 function Navbar(props) {
+  const [isNavOpen, setIsNavOpen] = useState(false)
+  // const { openSearchModal } = useContext(SearchModalContext)
+  const openSearchModal = () => console.log("placeholder open search modal")
+
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "initial"
+    }
+  }, [isNavOpen])
+
+  const handleSearchModalOpen = () => {
+    openSearchModal()
+  }
+
+  const handleNavItemClick = () => {
+    if (isNavOpen) {
+      setIsNavOpen(false)
+    }
+  }
   return (
     <div>
       <nav
         id="mainNavbar"
-        className="navbar navbar-expand-md navbar-dark fixed-top navAll"
+        className="navbar navbar-expand-md navbar-dark fixed-top navAll" 
         role="navigation"
       >
         <div className="container-xl navContainer">
@@ -21,7 +43,14 @@ function Navbar(props) {
               alt="starts foundation logo"
             />
           </span>
-
+          {/* mobile responsive styles */}
+          {/* <div className="mobileIcon">
+            <div className="searchIcon">
+              <span className="searchIconSpan">
+                <MdSearch className="searchIcon" size={40} />
+              </span>
+            </div>
+          </div> */}
           <div className="navbar-brand">
             <Link className="navbrand-link" to="/">
               Starts Foundation
@@ -98,6 +127,9 @@ function Navbar(props) {
           </span>
           <span className="donateClass">
             <button className="donateBtn">Donate</button>
+          </span>
+          <span className="searchIconSpan">
+            <MdSearch className="searchIcon" size={40} />
           </span>
         </div>
       </nav>
