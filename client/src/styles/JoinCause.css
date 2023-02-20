@@ -47,8 +47,8 @@
 }
 
 .starts-logo {
-  height: 12vh;
-  width: 5vw;
+  /* height: 12vh; */
+  /* width: 5vw; */
   padding: 2% 2% 2% 2%;
   margin: auto;
   transform: translateX(0.2vw);

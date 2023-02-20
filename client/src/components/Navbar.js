@@ -12,8 +12,10 @@ function Navbar(props) {
 
   useEffect(() => {
     if (isNavOpen) {
+      console.log("nav opened")
       document.body.style.overflow = "hidden"
     } else {
+      console.log("nav closed")
       document.body.style.overflow = "initial"
     }
   }, [isNavOpen])
@@ -37,7 +39,12 @@ function Navbar(props) {
         }
         role="navigation"
       >
-        <MdClose className="close" size={40} onClick={() => showMenu()} />
+        <MdClose
+          className="close"
+          size={40}
+          onClick={() => showMenu()}
+          onKeyDown={() => showMenu()}
+        />
         <div className="container-xl navContainer">
           <span className="logoSpan">
             <StaticImage
@@ -47,14 +54,7 @@ function Navbar(props) {
               alt="starts foundation logo"
             />
           </span>
-          {/* mobile responsive styles */}
-          {/* <div className="mobileIcon">
-            <div className="searchIcon">
-              <span className="searchIconSpan">
-                <MdSearch className="searchIcon" size={40} />
-              </span>
-            </div>
-          </div> */}
+
           <div className="navbar-brand">
             <Link className="navbrand-link brand" to="/">
               Starts Foundation
@@ -77,9 +77,7 @@ function Navbar(props) {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                     onClick={() => {
-                      showMenu();
-                      props.scrollToSection(props.about);
-                      
+                      props.scrollToSection(props.about)
                     }}
                   >
                     About Us
@@ -88,7 +86,7 @@ function Navbar(props) {
                     className="dropdown-menu"
                     aria-labelledby="dropdownMenuLink"
                   >
-                    <li>
+                    <li onClick={() => showMenu()}>
                       <span
                         className="dropdown-item"
                         onClick={() => props.scrollToSection(props.news)}
@@ -96,7 +94,7 @@ function Navbar(props) {
                         Recent News
                       </span>
                     </li>
-                    <li>
+                    <li onClick={() => showMenu()}>
                       <span
                         className="dropdown-item"
                         onClick={() => props.scrollToSection(props.join)}
@@ -138,12 +136,13 @@ function Navbar(props) {
             <span className="searchIconSpan">
               <MdSearch className="searchIcon" size={40} />
             </span>
-            <MdMenu
-              className={isNavOpen ? "menu close" : "menu"}
-              size={40}
-              onClick={() => showMenu()}
-            />
           </div>
+          <MdMenu
+            className={isNavOpen ? "menu close" : "menu"}
+            size={40}
+            onClick={() => showMenu()}
+            onKeyDown={() => showMenu()}
+          />
         </div>
       </nav>
     </div>
