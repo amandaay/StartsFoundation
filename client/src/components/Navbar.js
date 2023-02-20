@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import "../styles/global.css"
 import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
-import { MdSearch, MdMenu } from "react-icons/md"
+import { MdSearch, MdMenu, MdClose } from "react-icons/md"
 
 function Navbar(props) {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -22,18 +22,22 @@ function Navbar(props) {
     openSearchModal()
   }
 
-  const handleNavItemClick = () => {
-    if (isNavOpen) {
-      setIsNavOpen(false)
-    }
+  const showMenu = () => {
+    setIsNavOpen(!isNavOpen)
   }
+
   return (
     <div>
       <nav
         id="mainNavbar"
-        className="navbar navbar-expand-md navbar-dark fixed-top navAll" 
+        className={
+          isNavOpen
+            ? "navbar navbar-expand-md navbar-dark fixed-top navAll active"
+            : "navbar navbar-expand-md navbar-dark fixed-top navAll"
+        }
         role="navigation"
       >
+        <MdClose className="close" size={40} onClick={() => showMenu()} />
         <div className="container-xl navContainer">
           <span className="logoSpan">
             <StaticImage
@@ -52,7 +56,7 @@ function Navbar(props) {
             </div>
           </div> */}
           <div className="navbar-brand">
-            <Link className="navbrand-link" to="/">
+            <Link className="navbrand-link brand" to="/">
               Starts Foundation
             </Link>
           </div>
@@ -60,7 +64,7 @@ function Navbar(props) {
           <div className="collapse navbar-collapse" id="navLinks">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/" onClick={() => showMenu()}>
                   Home
                 </Link>
               </li>
@@ -72,7 +76,11 @@ function Navbar(props) {
                     // id="dropdownMenuLink"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    onClick={() => props.scrollToSection(props.about)}
+                    onClick={() => {
+                      showMenu();
+                      props.scrollToSection(props.about);
+                      
+                    }}
                   >
                     About Us
                   </span>
@@ -120,17 +128,22 @@ function Navbar(props) {
                   Contact Us
                 </Link>
               </li>
+              <li className="joinClass">
+                <button className="joinBtn">Join Us</button>
+              </li>
+              <li className="donateClass">
+                <button className="donateBtn">Donate</button>
+              </li>
             </ul>
+            <span className="searchIconSpan">
+              <MdSearch className="searchIcon" size={40} />
+            </span>
+            <MdMenu
+              className={isNavOpen ? "menu close" : "menu"}
+              size={40}
+              onClick={() => showMenu()}
+            />
           </div>
-          <span className="joinClass">
-            <button className="joinBtn">Join Us</button>
-          </span>
-          <span className="donateClass">
-            <button className="donateBtn">Donate</button>
-          </span>
-          <span className="searchIconSpan">
-            <MdSearch className="searchIcon" size={40} />
-          </span>
         </div>
       </nav>
     </div>
