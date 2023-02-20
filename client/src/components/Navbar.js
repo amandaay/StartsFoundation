@@ -40,6 +40,9 @@ function Navbar(props) {
         role="navigation"
       >
         <MdClose
+          aria-label="close menu"
+          role="button"
+          tabIndex={0}
           className="close"
           size={40}
           onClick={() => showMenu()}

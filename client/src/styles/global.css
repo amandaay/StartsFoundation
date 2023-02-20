@@ -208,5 +208,107 @@ img {
   .menu.close {
     display: none;
   }
+}
 
+/* footer css */
+.footerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  align-items: center;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.footer {
+  background-color: #1b75bb;
+  color: white;
+  height: 40vh;
+}
+
+.logoDiv {
+  width: 5rem;
+  height: 8rem;
+  padding-bottom: 2%;
+}
+.footer1,
+.footer2,
+.footer3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30vh;
+}
+
+.footerText {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.footerH1,
+.footerH2,
+.footerH3 {
+  font-size: 1.5rem;
+}
+
+.footer1 {
+  border-right: 1px solid rgb(214, 223, 214);
+}
+
+.footer3 {
+  border-left: 1px solid rgb(214, 223, 214);
+}
+.horizontalLine {
+  width: 20rem;
+  height: 5rem;
+  border-top: 1px solid rgb(214, 223, 214);
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-bottom: 1px solid rgb(214, 223, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donateSpan {
+  padding-right: 2%;
+}
+
+.footer__socialList li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  /* border-radius: 50%; */
+}
+
+.iconClass {
+  font-size: 2rem;
+}
+
+.iconDiv {
+  margin-top: 1.2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+ul.footer__usefulList {
+  list-style-type: none;
+}
+
+.footer__usefulList a {
+  color: white;
+}
+
+.footerBottom{
+  border-top: 1px solid rgb(214, 223, 214);
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 2%;
+}
+
+.copyright{
+  font-weight: 500;
 }
