@@ -21,8 +21,21 @@ Finished CMS in "studio" folder using sanity
 1. Git clone or zip download file
    run `npm install` to install all dependencies
    <br>
+
+#### Client
+
 2. `cd client` and run `npm install` to install dependencies in the Gatsby folder
    <br>
-3. `cd cms` to go to the CMS folder and run `npm install` to install dependencies of the Sanity project folder
+
+3. Run `npm run dev` or `gatsby develop` to start Gatsby in development mode on localhost:8000
+
+#### Studio (CMS with Sanity)
+
+4. `cd cms` to go to the CMS folder and run `npm install` to install dependencies of the Sanity project folder
    <br>
-   4.run `npm start ` or `gatsby develop` from client folder
+
+5. Run `npm run dev` to start Sanity in development mode on localhost:3333
+
+#### Server
+
+Run `npm run dev` from the root directory to start server in development mode
