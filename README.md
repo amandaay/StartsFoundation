@@ -31,7 +31,7 @@ Finished CMS in "studio" folder using sanity
 
 #### Studio (CMS with Sanity)
 
-4. `cd cms` to go to the CMS folder and run `npm install` to install dependencies of the Sanity project folder
+4. `cd studio` to go to the CMS folder and run `npm install` to install dependencies of the Sanity project folder
    <br>
 
 5. Run `npm run dev` to start Sanity in development mode on localhost:3333
