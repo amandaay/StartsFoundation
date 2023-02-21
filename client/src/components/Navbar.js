@@ -4,11 +4,11 @@ import "../styles/global.css"
 import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import { MdSearch, MdMenu, MdClose } from "react-icons/md"
+import { SearchModalContext } from "../context/searchModalContext"
 
 function Navbar(props) {
   const [isNavOpen, setIsNavOpen] = useState(false)
-  // const { openSearchModal } = useContext(SearchModalContext)
-  const openSearchModal = () => console.log("placeholder open search modal")
+  const { openSearchModal } = useContext(SearchModalContext)
 
   useEffect(() => {
     if (isNavOpen) {
@@ -136,7 +136,13 @@ function Navbar(props) {
                 <button className="donateBtn">Donate</button>
               </li>
             </ul>
-            <span className="searchIconSpan">
+            <span
+              className="searchIconSpan"
+              onClick={handleSearchModalOpen}
+              onKeyDown={handleSearchModalOpen}
+              role="button"
+              tabIndex={0}
+            >
               <MdSearch className="searchIcon" size={40} />
             </span>
           </div>

@@ -7,6 +7,7 @@ function Footer() {
     <>
       <footer className="footer">
         <div className="footerContainer">
+          {/* first footer division */}
           <div className="footer1">
             <div className="logoDiv">
               <StaticImage
@@ -21,6 +22,7 @@ function Footer() {
               of individuals in the Nepali society
             </i>
           </div>
+          {/* second footer division */}
           <div className="footer2">
             <h1 className="footerH1">Support Starts Foundation</h1>
             <h2 className="footerH2">
@@ -47,6 +49,7 @@ function Footer() {
               ))}
             </ul>
           </div>
+          {/* third footer division */}
           <div className="footer3">
             <h3 className="footerH3">Useful Links</h3>
             <ul className="footer__usefulList">

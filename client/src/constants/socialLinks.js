@@ -11,26 +11,26 @@ export const socialLinks = [
   {
     name: "instagram",
     url: "https://www.facebook.com/startsfoundation/",
-    icon: <FaInstagram />,
+    icon: <FaInstagram style={{ color: "#757474" }} />,
   },
   {
     name: "facebook",
     url: "https://www.facebook.com/startsfoundation/",
-    icon: <FaFacebook />,
+    icon: <FaFacebook style={{ color: "#757474" }} />,
   },
   {
     name: "twitter",
     url: "https://www.facebook.com/startsfoundation/",
-    icon: <FaTwitter />,
+    icon: <FaTwitter style={{ color: "#757474" }} />,
   },
   {
     name: "linkedin",
     url: "https://www.facebook.com/startsfoundation/",
-    icon: <FaLinkedinIn />,
+    icon: <FaLinkedinIn style={{ color: "#757474" }} />,
   },
   {
     name: "youtube",
     url: "https://www.facebook.com/startsfoundation/",
-    icon: <FaYoutube />,
+    icon: <FaYoutube style={{ color: "#757474" }} />,
   },
 ]

@@ -276,7 +276,6 @@ img {
 .footer__socialList li {
   display: inline-block;
   margin: 0 0.5rem;
-  /* border-radius: 50%; */
 }
 
 .iconClass {
@@ -300,15 +299,16 @@ ul.footer__usefulList {
 
 .footer__usefulList a {
   color: white;
+  line-height: 2rem;
 }
 
-.footerBottom{
+.footerBottom {
   border-top: 1px solid rgb(214, 223, 214);
   padding-left: 5rem;
   padding-right: 5rem;
   padding-top: 2%;
 }
 
-.copyright{
+.copyright {
   font-weight: 500;
 }
