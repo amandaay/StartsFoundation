@@ -26,6 +26,8 @@ function Home() {
     })
   }
 
+  console.log("home pathname", window.location.pathname)
+
   return (
     <div className="App">
       <Layout
@@ -92,7 +94,7 @@ function Home() {
           </div>
         </main>
         {/* About Section */}
-        <section className="sectionAbout" ref={about}>
+        <section className="sectionAbout" id="about" ref={about}>
           <About />
         </section>
         {/* Mission Section */}
@@ -100,15 +102,15 @@ function Home() {
           <Mission />
         </section>
         {/* Objective Section */}
-        <section className="sectionObjective">
+        <section className="sectionObjective" id="objective">
           <Objectives />
         </section>
         {/* News Section */}
-        <section className="sectionNews" ref={news}>
+        <section className="sectionNews" id="recent-news" ref={news}>
           <RecentNews />
         </section>
         {/* Join the Cause Section */}
-        <section className="sectionJoin" ref={join}>
+        <section className="sectionJoin" id="join-cause" ref={join}>
           <JoinCause />
         </section>
         <span className="scrollBtnSpan">

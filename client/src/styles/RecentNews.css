@@ -64,12 +64,12 @@
 
 .moreNewsp{
   white-space: nowrap;
-  color:#adabab;
+  color:#c6c5c5;
   text-decoration: underline;
   text-underline-offset: 3px;
   font-size:1.2rem;
-  float:right;
- 
+  position:fixed;
+  right:0
 }
 
 .moreNewsp:hover{

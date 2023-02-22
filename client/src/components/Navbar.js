@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import "../styles/global.css"
 import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
@@ -80,7 +80,9 @@ function Navbar(props) {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                     onClick={() => {
-                      props.scrollToSection(props.about)
+                      window.location.pathname === "/"
+                        ? props.scrollToSection(props.about)
+                        : navigate("/#about")
                     }}
                   >
                     About Us
@@ -92,7 +94,11 @@ function Navbar(props) {
                     <li onClick={() => showMenu()}>
                       <span
                         className="dropdown-item"
-                        onClick={() => props.scrollToSection(props.news)}
+                        onClick={() => {
+                          window.location.pathname === "/"
+                            ? props.scrollToSection(props.news)
+                            : navigate("/#recent-news")
+                        }}
                       >
                         Recent News
                       </span>
@@ -100,7 +106,11 @@ function Navbar(props) {
                     <li onClick={() => showMenu()}>
                       <span
                         className="dropdown-item"
-                        onClick={() => props.scrollToSection(props.join)}
+                        onClick={() => {
+                          window.location.pathname === "/"
+                            ? props.scrollToSection(props.join)
+                            : navigate("/#join-cause")
+                        }}
                       >
                         Join the Cause
                       </span>
