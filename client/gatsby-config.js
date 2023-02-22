@@ -33,6 +33,7 @@ module.exports = {
       resolve: "gatsby-source-sanity",
       options: {
         ...sanityConfig,
+        watchMode: true,
       },
     },
   ],

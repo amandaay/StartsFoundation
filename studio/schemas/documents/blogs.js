@@ -17,6 +17,7 @@ export default {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
+      validation: (Rule) => Rule.error('Slug cannot be empty').required(),
       options: {source: 'title', maxLength: 96},
     },
     {

@@ -1,11 +1,13 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
+import { AiOutlineArrowRight } from "react-icons/ai"
 import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import "../styles/RecentNews.css"
+
 function RecentNews() {
   const data = useStaticQuery(graphql`
     {
-      allSanityNews {
+      allSanityNews(sort: { date: DESC }, limit: 3) {
         nodes {
           _id
           slug {
@@ -16,7 +18,7 @@ function RecentNews() {
           image {
             alt
             asset {
-              gatsbyImageData(placeholder: BLURRED)
+              gatsbyImageData(width: 200, placeholder: BLURRED)
             }
           }
         }
@@ -55,7 +57,15 @@ function RecentNews() {
             )
           })}
         </div>
+        <div className="row newsRow">
+          <span className="moreNews">
+            <Link className="moreNewsp" to="/News">
+              More News <AiOutlineArrowRight />
+            </Link>
+          </span>
+        </div>
       </div>
+
       <hr className="hrNews" />
     </div>
   )

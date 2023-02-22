@@ -12,7 +12,13 @@ export default {
       name: 'title',
       type: 'string',
     },
-    {title: 'Slug', name: 'slug', type: 'slug', options: {source: 'title', maxLength: 96}},
+    {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      validation: (Rule) => Rule.error('Slug cannot be empty').required(),
+      options: {source: 'title', maxLength: 96},
+    },
     {
       title: 'Date',
       name: 'date',

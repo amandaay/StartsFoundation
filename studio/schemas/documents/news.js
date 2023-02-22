@@ -12,12 +12,14 @@ export default {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
+      validation: (Rule) => Rule.error('Slug cannot be empty').required(),
       options: {source: 'title', maxLength: 96},
     },
     {
       title: 'Date',
       name: 'date',
       type: 'datetime',
+      validation: (Rule) => Rule.error('Date cannot be empty').required(),
     },
     {
       title: 'Image',
