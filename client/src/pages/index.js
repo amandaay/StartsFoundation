@@ -8,6 +8,7 @@ import {
   JoinCause,
   Mission,
   Objectives,
+  OurTeam,
 } from "../components/Components"
 
 /**
@@ -92,6 +93,9 @@ function Home() {
               </div>
             </div>
           </div>
+
+        </div>
+
         </main>
         {/* About Section */}
         <section className="sectionAbout" id="about" ref={about}>
@@ -112,6 +116,12 @@ function Home() {
         {/* Join the Cause Section */}
         <section className="sectionJoin" id="join-cause" ref={join}>
           <JoinCause />
+        </section>
+        <section className="sectionOurTeam">
+          <OurTeam />
+        </section>
+        <section className="sectionOurTeam">
+          <OurTeam />
         </section>
         <span className="scrollBtnSpan">
           <ScrollToTop />

@@ -1,0 +1,32 @@
+.ourTeamMainDiv {
+    background-color: #1b75bb;
+    width: 100vw;
+    height: 105vh;
+}
+
+.ourTeamBannerColor {
+    background-image: linear-gradient(to right, #ffffff, #92aaeb);
+    /*Left to Right Gradient*/
+    text-align: center;
+    color: #ffffff;
+    /* font-size: 2rem; */
+}
+
+.memberLeftPic {
+    max-width: 32vw;
+    height: 100%;
+}
+
+.memberRightPic {
+    max-width: 24vw;
+    height: 26vh;
+}
+
+.ourTeamText {
+    width: 80%;
+}
+
+.memberIntro {
+    --bs-bg-opacity: 0.3;
+    background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
+}

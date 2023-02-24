@@ -5,7 +5,10 @@ import RecentNews from "./RecentNews"
 import JoinCause from "./JoinCause"
 import Mission from "./Mission"
 import Objectives from "./Objectives"
+import OurTeam from "./OurTeam"
 import Layout from "./Layout"
+
+
 export {
   Layout,
   Navbar,
@@ -15,4 +18,5 @@ export {
   JoinCause,
   Mission,
   Objectives,
+  OurTeam,
 }
