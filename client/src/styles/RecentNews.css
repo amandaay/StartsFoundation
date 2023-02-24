@@ -54,29 +54,36 @@
 }
 
 .caption {
-  margin: auto;
   color: white;
+  display: flex;
+  align-items: center;
+}
+
+.caption:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .hrNews {
   transform: translateY(15vh);
 }
 
-.moreNewsp{
+.moreNewsp {
   white-space: nowrap;
-  color:#c6c5c5;
+  color: #c6c5c5;
   text-decoration: underline;
   text-underline-offset: 3px;
-  font-size:1.2rem;
-  position:fixed;
-  right:0
+  font-size: 1.2rem;
+  position: fixed;
+  right: 0;
 }
 
-.moreNewsp:hover{
- cursor:pointer;
- color:#ffffff
+.moreNewsp:hover {
+  cursor: pointer;
+  color: #ffffff;
 }
 
-.newsRow{
+.newsRow {
   transform: translateY(5vh);
 }
