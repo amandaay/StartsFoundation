@@ -7,6 +7,10 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config("./.env")
+const sanityConfig = require("./sanity-config.js")
+
 module.exports = {
   siteMetadata: {
     title: `Starts Foundation Website`,
@@ -23,6 +27,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        ...sanityConfig,
+        watchMode: true,
       },
     },
   ],

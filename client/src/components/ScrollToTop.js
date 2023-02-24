@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { FaAngleDoubleUp } from "react-icons/fa"
+import { BiArrowFromBottom } from "react-icons/bi"
 import "../styles/ScrollToTop.css"
 /**
  * module that lets user scroll up to top of home page
@@ -27,7 +27,7 @@ const ScrollToTop = () => {
   }
   return (
     <div onClick={() => scrollTop()}>
-      {showScrollTopButton && <FaAngleDoubleUp className="showScrollBtn" />}
+      {showScrollTopButton && <BiArrowFromBottom className="showScrollBtn" />}
     </div>
   )
 }

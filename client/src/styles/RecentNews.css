@@ -61,3 +61,22 @@
 .hrNews {
   transform: translateY(15vh);
 }
+
+.moreNewsp{
+  white-space: nowrap;
+  color:#c6c5c5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size:1.2rem;
+  position:fixed;
+  right:0
+}
+
+.moreNewsp:hover{
+ cursor:pointer;
+ color:#ffffff
+}
+
+.newsRow{
+  transform: translateY(5vh);
+}

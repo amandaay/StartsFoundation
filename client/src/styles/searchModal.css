@@ -1,0 +1,27 @@
+.modalContainer {
+  z-index: 2000;
+}
+
+.searchDiv {
+  width: 60vw;
+  height: 60vh;
+  top: 0;
+  /* background-color: aliceblue; */
+}
+.closeBtn {
+  float: right;
+  /* position: absolute; */
+  transform: translateY(-100%);
+  top: -10px;
+  right: 0;
+  border-color: rgb(218, 4, 47);
+  color: rgb(218, 4, 47);
+}
+
+.closeBtn:hover {
+  background-color: rgb(200, 37, 70);
+  color:rgb(224, 224, 224);
+  border-style: solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

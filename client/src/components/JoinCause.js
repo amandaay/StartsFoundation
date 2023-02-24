@@ -39,6 +39,7 @@ function JoinCause() {
                 src="../images/logos/bluelogo.png"
                 alt="starts foundation logo"
                 className="starts-logo"
+                width={80}
               />
             </div>
             <span className="bottom-title">5+ PROJECTS</span>
