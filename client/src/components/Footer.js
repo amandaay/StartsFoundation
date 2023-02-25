@@ -2,6 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { socialLinks } from "../constants/socialLinks"
 import { usefulLinks } from "../constants/usefulLinks"
+import { Link } from "gatsby"
 function Footer() {
   return (
     <>
@@ -28,7 +29,9 @@ function Footer() {
             </h2>
             <div className="horizontalLine">
               <span className="donateSpan">
-                <button className="donateBtn">Donate</button>
+                <Link to="/donation">
+                  <button className="donateBtn">Donate</button>
+                </Link>
               </span>
               <span className="joinSpan">
                 <button className="joinBtn">Join</button>

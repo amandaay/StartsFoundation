@@ -1,0 +1,139 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    overflow: hidden;
+    padding-top: 10px;
+    margin-top: -10px;
+    border: none;
+}
+
+.options>div {
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 700;
+    font-size: 22px;
+    color: #1B75BB;
+    user-select: none;
+}
+
+.options>div:hover {
+    background-color: white;
+}
+
+.frequencyUnselected {
+    cursor: pointer;
+    background-color: rgb(232, 232, 232);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.frequencySelected {
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 25%);
+    border-bottom: 1px solid transparent;
+    background-color: white;
+    cursor: default;
+    z-index: 10;
+}
+
+.amountOptionsBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 15px 15px;
+    min-inline-size: min-content;
+    border: 1px solid #1B75BB;
+    user-select: none;
+}
+
+.amountOption {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 0;
+    margin: auto;
+    border: 1px solid #1B75BB;
+}
+
+.amountOption:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #1B75BB;
+}
+
+.amountSelected {
+    color: white;
+    background-color: #1B75BB;
+}
+
+.submitForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 15px;
+    margin: 15px
+}
+
+.subtitle {
+    padding: 0 15px;
+    font-size: 10px;
+}
+
+.form {
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: orange;
+    border-radius: 5px;
+    border-color: orange;
+    color: white;
+    font-size: 22px;
+    padding: 5px 25px;
+}
+
+.btn:hover {
+    background-color: #1B75BB;
+    border-color: #1B75BB;
+}
+
+.otherAmount {
+    border: 2px solid #1B75BB;
+    border-radius: 2px;
+    padding: 2px 0;
+    margin-bottom: 5px;
+}
+
+.label {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+    color:#1B75BB;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.input {
+    display: inline-block;
+    border: 0;
+    width: 75%;
+    color:#1B75BB;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
