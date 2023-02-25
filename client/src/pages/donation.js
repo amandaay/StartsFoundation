@@ -13,7 +13,7 @@ export default function donation() {
                             <div className={styles.donationBox}>
                                 <div className={styles.donationForm}>
                                     <h1>Donate Now</h1>
-                                    <div className={styles.subtitle}>Join Starts Foundation to save and support the life of children in Nepal.</div>
+                                    <div className={styles.subtitle}>Join Starts Foundation to save and support the life of people in Nepal.</div>
                                     <DonationForm />
                                 </div>
                             </div>
@@ -23,8 +23,8 @@ export default function donation() {
                 <div className={styles.container}>
                     <div className={styles.bottomPage}>
                         <div className={styles.bottomContent}>
-                            <h1>Children in Nepal<br/> Need your support to go to school</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h1>TRANSPARENCY AND ACCOUNTABILITY</h1>
+                            <p>It has always maintained a transparent relationship with the development partners, community group, government and people associated all the while fostering the bond in a significant way. Standing accountable to all the terms, it has paved its way into society as one of the emerging social organizations which works to thrive with dignity.</p>
                         </div>
                     </div>
                 </div>
