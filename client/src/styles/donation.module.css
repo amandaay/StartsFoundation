@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans:wght@300;400;500;600;900&family=Open+Sans:wght@300&family=PT+Sans&family=Poppins:wght@100;400&display=swap");
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 600;
+}
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0.5, 0.35), rgba(0, 0, 0, 0.5)),
+        url(https://i.postimg.cc/KYy4bCnC/DSC1103-292-min.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.midPage {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20%;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: right;
+    width: 100%;
+}
+
+.donationBox {
+    width: 440px;
+    max-width: 440px;
+    height: 420px;
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
+.donationForm {
+    padding: 25px 0 10px;
+    margin: 0;
+}
+
+.donationForm>h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #1B75BB;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    margin: 0 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #777779;
+    margin-bottom: 15px;
+}
+
+.bottomPage {
+    margin: -70px 0 50px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 55px;
+    -webkit-box-shadow: 0 1px 7px 0 rgb(0 0 0 / 25%);
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 25%);
+    background-color: white;
+}
+
+.bottomContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.bottomContent>h1{
+    font-weight: 700;
+}
+
+.bottomContent>p {
+    margin-top: 12px;
+    line-height: 30px;
+    font-size: 18px;
+    font-style: italic;
+}
