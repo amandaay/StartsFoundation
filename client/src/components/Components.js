@@ -7,6 +7,7 @@ import Mission from "./Mission"
 import Objectives from "./Objectives"
 import OurTeam from "./OurTeam"
 import Layout from "./Layout"
+import Testimonials from "./Testimonials"
 
 
 export {
@@ -19,4 +20,5 @@ export {
   Mission,
   Objectives,
   OurTeam,
+  Testimonials
 }

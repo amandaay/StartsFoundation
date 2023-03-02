@@ -9,6 +9,7 @@ import {
   Mission,
   Objectives,
   OurTeam,
+  Testimonials
 } from "../components/Components"
 
 /**
@@ -116,10 +117,10 @@ function Home() {
         <section className="sectionJoin" id="join-cause" ref={join}>
           <JoinCause />
         </section>
-        <section className="sectionOurTeam">
-          <OurTeam />
+        <section className="sectionTestimonials" id="testimonials">
+          <Testimonials />
         </section>
-        <section className="sectionOurTeam">
+        <section className="sectionOurTeam" id="our-team">
           <OurTeam />
         </section>
         <span className="scrollBtnSpan">
