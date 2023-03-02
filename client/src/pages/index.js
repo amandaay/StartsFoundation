@@ -9,7 +9,8 @@ import {
   Mission,
   Objectives,
   OurTeam,
-  Testimonials
+  Testimonials,
+  Blogs,
 } from "../components/Components"
 
 /**
@@ -122,6 +123,9 @@ function Home() {
         </section>
         <section className="sectionOurTeam" id="our-team">
           <OurTeam />
+        </section>
+        <section className="sectionBlog" id="blog">
+          <Blogs />
         </section>
         <span className="scrollBtnSpan">
           <ScrollToTop />

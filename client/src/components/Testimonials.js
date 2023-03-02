@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "../styles/Testimonials.css";
-import { StaticImage } from "gatsby-plugin-image"
-import { graphql, useStaticQuery, Link } from "gatsby"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import testimonialImg1 from "../images/testimonials/testimonial1.png"
