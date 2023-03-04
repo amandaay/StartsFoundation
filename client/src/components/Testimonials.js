@@ -38,6 +38,7 @@ export function Testimonials() {
                     <Testimonial image={testimonialImg1} />
                     <Testimonial image={testimonialImg2} />
                     <Testimonial image={testimonialImg3} />
+                    <Testimonial image={testimonialImg3} />
                 </Carousel>
 
             </div>

@@ -31,7 +31,7 @@ function Blogs() {
     return (
         <div className="aboutMainDiv " >
             <div className="container containerCause">
-                <h1 className="blogTitle">Blog</h1>
+                <h1 className="blogTitle">Blogs</h1>
                 <div className="row">
                     {/* <div className="col-4">
                         <GatsbyImage
