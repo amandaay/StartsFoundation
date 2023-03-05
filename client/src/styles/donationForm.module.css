@@ -75,7 +75,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 15px;
-    margin: 15px
+    margin: 15px;
 }
 
 .subtitle {
@@ -136,4 +136,32 @@
         -webkit-appearance: none;
         margin: 0;
     }
+}
+
+.detailedForm {
+    padding: 0 25px;
+}
+
+.donationSummary {
+    padding: 15px;
+    border: 1px dashed lightgray;
+    font-size: 14px;
+}
+
+.summaryTab {
+    background-color: #F1F1F1;
+    padding: 15px;
+    color:#1B75BB;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+
+.back {
+    cursor: pointer;
+    align-self: center;
+    margin: auto 30px;
 }
