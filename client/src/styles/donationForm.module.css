@@ -1,167 +1,253 @@
 .container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-    overflow: hidden;
-    padding-top: 10px;
-    margin-top: -10px;
-    border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  overflow: hidden;
+  padding-top: 10px;
+  margin-top: -10px;
+  border: none;
 }
 
-.options>div {
-    width: 100%;
-    text-align: center;
-    line-height: 60px;
-    font-weight: 700;
-    font-size: 22px;
-    color: #1B75BB;
-    user-select: none;
+.options > div {
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #1b75bb;
+  user-select: none;
 }
 
-.options>div:hover {
-    background-color: white;
+@media (max-width: 992px) {
+  .options > div {
+    font-size: 20px;
+  }
+}
+
+.options > div:hover {
+  background-color: white;
 }
 
 .frequencyUnselected {
-    cursor: pointer;
-    background-color: rgb(232, 232, 232);
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  cursor: pointer;
+  background-color: rgb(232, 232, 232);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .frequencySelected {
-    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 25%);
-    border-bottom: 1px solid transparent;
-    background-color: white;
-    cursor: default;
-    z-index: 10;
+  box-shadow: 0 2px 5px 2px rgb(0 0 0 / 25%);
+  border-bottom: 1px solid transparent;
+  background-color: white;
+  cursor: default;
+  z-index: 10;
 }
 
 .amountOptionsBox {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 15px 15px;
-    min-inline-size: min-content;
-    border: 1px solid #1B75BB;
-    user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 15px 15px;
+  min-inline-size: min-content;
+  border: 1px solid #1b75bb;
+  user-select: none;
 }
 
 .amountOption {
-    width: 100%;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    padding: 15px 0;
-    margin: auto;
-    border: 1px solid #1B75BB;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px 0;
+  margin: auto;
+  border: 1px solid #1b75bb;
 }
 
 .amountOption:hover {
-    cursor: pointer;
-    color: white;
-    background-color: #1B75BB;
+  cursor: pointer;
+  color: white;
+  background-color: #1b75bb;
 }
 
 .amountSelected {
-    color: white;
-    background-color: #1B75BB;
+  color: white;
+  background-color: #1b75bb;
 }
 
 .submitForm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 15px;
-    margin: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 15px;
+  margin: 15px;
 }
 
 .subtitle {
-    padding: 0 15px;
-    font-size: 10px;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .form {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .btn {
-    background-color: orange;
-    border-radius: 5px;
-    border-color: orange;
-    color: white;
-    font-size: 22px;
-    padding: 5px 25px;
+  background-color: orange;
+  border-radius: 5px;
+  border-color: orange;
+  color: white;
+  font-size: 22px;
+  padding: 5px 25px;
 }
 
 .btn:hover {
-    background-color: #1B75BB;
-    border-color: #1B75BB;
+  background-color: #1b75bb;
+  border-color: #1b75bb;
+}
+
+@media (max-width: 992px) {
+  .btn {
+    padding: 5px 20px;
+    font-size: 20px;
+  }
 }
 
 .otherAmount {
-    border: 2px solid #1B75BB;
-    border-radius: 2px;
-    padding: 2px 0;
-    margin-bottom: 5px;
+  border: 2px solid #1b75bb;
+  border-radius: 2px;
+  margin-bottom: 5px;
 }
 
-.label {
-    display: inline-block;
-    width: 25%;
-    text-align: right;
-    color:#1B75BB;
-    font-weight: 600;
-    font-size: 18px;
+.currency {
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+  color: #1b75bb;
+  font-weight: 600;
+  font-size: 18px;
 }
 
-.input {
-    display: inline-block;
-    border: 0;
-    width: 75%;
-    color:#1B75BB;
-    font-weight: 700;
-    font-size: 18px;
+.amountInput {
+  display: inline-block;
+  border: 0;
+  width: 75%;
+  color: #1b75bb;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 2px 0;
 }
 
-.input:focus {
-    outline: none;
+.amountInput:focus {
+  outline: none;
+}
+
+@media (max-width: 992px) {
+  .amountInput {
+    margin: 0;
+  }
 }
 
 @layer base {
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 .detailedForm {
-    padding: 0 25px;
+  padding: 0 25px;
+}
+
+.summary {
+  margin-bottom: 5px;
 }
 
 .donationSummary {
-    padding: 15px;
-    border: 1px dashed lightgray;
-    font-size: 14px;
+  padding: 15px;
+  border: 1px dashed lightgray;
+  font-size: 14px;
 }
 
 .summaryTab {
-    background-color: #F1F1F1;
-    padding: 15px;
-    color:#1B75BB;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    user-select: none;
+  background-color: #f1f1f1;
+  padding: 15px;
+  color: #1b75bb;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
 }
 
 .back {
-    cursor: pointer;
-    align-self: center;
-    margin: auto 30px;
+  cursor: pointer;
+  align-self: center;
+  margin: auto 30px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    margin: 0;
+  }
+}
+
+.col:last-of-type {
+  margin: 0;
+}
+
+label {
+  margin: 5px 0;
+}
+
+.formInput {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.formInput:focus {
+  outline: none;
+}
+
+.span {
+  color: red;
+}
+
+.checkBox {
+  position: absolute;
+  margin-top: 8px;
+  margin-right: 3px;
+}
+
+.checkBoxContent {
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: gray;
+}
+
+input {
+  border: 1px solid #d4d4d8;
+  border-radius: 4px;
 }
