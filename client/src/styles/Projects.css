@@ -1,13 +1,13 @@
 .ProjectMainDiv {
     background-color: #1b75bb;
     width: 100vw;
-    height: 105vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
   }
   
   .ProjectHeader {
-      color: white;
+    color: white;
     font-size: 2rem;
     text-decoration: underline;
     text-underline-offset: 1rem;
@@ -21,8 +21,8 @@
   
   .ProjectContent {
     padding-top: 87px;
-    padding-bottom: 87px;
-    margin: 2rem;
+    /* padding-bottom: 87px; */
+    /* margin: 2rem; */
   }
   
   .ProjectTopContainer {
@@ -40,6 +40,7 @@
   }
 
 .ProjectMidContainer {
-  
+  background-color: #1b75bb;
+  align-items: center;
+  justify-content: center;
 }
-  

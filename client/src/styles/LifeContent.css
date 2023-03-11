@@ -1,9 +1,9 @@
 .containerLifeContent {
-    padding-top: 7%;
+    padding-top: 3%;
   }
   
   .lifeContent-row {
-    padding-top: 5vh;
+    padding-top: 2vh;
   }
   
   .LifeContentTitle {
@@ -19,7 +19,7 @@
   .life-content-title {
     font-size: 1.5rem;
     padding-bottom: 10%;
-    color: rgb(8, 2, 27);
+    color: rgb(255, 255, 255);
   }
   
   .life-col-div {
@@ -28,4 +28,21 @@
     justify-content: center;
     align-items: center;
   }
-  
+
+  .circle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  .life-content-logo {
+    padding: 2% 2% 2% 2%;
+    margin: auto;
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+    justify-content: center;
+  }
