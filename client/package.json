@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@paypal/react-paypal-js": "^7.8.2",
     "@portabletext/react": "^2.0.1",
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
