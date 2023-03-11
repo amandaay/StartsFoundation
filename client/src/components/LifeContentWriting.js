@@ -3,7 +3,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../styles/LifeContent.css"
 
 function LifeContent() {
-  console.log("testttttttt")
   return (
     <div className="LifeContentMainDiv">
       <div className="container containerLifeContent">

@@ -2,8 +2,8 @@ import {RiHammerLine} from 'react-icons/ri'
 import {format} from 'date-fns'
 
 export default {
-  title: 'Project',
-  name: 'project',
+  title: 'Projects: AidForLivingLife, COVID RELIEF',
+  name: 'AidForLivingLifeCOVID',
   type: 'document',
   icon: RiHammerLine,
   fields: [
