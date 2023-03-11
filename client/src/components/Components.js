@@ -10,7 +10,6 @@ import Layout from "./Layout"
 import Testimonials from "./Testimonials"
 import Blogs from "./Blogs"
 
-
 export {
   Layout,
   Navbar,
@@ -22,5 +21,5 @@ export {
   Objectives,
   OurTeam,
   Testimonials,
-  Blogs
+  Blogs,
 }

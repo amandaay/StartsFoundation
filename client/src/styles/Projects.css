@@ -1,0 +1,45 @@
+.ProjectMainDiv {
+    background-color: #1b75bb;
+    width: 100vw;
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ProjectHeader {
+      color: white;
+    font-size: 2rem;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-thickness: 0.18rem;
+    padding-bottom: 3%;
+  }
+  
+  .quote {
+    font-style: italic;
+  }
+  
+  .ProjectContent {
+    padding-top: 87px;
+    padding-bottom: 87px;
+    margin: 2rem;
+  }
+  
+  .ProjectTopContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+      margin: 2rem;
+  }
+  
+  .ProjectKeyPointsContent {
+      font-weight: 500;
+      color: white;
+      line-height: 2;
+      font-size: 1.05rem;
+  }
+
+.ProjectMidContainer {
+  
+}
+  

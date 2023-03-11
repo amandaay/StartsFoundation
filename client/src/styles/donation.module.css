@@ -1,147 +1,146 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans:wght@300;400;500;600;900&family=Open+Sans:wght@300&family=PT+Sans&family=Poppins:wght@100;400&display=swap");
 
 body {
-    font-family: "Noto Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 600;
-    position: relative;
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+  position: relative;
 }
 
 .banner {
-    background-image: url("../images/donate/donate.jpeg");
-    background-size: cover;
-    -webkit-background-size: cover;
-    background-position: left top;
-    background-repeat: no-repeat;
-    height: 110vh;
+  background-image: url("../images/donate/donate.jpeg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 110vh;
 }
 
 @media (max-width: 992px) {
-    .banner {
-        background-size: 100%;
-        height: auto;
-    }
+  .banner {
+    background-size: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
+  .container {
+    max-width: 960px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
+  .container {
+    max-width: 1140px;
+  }
 }
 
 .container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .firstSection {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 15%;
-    justify-content: right;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15%;
+  justify-content: right;
+  width: 100%;
 }
 
 .donationBox {
-    width: 440px;
-    max-width: 440px;
-    min-height: 420px;
-    height: 100%;
-    background-color: white;
-    border: solid 1px white;
-    border-radius: 5px;
+  width: 440px;
+  max-width: 440px;
+  min-height: 420px;
+  height: 100%;
+  background-color: white;
+  border: solid 1px white;
+  border-radius: 5px;
 }
 
 @media (max-width: 992px) {
-    .donationBox {
-        max-width: 100vw;
-        width: 100vw;
-        margin-top: 50%;
-        border-radius: 0;
-    }
+  .donationBox {
+    max-width: 100vw;
+    width: 100vw;
+    margin-top: 50%;
+    border-radius: 0;
+  }
 }
 
 .donationForm {
-    padding: 25px 0 10px;
-    margin: 0;
+  padding: 25px 0 10px;
+  margin: 0;
 }
 
-.donationForm>h1 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    text-align: center;
-    color: #1B75BB;
-    margin-bottom: 15px;
+.donationForm > h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #1b75bb;
+  margin-bottom: 15px;
 }
 
 .subtitle {
-    margin: 0 30px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
-    color: #777779;
-    margin-bottom: 15px;
+  margin: 0 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #777779;
+  margin-bottom: 15px;
 }
 
 .secondSection {
-    margin: -80px auto 0 auto;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding: 40px;
-    -webkit-box-shadow: 0 1px 7px 0 rgb(0 0 0 / 25%);
-    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 25%);
-    background-color: white;
+  margin: -80px auto 0 auto;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 40px;
+  -webkit-box-shadow: 0 1px 7px 0 rgb(0 0 0 / 25%);
+  box-shadow: 0 1px 7px 0 rgb(0 0 0 / 25%);
+  background-color: white;
 }
 
 @media (max-width: 992px) {
-    .secondSection {
-        max-width: 100vw;
-        width: 100vw;
-        margin: 10px 0;
-    }
+  .secondSection {
+    max-width: 100vw;
+    width: 100vw;
+    margin: 10px 0;
+  }
 }
 
 .secondSectionContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-.secondSectionContent>h1 {
-    font-weight: 700;
-    color: #1B75BB;
+.secondSectionContent > h1 {
+  font-weight: 700;
+  color: #1b75bb;
 }
 
-.secondSectionContent>p {
-    margin-top: 12px;
-    line-height: 35px;
-    font-size: 20px;
-    font-style: italic;
+.secondSectionContent > p {
+  margin-top: 12px;
+  line-height: 35px;
+  font-size: 20px;
+  font-style: italic;
 }
 
 .thirdSection {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 35px;
-    padding-left: 25px;
-    padding-right: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-.thirdSection>p{
-    font-size: 16px;
-    line-height: 35px;
-    margin-bottom: 25px;
+.thirdSection > p {
+  font-size: 16px;
+  line-height: 35px;
+  margin-bottom: 25px;
 }
-

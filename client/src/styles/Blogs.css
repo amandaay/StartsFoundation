@@ -1,40 +1,40 @@
 .containerCause {
-    padding-top: 7%;
+  padding-top: 7%;
 }
 
 .blogTitle {
-    font-size: 2rem;
-    /* text-decoration: underline;
+  font-size: 2rem;
+  /* text-decoration: underline;
     text-underline-offset: 1rem; */
-    text-decoration-thickness: 0.18rem;
-    color: rgb(255, 255, 255);
-    padding-bottom: 5%;
-    text-align: center;
+  text-decoration-thickness: 0.18rem;
+  color: rgb(255, 255, 255);
+  padding-bottom: 5%;
+  text-align: center;
 }
 
 .imgs {
-    width: 100%;
-    object-fit: cover;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }
 
 .leftBlogHeight {
-    height: 21rem;
+  height: 21rem;
 }
 
 .leftContextHeight {
-    height: 10rem;
+  height: 10rem;
 }
 
 .rightBlogHeight {
-    height: 10rem;
+  height: 10rem;
 }
 
 .rightContextHeight {
-    height: 5rem;
+  height: 5rem;
 }
 
 .bottomRounded {
-    border-radius: 0 0 3rem 3rem;
+  border-radius: 0 0 3rem 3rem;
 }

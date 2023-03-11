@@ -24,5 +24,5 @@ export const schemaTypes = [
   customImage,
   bodyText,
   normalText,
-  excerptText
+  excerptText,
 ]

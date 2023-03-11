@@ -19,17 +19,16 @@ export default {
       type: 'customImage',
     },
   ],
-  preview:{
-    select:{
-        image:'image',
-        title:'caption'
+  preview: {
+    select: {
+      image: 'image',
+      title: 'caption',
     },
-    prepare({image,title}){
-        return{
-            media:image,
-            title,
-            
-        }
-    }
-  }
+    prepare({image, title}) {
+      return {
+        media: image,
+        title,
+      }
+    },
+  },
 }
