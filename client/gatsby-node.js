@@ -98,10 +98,9 @@
 //   })
 // }
 
-
 const pageSize = 6
 /**
- * function that returns pagination for all News Posts 
+ * function that returns pagination for all News Posts
  * @param {array} data to be mapped
  * @param {function} createPage function from Gatsby
  * @returns createPage object
@@ -147,15 +146,16 @@ const newsResults = `
  * END OF PAGINATION -----------
  */
 
-
 /**
- * Create Pages function 
+ * Create Pages function
  * @param {function} Gatsby methods
  */
 exports.createPages = async ({ graphql, actions }) => {
+
   /**
    * Pagination for news pages
    */
+  const { createPage } = actions
   const resultNews = await graphql(newsResults)
   if (resultNews.errors) throw resultNews.errors
   const newsPosts = resultNews.data.allSanityNews.nodes
@@ -169,7 +169,6 @@ exports.createPages = async ({ graphql, actions }) => {
   //template paths (resolving paths)
   const singlePostTemplate = require.resolve("./src/templates/single-post.js")
 
-  const { createPage } = actions
   const result = await graphql(`
     {
       allSanityNews {
