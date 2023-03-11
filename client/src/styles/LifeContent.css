@@ -1,0 +1,31 @@
+.containerLifeContent {
+    padding-top: 7%;
+  }
+  
+  .lifeContent-row {
+    padding-top: 5vh;
+  }
+  
+  .LifeContentTitle {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-thickness: 0.18rem;
+    color: rgb(255, 255, 255);
+    padding-bottom: 5%;
+    text-align: center;
+  }
+  
+  .life-content-title {
+    font-size: 1.5rem;
+    padding-bottom: 10%;
+    color: rgb(8, 2, 27);
+  }
+  
+  .life-col-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  

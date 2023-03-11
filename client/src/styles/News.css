@@ -11,7 +11,7 @@
 
 .newsHeader {
   text-align: center;
-  color:rgb(60, 59, 59);
+  color: rgb(60, 59, 59);
 }
 
 .newsTitleDiv,
@@ -29,7 +29,7 @@
 .newsTitle {
   font-size: 1.2rem;
   font-weight: 600;
-  color:rgb(60, 59, 59)
+  color: rgb(60, 59, 59);
 }
 .newsTitle:hover {
   cursor: pointer;

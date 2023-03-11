@@ -95,8 +95,6 @@ function Home() {
               </div>
             </div>
           </div>
-
-
         </main>
         {/* About Section */}
         <section className="sectionAbout" id="about" ref={about}>
