@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../styles/LifeContent.css"
 
 function LifeContent() {
-    console.log("testttttttt")
+  console.log("testttttttt")
   return (
     <div className="LifeContentMainDiv">
       <div className="container containerLifeContent">
@@ -14,7 +14,9 @@ function LifeContent() {
               <StaticImage
                 alt="volunteer"
                 src="../images/projects/Volunteers.png"
-                width={80}
+                className="life-content-logo"
+                width={70}
+                height={130}
               />
             </div>
             <span className="life-content-title">Volunteer</span>
@@ -24,7 +26,9 @@ function LifeContent() {
               <StaticImage
                 alt="funding"
                 src="../images/projects/Funding.png"
-                width={80}
+                className="life-content-logo"
+                width={70}
+                height={100}
               />
             </div>
             <span className="life-content-title">Funding</span>
@@ -34,10 +38,12 @@ function LifeContent() {
               <StaticImage
                 alt="supportedFamily"
                 src="../images/projects/SupportedFamily.png"
-                width={80}
+                className="life-content-logo"
+                width={70}
+                height={100}
               />
             </div>
-            <span className="life-content-title">SupportedFamily</span>
+            <span className="life-content-title">Supported Family</span>
           </div>
         </div>
       </div>
