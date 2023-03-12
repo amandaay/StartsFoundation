@@ -7,7 +7,12 @@ export default {
   type: 'document',
   icon: ImNewspaper,
   fields: [
-    {title: 'Title', name: 'title', type: 'string'},
+    {
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+      validation: (Rule) => Rule.error('Title cannot be empty').required(),
+    },
     {
       title: 'Slug',
       name: 'slug',
@@ -25,16 +30,18 @@ export default {
       title: 'Image',
       name: 'image',
       type: 'customImage',
+      validation: (Rule) => Rule.error('Image cannot be empty').required(),
     },
-    {title: 'News Content', name: 'body', type: 'bodyText'},
     {
       title: 'Caption',
       name: 'caption',
       type: 'string',
+      validation: (Rule) => Rule.error('Caption cannot be empty').required(),
       options: {
         isHighlighted: true,
       },
     },
+    {title: 'News Content', name: 'body', type: 'bodyText'},
   ],
   preview: {
     select: {
