@@ -6,15 +6,31 @@ export default {
   type: 'document',
   icon: BsPeople,
   fields: [
-    {title: 'Member Name', name: 'memberName', type: 'string'},
+    {
+      title: 'Member Name',
+      name: 'memberName',
+      type: 'string',
+      validation: (Rule) => Rule.error('Name cannot be empty').required(),
+    },
     {
       title: 'Slug',
       name: 'slug',
       type: 'slug',
+      validation: (Rule) => Rule.error('Title cannot be empty').required(),
       options: {source: 'memberName', maxLength: 96},
     },
-    {title: 'Member Portrait', name: 'memberPortrait', type: 'customImage'},
-    {title: 'About Member', name: 'body', type: 'normalText'},
+    {
+      title: 'Member Portrait',
+      name: 'memberPortrait',
+      type: 'customImage',
+      validation: (Rule) => Rule.error('Picture cannot be empty').required(),
+    },
+    {
+      title: 'About Member',
+      name: 'body',
+      type: 'normalText',
+      validation: (Rule) => Rule.error('Bio cannot be empty').required(),
+    },
   ],
   preview: {
     select: {

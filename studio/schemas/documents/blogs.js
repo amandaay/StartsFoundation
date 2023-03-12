@@ -11,8 +11,14 @@ export default {
       title: 'Title',
       name: 'title',
       type: 'string',
+      validation: (Rule) => Rule.error('Title cannot be empty').required(),
     },
-    {title: 'Author', name: 'author', type: 'string'},
+    {
+      title: 'Author',
+      name: 'author',
+      type: 'string',
+      validation: (Rule) => Rule.error('Author cannot be empty').required(),
+    },
     {
       title: 'Slug',
       name: 'slug',
@@ -24,15 +30,27 @@ export default {
       title: 'Publication Date',
       name: 'publicationDate',
       type: 'datetime',
+      validation: (Rule) => Rule.error('Date cannot be empty').required(),
     },
 
     {
       title: 'Cover Image',
       name: 'coverImage',
       type: 'customImage',
+      validation: (Rule) => Rule.error('Image cannot be empty').required(),
     },
-    {title: 'Excerpt', name: 'excerpt', type: 'excerptText'},
-    {title: 'Blog body', name: 'body', type: 'bodyText'},
+    {
+      title: 'Excerpt',
+      name: 'excerpt',
+      type: 'excerptText',
+      validation: (Rule) => Rule.error('Excerpt cannot be empty').required(),
+    },
+    {
+      title: 'Blog body',
+      name: 'body',
+      type: 'bodyText',
+      validation: (Rule) => Rule.error('Body cannot be empty').required(),
+    },
   ],
   preview: {
     select: {

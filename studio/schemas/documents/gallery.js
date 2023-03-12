@@ -9,6 +9,7 @@ export default {
       title: 'Caption',
       name: 'caption',
       type: 'string',
+      validation: (Rule) => Rule.error('Caption cannot be empty').required(),
       options: {
         isHighlighted: true,
       },
@@ -17,6 +18,7 @@ export default {
       title: 'Image',
       name: 'image',
       type: 'customImage',
+      validation: (Rule) => Rule.error('Image cannot be empty').required(),
     },
   ],
   preview: {

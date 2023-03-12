@@ -39,7 +39,7 @@ function SinglePost({ data }) {
 }
 
 SinglePost.propTypes = {
-  data: PropTypes.func,
+  data: PropTypes.any,
 }
 
 export default SinglePost
