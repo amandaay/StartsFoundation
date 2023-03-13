@@ -1,53 +1,125 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby"
+import React, { useState } from "react"
 import "../styles/LifeContent.css"
+import LifeContentWritingLogos from "./LifeContentWritingLogos"
+import { FcPrevious, FcNext } from "react-icons/fc"
 
-function LifeContent() {
+/**
+ * content writing component in Aid For living life in Projects
+ *
+ * @returns JSX for content writing
+ */
+function LifeContentWriting() {
+  const data = useStaticQuery(graphql`
+    query {
+      allSanityAidForLivingLifeCovid(sort: { _createdAt: DESC }) {
+        nodes {
+          id
+          title
+          slug {
+            current
+          }
+          body {
+            _key
+            children {
+              _key
+              text
+            }
+          }
+        }
+        totalCount
+      }
+      allSanityAidForLivingLifeOthers(sort: { _createdAt: DESC }) {
+        nodes {
+          id
+          title
+          slug {
+            current
+          }
+          body {
+            children {
+              _key
+              text
+            }
+          }
+        }
+        totalCount
+      }
+    }
+  `)
+
+  //   const [covidPage, setCovidPage] = useState(0)
+  //   const covidPageSize = data.allSanityAidForLivingLifeCovid.totalCount
+  //   const covidData = data.allSanityAidForLivingLifeCovid.nodes[covidPage]
+
+  //   const [nonSpecificPage, setNonSpecificPage] = useState(0)
+  //   const nonSpecificPageSize = data.allSanityAidForLivingLifeOthers.totalCount
+  //   const nonSpecificData =
+  //     data.allSanityAidForLivingLifeOthers.nodes[nonSpecificPage]
+
+  const [page, setPage] = useState(0)
+  const covidPageSize = data.allSanityAidForLivingLifeCovid.totalCount
+  const nonSpecificPageSize = data.allSanityAidForLivingLifeOthers.totalCount
+  const pageSize = covidPageSize + nonSpecificPageSize
+  const covidData = data.allSanityAidForLivingLifeCovid.nodes[page]
+  const nonSpecificData =
+    data.allSanityAidForLivingLifeOthers.nodes[page - covidPageSize]
+
   return (
-    <div className="LifeContentMainDiv">
-      <div className="container containerLifeContent">
-        <h1 className="LifeContentTitle">Janakpur</h1>
-        <div className="row lifeContent-row">
-          <div className="col life-col-div">
-            <div className="circle">
-              <StaticImage
-                alt="volunteer"
-                src="../images/projects/Volunteers.png"
-                className="life-content-logo"
-                width={70}
-                height={130}
-              />
-            </div>
-            <span className="life-content-title">Volunteer</span>
-          </div>
-          <div className="col life-col-div">
-            <div className="circle">
-              <StaticImage
-                alt="funding"
-                src="../images/projects/Funding.png"
-                className="life-content-logo"
-                width={70}
-                height={100}
-              />
-            </div>
-            <span className="life-content-title">Funding</span>
-          </div>
-          <div className="col life-col-div">
-            <div className="circle">
-              <StaticImage
-                alt="supportedFamily"
-                src="../images/projects/SupportedFamily.png"
-                className="life-content-logo"
-                width={70}
-                height={100}
-              />
-            </div>
-            <span className="life-content-title">Supported Family</span>
-          </div>
-        </div>
+    <section>
+      <div className="LifeActivities">
+        {/* {covidPage > 0 && (
+          <FcPrevious
+            className="life-left-arrow"
+            onClick={() => setCovidPage(covidPage - 1)}
+          />
+        )} */}
+        {page > 0 && (
+          <FcPrevious
+            className="life-left-arrow"
+            onClick={() => setPage(page - 1)}
+          />
+        )}
+        {page < covidPageSize ? (
+          <>
+            <h1 className="LifeContentTitle">
+              COVID Relief: {covidData.title}
+            </h1>
+            <LifeContentWritingLogos />
+            {covidData.body.map(section => {
+              return (
+                <div key={section._key}>
+                  {section.children.map(child => {
+                    return <p key={child._key}>{child.text}</p>
+                  })}
+                </div>
+              )
+            })}
+          </>
+        ) : (
+          <>
+            <h1 className="LifeContentTitle">{nonSpecificData.title}</h1>
+            {nonSpecificData.body.map(section => {
+              return (
+                <div key={section._key}>
+                  {section.children.map(child => {
+                    return <p key={child._key}>{child.text}</p>
+                  })}
+                </div>
+              )
+            })}
+          </>
+        )}
       </div>
-    </div>
+
+      {page < pageSize - 1 && (
+        <FcNext
+          className="life-right-arrow"
+          onClick={() => setPage(page + 1)}
+        />
+      )}
+    </section>
   )
 }
 
-export default LifeContent
+export default LifeContentWriting

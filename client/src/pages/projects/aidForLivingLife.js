@@ -3,7 +3,8 @@ import "../../styles/Projects.css"
 import Layout from "../../components/Layout"
 import LifeImgSlider from "../../components/LifeImgSlider"
 import { LifeImgData } from "../../components/LifeImgData"
-import LifeContent from "../../components/LifeContentWriting"
+// import LifeContentLogos from "../../components/LifeContentWritingLogos"
+import LifeContentWriting from "../../components/LifeContentWriting"
 
 /**
  * /Projects/AidForLivingLife page
@@ -14,12 +15,13 @@ function AidForLivingLife() {
     <div className="ProjectMainDiv">
       <Layout>
         <div className="ProjectContent">
+        <h1 className="ProjectHeader">Project - AID FOR LIVING LIFE</h1>
           <div className="ProjectTopContainer">
             <div className="ProjectImgSlider">
               <LifeImgSlider slides={LifeImgData} />
             </div>
             <div className="ProjectKeyPoints">
-              <h1 className="ProjectHeader">AID FOR LIVING LIFE</h1>
+              
               <p className="ProjectKeyPointsContent">
                 In Nepal, unexpected disasters strip many people from the stable
                 foundations through which they live and survive. These
@@ -41,13 +43,15 @@ function AidForLivingLife() {
             </div>
           </div>
           <div className="ProjectMidContainer">
-            <LifeContent />
+            <LifeContentWriting />
           </div>
         </div>
       </Layout>
     </div>
   )
 }
+
+
 
 AidForLivingLife.propTypes = {}
 export default AidForLivingLife
