@@ -1,9 +1,9 @@
-import React from "react";
-import "../../styles/Projects.css";
+import React from "react"
+import "../../styles/Projects.css"
 import Layout from "../../components/Layout"
-import SmileImgSlider from "../../components/SmileImgSlider";
-import { SmileImgData } from "../../components/SmileImgData";
-
+import SmileImgSlider from "../../components/SmileImgSlider"
+import { SmileImgData } from "../../components/SmileImgData"
+import SmileContentWriting from "../../components/SmileContentWriting"
 
 /**
  * /Projects/AWaitingSmile page
@@ -11,19 +11,20 @@ import { SmileImgData } from "../../components/SmileImgData";
  */
 function AWaitingSmile() {
   return (
-    <Layout>
-      <div className="ProjectMainDiv">
-        
+    <div className="ProjectMainDiv">
+      <Layout>
         <div className="ProjectContent">
+          <h1 className="ProjectHeader">Project - A Waiting Smile</h1>
           <div className="ProjectTopContainer">
             <div className="ProjectImgSlider">
               <SmileImgSlider slides={SmileImgData} />
             </div>
             <div className="ProjectKeyPoints">
-              <h1 className="ProjectHeader">A Waiting Smile</h1>
               <p className="ProjectKeyPointsContent">
-              <q className="quote">Spreading smiles through an opportunity for learning and
-                discovering creativity</q>
+                <q className="quote">
+                  Spreading smiles through an opportunity for learning and
+                  discovering creativity
+                </q>
                 <br />
                 Starting Year- 2020 The education system in Nepal is still in
                 the phase of improvement and growth. Currently, this sector has
@@ -46,11 +47,14 @@ function AWaitingSmile() {
               </p>
             </div>
           </div>
+          <div className="ProjectMidContainer">
+            <SmileContentWriting />
+          </div>
         </div>
-      </div>
       </Layout>
-  );
+    </div>
+  )
 }
 
-AWaitingSmile.propTypes = {};
-export default AWaitingSmile;
+AWaitingSmile.propTypes = {}
+export default AWaitingSmile

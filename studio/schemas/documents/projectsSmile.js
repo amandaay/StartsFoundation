@@ -2,7 +2,7 @@ import {RiHammerLine} from 'react-icons/ri'
 import {format} from 'date-fns'
 
 export default {
-  title: 'Projects: AWaitingSmile',
+  title: 'Projects: A Waiting Smile',
   name: 'AWaitingSmile',
   type: 'document',
   icon: RiHammerLine,

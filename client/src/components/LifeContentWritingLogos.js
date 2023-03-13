@@ -1,6 +1,6 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import "../styles/LifeContent.css"
+import "../styles/projContentWriting.css"
 // import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -41,7 +41,7 @@ function LifeContentLogos() {
                     height={logo.name === "Volunteer" ? 130 : logos.height}
                   />
                 </div>
-                <span className="life-content-title">{logo.name.slice(2)}</span>
+                <span className="life-logo-content-title">{logo.name.slice(2)}</span>
               </div>
             )
           })}
