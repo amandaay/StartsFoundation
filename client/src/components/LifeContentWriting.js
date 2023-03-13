@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
-import "../styles/LifeContent.css"
+import "../styles/projContentWriting.css"
 import LifeContentWritingLogos from "./LifeContentWritingLogos"
 import { FcPrevious, FcNext } from "react-icons/fc"
 
@@ -38,17 +38,17 @@ function LifeContentWriting() {
   const lifeData = data.allSanityAidForLivingLife.nodes[page]
 
   return (
-    <section className="lifeActivityContainer">
+    <section className="ActivityContainer">
       {/* <div className="projPaginate"> */}
       <div className="d-flex justify-content-between">
         {page > 0 && (
           <FcPrevious
-            className="life-left-arrow"
+            className="proj-content-left-arrow"
             onClick={() => setPage(page - 1)}
           />
         )}
-        <div className="lifeActivities">
-          <h1 className="LifeContentTitle">
+        <div className="Activities">
+          <h1 className="ContentTitle">
             {lifeData.activity
               ? lifeData.activity + ": " + lifeData.title
               : lifeData.title}
@@ -70,7 +70,7 @@ function LifeContentWriting() {
         </div>
         {page < pageSize - 1 && (
           <FcNext
-            className="life-right-arrow"
+            className="proj-content-right-arrow"
             onClick={() => setPage(page + 1)}
           />
         )}

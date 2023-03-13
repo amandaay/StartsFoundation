@@ -15,13 +15,12 @@ function AidForLivingLife() {
     <div className="ProjectMainDiv">
       <Layout>
         <div className="ProjectContent">
-        <h1 className="ProjectHeader">Project - AID FOR LIVING LIFE</h1>
+          <h1 className="ProjectHeader">Project - AID FOR LIVING LIFE</h1>
           <div className="ProjectTopContainer">
             <div className="ProjectImgSlider">
               <LifeImgSlider slides={LifeImgData} />
             </div>
             <div className="ProjectKeyPoints">
-              
               <p className="ProjectKeyPointsContent">
                 In Nepal, unexpected disasters strip many people from the stable
                 foundations through which they live and survive. These
@@ -50,8 +49,6 @@ function AidForLivingLife() {
     </div>
   )
 }
-
-
 
 AidForLivingLife.propTypes = {}
 export default AidForLivingLife

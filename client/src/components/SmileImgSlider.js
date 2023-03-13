@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "../styles/ImgSlider.css"
 import { SmileImgData } from "./SmileImgData"
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa"
+import { FcPrevious, FcNext } from "react-icons/fc"
 import PropTypes from "prop-types"
 
 /**
@@ -29,8 +29,8 @@ function SmileImgSlider({ slides }) {
 
   return (
     <section className="ImgSlider">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <FcPrevious className="left-arrow" onClick={prevSlide} />
+      <FcNext className="right-arrow" onClick={nextSlide} />
       {SmileImgData.map((slide, index) => {
         return (
           <div
