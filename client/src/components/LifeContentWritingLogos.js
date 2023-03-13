@@ -28,7 +28,6 @@ function LifeContentLogos() {
   return (
     <div className="LifeContentMainDiv">
       <div className="container containerLifeContent">
-        {/* <h1 className="LifeContentTitle">ACTIVITIES</h1> */}
         <div className="row lifeContent-row">
           {logos.map(logo => {
             return (
