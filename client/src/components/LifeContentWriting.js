@@ -12,9 +12,10 @@ import { FcPrevious, FcNext } from "react-icons/fc"
 function LifeContentWriting() {
   const data = useStaticQuery(graphql`
     query {
-      allSanityAidForLivingLifeCovid(sort: { _createdAt: DESC }) {
+      allSanityAidForLivingLife(sort: { date: ASC }) {
         nodes {
           id
+          activity
           title
           slug {
             current
@@ -29,79 +30,53 @@ function LifeContentWriting() {
         }
         totalCount
       }
-      allSanityAidForLivingLifeOthers(sort: { _createdAt: DESC }) {
-        nodes {
-          id
-          title
-          slug {
-            current
-          }
-          body {
-            children {
-              _key
-              text
-            }
-          }
-        }
-        totalCount
-      }
     }
   `)
 
   const [page, setPage] = useState(0)
-  const covidPageSize = data.allSanityAidForLivingLifeCovid.totalCount
-  const nonSpecificPageSize = data.allSanityAidForLivingLifeOthers.totalCount
-  const pageSize = covidPageSize + nonSpecificPageSize
-  const covidData = data.allSanityAidForLivingLifeCovid.nodes[page]
-  const nonSpecificData =
-    data.allSanityAidForLivingLifeOthers.nodes[page - covidPageSize]
+  const pageSize = data.allSanityAidForLivingLife.totalCount
+  const lifeData = data.allSanityAidForLivingLife.nodes[page]
 
   return (
-    <section>
-      <div className="LifeActivities">
+    <section className="lifeActivityContainer">
+      {/* <div className="projPaginate"> */}
+      <div className="d-flex justify-content-between">
         {page > 0 && (
           <FcPrevious
             className="life-left-arrow"
             onClick={() => setPage(page - 1)}
           />
         )}
-        {page < covidPageSize ? (
-          <>
-            <h1 className="LifeContentTitle">
-              COVID Relief: {covidData.title}
-            </h1>
-            <LifeContentWritingLogos />
-            {covidData.body.map(section => {
-              return (
-                <div key={section._key}>
-                  {section.children.map(child => {
-                    return <p key={child._key}>{child.text}</p>
-                  })}
-                </div>
-              )
-            })}
-          </>
-        ) : (
-          <>
-            <h1 className="LifeContentTitle">{nonSpecificData.title}</h1>
-            {nonSpecificData.body.map(section => {
-              return (
-                <div key={section._key}>
-                  {section.children.map(child => {
-                    return <p key={child._key}>{child.text}</p>
-                  })}
-                </div>
-              )
-            })}
-          </>
+        <div className="lifeActivities">
+          <h1 className="LifeContentTitle">
+            {lifeData.activity
+              ? lifeData.activity + ": " + lifeData.title
+              : lifeData.title}
+          </h1>
+          <LifeContentWritingLogos />
+          {lifeData.body.map(section => {
+            return (
+              <div key={section._key}>
+                {section.children.map(child => {
+                  return (
+                    <p className="projText" key={child._key}>
+                      {child.text}
+                    </p>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </div>
+        {page < pageSize - 1 && (
+          <FcNext
+            className="life-right-arrow"
+            onClick={() => setPage(page + 1)}
+          />
         )}
       </div>
-      {page < pageSize - 1 && (
-        <FcNext
-          className="life-right-arrow"
-          onClick={() => setPage(page + 1)}
-        />
-      )}
+
+      {/* </div> */}
     </section>
   )
 }

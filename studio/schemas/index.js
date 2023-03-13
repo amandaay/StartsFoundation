@@ -8,7 +8,6 @@ import excerptText from './objects/excerptText'
 import blogs from './documents/blogs'
 import gallery from './documents/gallery'
 import news from './documents/news'
-import projectsLifeCOVID from './documents/projectsLifeCOVID'
 import projectsLife from './documents/projectsLife'
 import projectsCanvas from './documents/projectsCanvas'
 import projectsSmile from './documents/projectsSmile'
@@ -20,7 +19,6 @@ export const schemaTypes = [
   blogs,
   gallery,
   news,
-  projectsLifeCOVID,
   projectsLife,
   projectsCanvas,
   projectsSmile,

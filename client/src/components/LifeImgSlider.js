@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import "../styles/ImgSlider.css"
 import { LifeImgData } from "./LifeImgData"
 import { FcPrevious, FcNext } from "react-icons/fc"
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import PropTypes from "prop-types"
 
 /**

@@ -1,6 +1,6 @@
 .ProjectMainDiv {
     /* background-color: #1b75bb; */
-    background-color: white;
+    /* background-color: white; */
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -44,7 +44,7 @@
 
 .ProjectMidContainer {
   /* background-color: #1b75bb; */
-  background-color: #b3cee5;
+  /* background-color: #b3cee5; */
   align-items: center;
   justify-content: center;
   padding: 1em 1em 1em 1em;
