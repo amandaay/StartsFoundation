@@ -48,15 +48,6 @@ function LifeContentWriting() {
     }
   `)
 
-  //   const [covidPage, setCovidPage] = useState(0)
-  //   const covidPageSize = data.allSanityAidForLivingLifeCovid.totalCount
-  //   const covidData = data.allSanityAidForLivingLifeCovid.nodes[covidPage]
-
-  //   const [nonSpecificPage, setNonSpecificPage] = useState(0)
-  //   const nonSpecificPageSize = data.allSanityAidForLivingLifeOthers.totalCount
-  //   const nonSpecificData =
-  //     data.allSanityAidForLivingLifeOthers.nodes[nonSpecificPage]
-
   const [page, setPage] = useState(0)
   const covidPageSize = data.allSanityAidForLivingLifeCovid.totalCount
   const nonSpecificPageSize = data.allSanityAidForLivingLifeOthers.totalCount
@@ -68,12 +59,6 @@ function LifeContentWriting() {
   return (
     <section>
       <div className="LifeActivities">
-        {/* {covidPage > 0 && (
-          <FcPrevious
-            className="life-left-arrow"
-            onClick={() => setCovidPage(covidPage - 1)}
-          />
-        )} */}
         {page > 0 && (
           <FcPrevious
             className="life-left-arrow"
@@ -111,7 +96,6 @@ function LifeContentWriting() {
           </>
         )}
       </div>
-
       {page < pageSize - 1 && (
         <FcNext
           className="life-right-arrow"

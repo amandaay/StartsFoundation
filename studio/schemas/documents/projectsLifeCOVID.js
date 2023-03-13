@@ -1,8 +1,8 @@
 import {RiHammerLine} from 'react-icons/ri'
-import {format} from 'date-fns'
+// import {format} from 'date-fns'
 
 export default {
-  title: 'Projects: AidForLivingLife, COVID RELIEF',
+  title: 'Projects: AidForLivingLife (COVID RELIEF specific)',
   name: 'AidForLivingLifeCOVID',
   type: 'document',
   icon: RiHammerLine,
@@ -24,25 +24,25 @@ export default {
       name: 'date',
       type: 'datetime',
     },
-    {
-      title: 'Cover Image',
-      name: 'coverImage',
-      type: 'customImage',
-    },
+    // {
+    //   title: 'Cover Image',
+    //   name: 'coverImage',
+    //   type: 'customImage',
+    // },
     {title: 'Project Content', name: 'body', type: 'bodyText'},
   ],
-  preview: {
-    select: {
-      image: 'coverImage',
-      title: 'title',
-      date: 'date',
-    },
-    prepare({image, title, date}) {
-      return {
-        title,
-        media: image,
-        subtitle: date ? format(new Date(date), 'p, MM/dd/yyyy') : '',
-      }
-    },
-  },
+  // preview: {
+  //   select: {
+  //     image: 'coverImage',
+  //     title: 'title',
+  //     date: 'date',
+  //   },
+  //   prepare({image, title, date}) {
+  //     return {
+  //       title,
+  //       media: image,
+  //       subtitle: date ? format(new Date(date), 'p, MM/dd/yyyy') : '',
+  //     }
+  //   },
+  // },
 }
