@@ -1,5 +1,6 @@
 .ProjectMainDiv {
-    background-color: #1b75bb;
+    /* background-color: #1b75bb; */
+    background-color: white;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -7,12 +8,14 @@
   }
   
   .ProjectHeader {
-    color: white;
+    color: #1b75bb;
     font-size: 2rem;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-thickness: 0.18rem;
     padding-bottom: 3%;
+    padding-top: 0.8em;
+    text-align: center;
   }
   
   .quote {
@@ -34,13 +37,16 @@
   
   .ProjectKeyPointsContent {
       font-weight: 500;
-      color: white;
+      color: black;
       line-height: 2;
       font-size: 1.05rem;
   }
 
 .ProjectMidContainer {
-  background-color: #1b75bb;
+  /* background-color: #1b75bb; */
+  background-color: #b3cee5;
   align-items: center;
   justify-content: center;
+  padding: 1em 1em 1em 1em;
+  margin: 3em 4em 3em 4em;
 }

@@ -169,11 +169,11 @@ exports.createPages = async ({ graphql, actions }) => {
           _rawBody
         }
       }
-    }
+      
   `)
   if (result.errors) throw result.errors
   const newsPost = result.data.allSanityNews.nodes
-
+  
   //single news post pages
   newsPost.forEach(post => {
     createPage({
@@ -182,4 +182,6 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { id: post._id },
     })
   })
+
+  
 }
