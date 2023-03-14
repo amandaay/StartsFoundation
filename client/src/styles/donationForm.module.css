@@ -80,7 +80,7 @@
 .submitForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 15px;
+  padding: 10px;
   margin: 15px;
 }
 
@@ -186,7 +186,7 @@
 
 .back {
   cursor: pointer;
-  align-self: center;
+  align-self:flex-start;
   margin: auto 30px;
 }
 
