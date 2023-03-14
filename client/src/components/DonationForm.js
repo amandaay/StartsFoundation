@@ -185,7 +185,7 @@ export default function DonationForm() {
                 </div>
                 <div className={styles.form}>
                     {(((onetimeAmountSelected===3 && !donateMonthly)||(monthlyAmountSelected===3 && donateMonthly))&&!donateClicked)&&renderedOtherAmount}
-                    {showFormDetails?<DonateButton disabled={disabled} value={donatedAmount} donateMonthly={donateMonthly} userInfo={userInfo}/>:<button onClick={onDonateClick} className={styles.btn}>Donate Now</button>}
+                    {showFormDetails?<DonateButton disabled={disabled} value={donatedAmount} donateMonthly={donateMonthly} userInfo={userInfo} subscribed={checked}/>:<button onClick={onDonateClick} className={styles.btn}>Donate Now</button>}
                 </div>
             </div>
         </section>
