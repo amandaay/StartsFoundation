@@ -4,6 +4,8 @@
 //  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
 //  */
 
+const { graphql } = require("gatsby")
+
 // /**
 //  * @type {import('gatsby').GatsbyNode['createPages']}
 //  */
@@ -129,6 +131,63 @@ const newsResults = `
  * END OF CREATE PAGINATION METHOD SECTION-----------
  */
 
+// createBlogsPages Section
+const blogsQuery = `
+    {
+      allSanityBlog(sort: { _createdAt: DESC }) {
+        nodes {
+          _id
+          title
+          _createdAt(formatString: "MMM Do, YYYY")
+          author
+          coverImage {
+            asset {
+              gatsbyImageData
+            }
+            alt
+          }
+          excerpt {
+            children {
+              text
+            }
+          }
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `
+
+const createBlogsPages = async (blogs, createPage) => {
+  const pageCount = Math.ceil(blogs.length / pageSize)
+  console.log(blogs)
+  return Array.from({ length: pageCount }).map((_, index) =>
+    createPage({
+      path: `/Blogs/page=${index + 1}`,
+      component: require.resolve(`./src/templates/blogs-posts.js`),
+      context: {
+        skip: index * pageSize,
+        limit: pageSize,
+        pageCount,
+        currentPage: index + 1,
+      },
+    })
+  )
+}
+
+const createBlogPosts = async (blogs, createPage) => {
+  return blogs.forEach((blog) => {
+    createPage({
+      path: `/Blogs/${blog.slug.current}`,
+      component: require.resolve(`./src/templates/single-blog.js`),
+      context: {
+        id: blog._id,
+      },
+    })
+  })
+}
+
 /**
  * Create Pages function
  * @param {function} Gatsby methods
@@ -173,7 +232,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   if (result.errors) throw result.errors
   const newsPost = result.data.allSanityNews.nodes
-  
+
   //single news post pages
   newsPost.forEach(post => {
     createPage({
@@ -183,5 +242,10 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  
+
+  const blogsResult = await graphql(blogsQuery)
+  if (blogsResult.errors) throw blogsResult.errors
+  const blogs = blogsResult.data.allSanityBlog.nodes
+  createBlogsPages(blogs, createPage)
+  createBlogPosts(blogs, createPage)
 }
