@@ -4,8 +4,6 @@
 //  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
 //  */
 
-const { graphql } = require("gatsby")
-
 // /**
 //  * @type {import('gatsby').GatsbyNode['createPages']}
 //  */
@@ -128,7 +126,7 @@ const newsResults = `
   }
 `
 /**
- * END OF CREATE PAGINATION METHOD SECTION-----------
+ * END OF PAGINATION -----------
  */
 
 // createBlogsPages Section
@@ -161,7 +159,6 @@ const blogsQuery = `
 
 const createBlogsPages = async (blogs, createPage) => {
   const pageCount = Math.ceil(blogs.length / pageSize)
-  console.log(blogs)
   return Array.from({ length: pageCount }).map((_, index) =>
     createPage({
       path: `/Blogs/page=${index + 1}`,
@@ -228,7 +225,7 @@ exports.createPages = async ({ graphql, actions }) => {
           _rawBody
         }
       }
-      
+    }
   `)
   if (result.errors) throw result.errors
   const newsPost = result.data.allSanityNews.nodes
@@ -241,7 +238,6 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { id: post._id },
     })
   })
-
 
   const blogsResult = await graphql(blogsQuery)
   if (blogsResult.errors) throw blogsResult.errors
