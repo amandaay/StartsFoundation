@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 
 /**
  *
+ *
  * @param {slides} slides taken from the canvas image data
  * @returns image slider of the Canvas component in the top container
  * ref: https://www.youtube.com/watch?v=l1MYfu5YWHc

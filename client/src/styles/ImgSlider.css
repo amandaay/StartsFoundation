@@ -1,14 +1,14 @@
 .ImgSlider {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .SliderImg {
-    width: 600px;
-    height: 500px;
-    border-radius: 10px;
+  width: 600px;
+  height: 500px;
+  border-radius: 10px;
 }
 
 .right-arrow {
@@ -32,12 +32,12 @@
 }
 
 .slide {
-    opacity: 0;
-    transition-duration: 1s ease;
+  opacity: 0;
+  transition-duration: 1s ease;
 }
 
 .slide.active {
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.00);
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1);
 }

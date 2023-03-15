@@ -126,7 +126,7 @@ const newsResults = `
   }
 `
 /**
- * END OF PAGINATION -----------
+ * END OF CREATE PAGINATION METHOD SECTION-----------
  */
 
 /**
