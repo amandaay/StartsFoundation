@@ -1,8 +1,8 @@
 .BlogsMainDiv {
   background-color: #1b75bb;
   width: 100vw;
-  height: 105vh;
-  padding-bottom: 5%;
+  /* height: 105vh; */
+  padding-bottom: 10%;
 }
 
 .containerCause {
