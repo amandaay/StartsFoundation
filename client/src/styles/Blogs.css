@@ -1,40 +1,25 @@
-.containerCause {
-  padding-top: 7%;
+.blogsContainer {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
 }
 
-.blogTitle {
-  font-size: 2rem;
-  /* text-decoration: underline;
-    text-underline-offset: 1rem; */
-  text-decoration-thickness: 0.18rem;
-  color: rgb(255, 255, 255);
-  padding-bottom: 5%;
-  text-align: center;
+.blogsRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
 }
 
-.imgs {
-  width: 100%;
-  object-fit: cover;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  cursor: pointer;
+.blogsHeader {
+    text-align: center;
+    color: rgb(60, 59, 59);
 }
 
-.leftBlogHeight {
-  height: 21rem;
+.imgHeight {
+    width: 100%;
+    height: 10rem;
 }
 
-.leftContextHeight {
-  height: 10rem;
-}
-
-.rightBlogHeight {
-  height: 10rem;
-}
-
-.rightContextHeight {
-  height: 5rem;
-}
-
-.bottomRounded {
-  border-radius: 0 0 3rem 3rem;
+.contextHeight {
+    height: 10rem;
+    /* height: 100%; */
 }
