@@ -1,9 +1,8 @@
-import React from "react";
-import "../../styles/Projects.css";
+import React from "react"
+import "../../styles/Projects.css"
 import Layout from "../../components/Layout"
-import SmileImgSlider from "../../components/SmileImgSlider";
-import { SmileImgData } from "../../components/SmileImgData";
-
+import SmileImgSlider from "../../components/SmileImgSlider"
+import { SmileImgData } from "../../components/SmileImgData"
 
 /**
  * /Projects/AWaitingSmile page
@@ -13,7 +12,6 @@ function AWaitingSmile() {
   return (
     <Layout>
       <div className="ProjectMainDiv">
-        
         <div className="ProjectContent">
           <div className="ProjectTopContainer">
             <div className="ProjectImgSlider">
@@ -22,8 +20,10 @@ function AWaitingSmile() {
             <div className="ProjectKeyPoints">
               <h1 className="ProjectHeader">A Waiting Smile</h1>
               <p className="ProjectKeyPointsContent">
-              <q className="quote">Spreading smiles through an opportunity for learning and
-                discovering creativity</q>
+                <q className="quote">
+                  Spreading smiles through an opportunity for learning and
+                  discovering creativity
+                </q>
                 <br />
                 Starting Year- 2020 The education system in Nepal is still in
                 the phase of improvement and growth. Currently, this sector has
@@ -48,9 +48,9 @@ function AWaitingSmile() {
           </div>
         </div>
       </div>
-      </Layout>
-  );
+    </Layout>
+  )
 }
 
-AWaitingSmile.propTypes = {};
-export default AWaitingSmile;
+AWaitingSmile.propTypes = {}
+export default AWaitingSmile
