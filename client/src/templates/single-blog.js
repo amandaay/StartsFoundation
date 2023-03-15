@@ -7,16 +7,16 @@ import PortableTextComponent from "../components/PortableText"
 export const postQuery = graphql`
   query singleNewsQuery($id: String!) {
     sanityBlog(_id: { eq: $id }) {
-        title
-        _createdAt(formatString: "MMM Do, YYYY")
-        author
-        coverImage {
-          asset {
-            gatsbyImageData
-          }
-          alt
+      title
+      _createdAt(formatString: "MMM Do, YYYY")
+      author
+      coverImage {
+        asset {
+          gatsbyImageData
         }
-        _rawBody
+        alt
+      }
+      _rawBody
     }
   }
 `
@@ -32,7 +32,10 @@ function SingleBlog({ data }) {
         <PortableTextComponent value={_rawBody} />
       </article>
       <span>
-        <GatsbyImage image={coverImage.asset.gatsbyImageData} alt={coverImage.alt} />
+        <GatsbyImage
+          image={coverImage.asset.gatsbyImageData}
+          alt={coverImage.alt}
+        />
       </span>
     </div>
   )

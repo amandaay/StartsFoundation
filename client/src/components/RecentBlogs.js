@@ -35,7 +35,7 @@ function RecentBlogs() {
   `)
   const blogs = data.allSanityBlog.nodes
   console.log(blogs)
-  const createRightBlog = (blogs) => {
+  const createRightBlog = blogs => {
     let length = blogs.length > 5 ? 5 : blogs.length
     const rightBlogs = []
     for (let i = 1; i < length; i++) {
@@ -64,11 +64,7 @@ function RecentBlogs() {
             show
           />
           <div className="col-8">
-            <div className="row gy-4">
-              {
-                createRightBlog(blogs ?? [])
-              }
-            </div>
+            <div className="row gy-4">{createRightBlog(blogs ?? [])}</div>
           </div>
           <div className="row newsRow">
             <span className="moreNews">
@@ -108,18 +104,17 @@ export function Blog(props) {
             {IoPersonOutline()} Blog by {blog.author}
           </h6>
 
-          {
-            props.show ?
-              <div>
-                <div className="w-100 mt-3 border-bottom"></div>
-                <div className={`mt-3 fst-italic text-secondary overflow-hidden`}>
-                  {blog.excerpt[0].children[0].text}
-                </div>
+          {props.show ? (
+            <div>
+              <div className="w-100 mt-3 border-bottom"></div>
+              <div className={`mt-3 fst-italic text-secondary overflow-hidden`}>
+                {blog.excerpt[0].children[0].text}
               </div>
-              : <div></div>
-          }
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
-
       </div>
     </div>
   )

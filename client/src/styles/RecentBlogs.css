@@ -26,12 +26,10 @@
   cursor: pointer; */
 }
 
-
 .leftContextHeight {
   height: 19.5rem;
   /* height: 100%; */
 }
-
 
 .rightContextHeight {
   height: 8rem;
@@ -68,9 +66,7 @@
   right: 0;
 }
 
-
 .blogsTitle {
   font-size: 1.2rem;
   font-weight: 600;
-
 }

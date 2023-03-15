@@ -28,17 +28,17 @@ router.patch("/", async (req, res) => {
   let collection = await db.collection("users");
   let query = { email: req.body.email };
   let user = await collection.findOne(query);
-  if(user){
+  if (user) {
     const updates = {
       $push: {
         lastName: req.body.lastName,
-        firstName: req.body.firstName, 
-        phoneNumber: req.body.phoneNumber
+        firstName: req.body.firstName,
+        phoneNumber: req.body.phoneNumber,
       },
     };
     let result = await collection.updateOne(query, updates);
     res.send(result).status(200);
-  }else{
+  } else {
     let newDocument = req.body;
     newDocument.date = new Date();
     let result = await collection.insertOne(newDocument);
