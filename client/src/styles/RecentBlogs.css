@@ -1,0 +1,76 @@
+.BlogsMainDiv {
+  background-color: #1b75bb;
+  width: 100vw;
+  height: 105vh;
+  padding-bottom: 5%;
+}
+
+.containerCause {
+  padding-top: 7%;
+}
+
+.blogTitle {
+  font-size: 2rem;
+  /* text-decoration: underline;
+    text-underline-offset: 1rem; */
+  text-decoration-thickness: 0.18rem;
+  color: rgb(255, 255, 255);
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.imgs {
+  width: 100%;
+  object-fit: contain;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer; */
+}
+
+
+.leftContextHeight {
+  height: 19.5rem;
+  /* height: 100%; */
+}
+
+
+.rightContextHeight {
+  height: 8rem;
+  /* height: 100%; */
+}
+
+.leftImgHeight {
+  width: 100%;
+  height: 18rem;
+}
+
+.rightImgHeight {
+  width: 100%;
+  height: 10rem;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.titleFont {
+  font-size: 1.3rem;
+  color: rgb(60, 59, 59);
+  text-decoration: none;
+}
+
+.moreBlogsp {
+  white-space: nowrap;
+  color: #c6c5c5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 1.2rem;
+  position: fixed;
+  right: 0;
+}
+
+
+.blogsTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+
+}
