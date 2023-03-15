@@ -20,7 +20,7 @@ const write = async ({ userInfo, subscribed }) => {
   }).then(resp => resp.json())
 }
 
-const update = async ( userInfo ) => {
+const update = async userInfo => {
   await fetch(`${url}/`, {
     method: "PATCH",
     headers: {
@@ -30,7 +30,7 @@ const update = async ( userInfo ) => {
       firstName: userInfo.firstName,
       lastName: userInfo.lastName,
       email: userInfo.email,
-      phoneNumber: userInfo.phoneNumber
+      phoneNumber: userInfo.phoneNumber,
     }),
   }).then(resp => resp.json())
 }

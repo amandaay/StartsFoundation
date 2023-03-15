@@ -57,17 +57,15 @@ export function Testimonials() {
           itemClass="px-3 h-auto"
           containerClass="react-multi-carousel-list"
         >
-          {
-            testimonials.map((testimonial) => {
-              return (
-                <Testimonial
-                  image={testimonial.image.asset.gatsbyImageData}
-                  name={testimonial.name}
-                  body={testimonial.body}
-                />
-              )
-            })
-          }
+          {testimonials.map(testimonial => {
+            return (
+              <Testimonial
+                image={testimonial.image.asset.gatsbyImageData}
+                name={testimonial.name}
+                body={testimonial.body}
+              />
+            )
+          })}
         </Carousel>
       </div>
     </div>
@@ -80,14 +78,15 @@ function Testimonial(props) {
       <div className="bg-white testimonialHeight w-85">
         <div className="row ">
           <div className="col-4 d-flex justify-content-center">
-            <GatsbyImage
-              className="rounded-circle w-75"
-              image={props.image}
-            />
+            <GatsbyImage className="rounded-circle w-75" image={props.image} />
           </div>
           <div className="col-8 d-flex align-items-center">
             <div>
-              <div><span className="fs-5">{props.name}</span><br /><span className="text-secondary">UC Berkly</span></div>
+              <div>
+                <span className="fs-5">{props.name}</span>
+                <br />
+                <span className="text-secondary">UC Berkly</span>
+              </div>
             </div>
           </div>
           <div className="mt-3 d-flex justify-content-center">
@@ -96,7 +95,6 @@ function Testimonial(props) {
           <div className="mt-3 d-flex justify-content-center">
             <p>{props.body[0].children[0].text}</p>
           </div>
-
         </div>
       </div>
     </div>

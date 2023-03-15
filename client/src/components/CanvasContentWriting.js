@@ -12,7 +12,7 @@ import { FcPrevious, FcNext } from "react-icons/fc"
 function CanvasContentWriting() {
   const data = useStaticQuery(graphql`
     {
-      allSanityCanvas (sort: {_createdAt: DESC}){
+      allSanityCanvas(sort: { _createdAt: DESC }) {
         nodes {
           id
           title
