@@ -11,15 +11,15 @@ function About() {
     <>
       <div className="aboutMainDiv">
         <div className="container contentDiv">
-          <div className="row">
-            <div className="col first-pic-div">
+          <div className="row upper-row">
+            <div className="first-pic-div">
               <StaticImage
                 className="first-pic"
                 src="../images/about/about-1.jpg"
                 alt="Starts Foundation helping"
               />
             </div>
-            <div className="col aboutUsDiv">
+            <div className="aboutUsDiv">
               <h1 className="aboutTitle">About Us</h1>
               <p className="aboutContent">
                 Starts was initiated as a pivotal platform to embark much needed

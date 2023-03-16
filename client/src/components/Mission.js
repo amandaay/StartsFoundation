@@ -9,7 +9,7 @@ function Mission() {
     <>
       <div className="MissionDiv">
         <div className="container containerMission">
-          <div className="row align-items-center">
+          <div className="row align-items-center mission-rows">
             <div className="col row-box">
               <h1 className="missionTitle">
                 Mission
