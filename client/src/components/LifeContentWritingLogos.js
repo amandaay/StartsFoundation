@@ -23,7 +23,7 @@ function LifeContentLogos() {
       }
     }
   `)
-  const logos = logosData.allFile.nodes;
+  const logos = logosData.allFile.nodes
 
   return (
     <div className="LifeContentMainDiv">
@@ -41,7 +41,9 @@ function LifeContentLogos() {
                     height={logo.name === "Volunteer" ? 130 : logos.height}
                   />
                 </div>
-                <span className="life-logo-content-title">{logo.name.slice(2)}</span>
+                <span className="life-logo-content-title">
+                  {logo.name.slice(2)}
+                </span>
               </div>
             )
           })}
@@ -62,4 +64,4 @@ function LifeContentLogos() {
 //     })
 //   ).isRequired,
 // }
-export default LifeContentLogos;
+export default LifeContentLogos

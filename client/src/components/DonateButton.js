@@ -2,7 +2,46 @@ import React from "react"
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 import PropTypes from "prop-types"
 
-const ButtonWrapper = ({ value, donateMonthly, userInfo, disabled }) => {
+const url = "http://localhost:5050"
+
+const write = async ({ userInfo, subscribed }) => {
+  await fetch(`${url}/`, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      firstName: userInfo.firstName,
+      lastName: userInfo.lastName,
+      email: userInfo.email,
+      phoneNumber: userInfo.phoneNumber,
+      subscribed: subscribed,
+    }),
+  }).then(resp => resp.json())
+}
+
+const update = async userInfo => {
+  await fetch(`${url}/`, {
+    method: "PATCH",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      firstName: userInfo.firstName,
+      lastName: userInfo.lastName,
+      email: userInfo.email,
+      phoneNumber: userInfo.phoneNumber,
+    }),
+  }).then(resp => resp.json())
+}
+
+const ButtonWrapper = ({
+  value,
+  donateMonthly,
+  userInfo,
+  disabled,
+  subscribed,
+}) => {
   const currency = "USD"
   const style = {
     layout: "vertical",
@@ -44,12 +83,15 @@ const ButtonWrapper = ({ value, donateMonthly, userInfo, disabled }) => {
           })
           .then(orderId => {
             // Your code here after create the order
+            write({ userInfo, subscribed })
             return orderId
           })
       }}
       onApprove={function (data, actions) {
         return actions.order.capture().then(function () {
           // Your code here after capture the order
+          update(userInfo)
+          console.log(data)
         })
       }}
     />
@@ -61,9 +103,10 @@ export default function DonateButton({
   donateMonthly,
   userInfo,
   disabled,
+  subscribed,
 }) {
   return (
-    <div style={{ maxWidth: "100%" }}>
+    <div style={{ maxWidth: "100%", maxHeight: "100%" }}>
       <PayPalScriptProvider
         options={{
           "client-id":
@@ -78,6 +121,7 @@ export default function DonateButton({
           donateMonthly={donateMonthly}
           userInfo={userInfo}
           disabled={disabled}
+          subscribed={subscribed}
         />
       </PayPalScriptProvider>
     </div>
@@ -89,6 +133,7 @@ DonateButton.propTypes = {
   donateMonthly: PropTypes.bool,
   userInfo: PropTypes.object,
   disabled: PropTypes.bool,
+  subscribed: PropTypes.bool,
 }
 
 ButtonWrapper.propTypes = {
@@ -96,4 +141,5 @@ ButtonWrapper.propTypes = {
   donateMonthly: PropTypes.bool,
   userInfo: PropTypes.object,
   disabled: PropTypes.bool,
+  subscribed: PropTypes.bool,
 }

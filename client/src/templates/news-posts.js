@@ -13,7 +13,7 @@ export const newsQuery = graphql`
         slug {
           current
         }
-        title 
+        title
         date(formatString: "MMM Do, YYYY")
         image {
           alt

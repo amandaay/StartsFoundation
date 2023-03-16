@@ -8,7 +8,7 @@ import Objectives from "./Objectives"
 import OurTeam from "./OurTeam"
 import Layout from "./Layout"
 import Testimonials from "./Testimonials"
-import Blogs from "./Blogs"
+import RecentBlogs from "./RecentBlogs"
 
 export {
   Layout,
@@ -21,5 +21,5 @@ export {
   Objectives,
   OurTeam,
   Testimonials,
-  Blogs,
+  RecentBlogs,
 }

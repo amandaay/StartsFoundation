@@ -1,79 +1,79 @@
 .containerLifeContent {
-    padding-top: 1%;
-  }
-  
-  .lifeContent-row {
-    padding-top: 2vh;
-  }
-  
-  .ContentTitle {
-    font-size: 2rem;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-thickness: 0.18rem;
-    color: rgb(255, 255, 255);
-    padding-bottom: 5%;
-    padding-top: 2%;
-    text-align: center;
-  }
-  
-  .life-logo-content-title {
-    font-size: 1.5rem;
-    padding-top: 0.5em;
-    padding-bottom: 10%;
-    color: rgb(255, 255, 255);
-  }
-  
-  .life-col-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  padding-top: 1%;
+}
 
-  .circle {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-  }
+.lifeContent-row {
+  padding-top: 2vh;
+}
 
-  .life-content-logo {
-    padding: 2% 2% 2% 0%;
-    margin: auto;
-    border-radius: 50%;
-    width: 15em;
-    height: 10em;
-    justify-content: center;
-  }
+.ContentTitle {
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  color: rgb(255, 255, 255);
+  padding-bottom: 5%;
+  padding-top: 2%;
+  text-align: center;
+}
 
-  .Activities {
-    background-color: #b3cee5;
-    border-radius: 0.3em;
-  }
+.life-logo-content-title {
+  font-size: 1.5rem;
+  padding-top: 0.5em;
+  padding-bottom: 10%;
+  color: rgb(255, 255, 255);
+}
 
-  /* .projPaginate {
+.life-col-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.life-content-logo {
+  padding: 2% 2% 2% 0%;
+  margin: auto;
+  border-radius: 50%;
+  width: 15em;
+  height: 10em;
+  justify-content: center;
+}
+
+.Activities {
+  background-color: #b3cee5;
+  border-radius: 0.3em;
+}
+
+/* .projPaginate {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
   } */
 
-  .proj-content-right-arrow {
-    /* padding-right: 32px; */
-    /* position: relative; */
-    /* padding-top: 50%; */
-    font-size: 3rem;
-    cursor: pointer;
-    user-select: none;
+.proj-content-right-arrow {
+  /* padding-right: 32px; */
+  /* position: relative; */
+  /* padding-top: 50%; */
+  font-size: 3rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 .proj-content-left-arrow {
-    /* padding-left: 32px; */
-    font-size: 3rem;
-    cursor: pointer;
-    user-select: none;
+  /* padding-left: 32px; */
+  font-size: 3rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 .projText {
