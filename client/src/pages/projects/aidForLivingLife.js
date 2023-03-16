@@ -3,7 +3,6 @@ import "../../styles/Projects.css"
 import Layout from "../../components/Layout"
 import LifeImgSlider from "../../components/LifeImgSlider"
 import { LifeImgData } from "../../components/LifeImgData"
-// import LifeContentLogos from "../../components/LifeContentWritingLogos"
 import LifeContentWriting from "../../components/LifeContentWriting"
 
 /**
