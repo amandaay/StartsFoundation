@@ -11,7 +11,6 @@ export default {
       title: 'Activity',
       name: 'activity',
       type: 'string',
-      // validation: (Rule) => Rule.error('Activity cannot be empty').required(),
     },
     {
       title: 'Title',
@@ -30,25 +29,6 @@ export default {
       name: 'date',
       type: 'datetime',
     },
-    // {
-    //   title: 'Cover Image',
-    //   name: 'coverImage',
-    //   type: 'customImage',
-    // },
     {title: 'Project Content', name: 'body', type: 'bodyText'},
   ],
-  // preview: {
-  //   select: {
-  //     image: 'coverImage',
-  //     title: 'title',
-  //     date: 'date',
-  //   },
-  //   prepare({image, title, date}) {
-  //     return {
-  //       title,
-  //       media: image,
-  //       subtitle: date ? format(new Date(date), 'p, MM/dd/yyyy') : '',
-  //     }
-  //   },
-  // },
 }

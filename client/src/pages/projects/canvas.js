@@ -23,7 +23,7 @@ function Canvas() {
               <p className="ProjectKeyPointsContent">
                 <q className="quote">
                   Empowering people to repaint the colours of imagination in
-                  their lives”
+                  their lives
                 </q>
                 <br />
                 Starting Year- 2019 Life after a life threatening illness or
