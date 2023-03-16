@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import "../styles/projContentWriting.css"
-import { FcPrevious, FcNext } from "react-icons/fc"
+import ProjectPagination from "./ProjPagination"
 
 /**
  * content writing component in a waiting smile in Projects
@@ -40,17 +40,14 @@ function SmileContentWriting() {
   const [page, setPage] = useState(0)
   const pageSize = data.allSanityAWaitingSmile.totalCount
   const smileData = data.allSanityAWaitingSmile.nodes[page]
-  console.log("smileData", smileData)
+
   return (
-    <section className="">
-      {/* <div className="projPaginate"> */}
-      <div className="d-flex justify-content-between">
-        {page > 0 && (
-          <FcPrevious
-            className="proj-content-left-arrow"
-            onClick={() => setPage(page - 1)}
-          />
-        )}
+    <section className="SmileContent">
+      <ProjectPagination
+        currentPage={page}
+        totalPages={pageSize}
+        onPageChange={setPage}
+      >
         <div className="Activities">
           <h1 className="ContentTitle">{smileData.title}</h1>
           <div className="row stories-row">
@@ -78,14 +75,7 @@ function SmileContentWriting() {
             </div>
           </div>
         </div>
-        {page < pageSize - 1 && (
-          <FcNext
-            className="proj-content-right-arrow"
-            onClick={() => setPage(page + 1)}
-          />
-        )}
-      </div>
-      {/* </div> */}
+      </ProjectPagination>
     </section>
   )
 }
