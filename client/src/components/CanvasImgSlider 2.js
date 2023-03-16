@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import "../styles/ImgSlider.css"
 import { CanvasImgData } from "./CanvasImgData"
-import { FcPrevious, FcNext } from "react-icons/fc"
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa"
 import PropTypes from "prop-types"
 
 /**
- *
  *
  * @param {slides} slides taken from the canvas image data
  * @returns image slider of the Canvas component in the top container
@@ -30,8 +29,8 @@ function CanvasImgSlider({ slides }) {
 
   return (
     <section className="ImgSlider">
-      <FcPrevious className="left-arrow" onClick={prevSlide} />
-      <FcNext className="right-arrow" onClick={nextSlide} />
+      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
       {CanvasImgData.map((slide, index) => {
         return (
           <div

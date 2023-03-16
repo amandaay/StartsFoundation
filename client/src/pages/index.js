@@ -10,7 +10,7 @@ import {
   Objectives,
   OurTeam,
   Testimonials,
-  Blogs,
+  RecentBlogs,
 } from "../components/Components"
 
 /**
@@ -123,7 +123,7 @@ function Home() {
           <OurTeam />
         </section>
         <section className="sectionBlog" id="blog">
-          <Blogs />
+          <RecentBlogs />
         </section>
         <span className="scrollBtnSpan">
           <ScrollToTop />

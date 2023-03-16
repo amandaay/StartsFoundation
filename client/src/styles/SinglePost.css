@@ -1,0 +1,22 @@
+/* container */
+.postContent {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+/* image */
+.postImage {
+  width: 30vw;
+}
+
+.postTitle {
+  font-size: 2rem;
+  padding-bottom: 1%;
+}
+
+.date {
+  color: rgb(70, 70, 70);
+  padding-bottom: 1%;
+}

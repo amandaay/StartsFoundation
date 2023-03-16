@@ -1,18 +1,17 @@
 import React, { useState } from "react"
 import "../styles/ImgSlider.css"
-import { CanvasImgData } from "./CanvasImgData"
-import { FcPrevious, FcNext } from "react-icons/fc"
+import { SmileImgData } from "./SmileImgData"
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa"
 import PropTypes from "prop-types"
 
 /**
  *
- *
- * @param {slides} slides taken from the canvas image data
- * @returns image slider of the Canvas component in the top container
+ * @param {slides} slides taken from the smile image data
+ * @returns image slider of a waiting Smile in the top container
  * ref: https://www.youtube.com/watch?v=l1MYfu5YWHc
  */
 
-function CanvasImgSlider({ slides }) {
+function SmileImgSlider({ slides }) {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
@@ -30,16 +29,20 @@ function CanvasImgSlider({ slides }) {
 
   return (
     <section className="ImgSlider">
-      <FcPrevious className="left-arrow" onClick={prevSlide} />
-      <FcNext className="right-arrow" onClick={nextSlide} />
-      {CanvasImgData.map((slide, index) => {
+      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      {SmileImgData.map((slide, index) => {
         return (
           <div
             className={index === current ? "slide active" : "slide"}
             key={index}
           >
             {index === current && (
-              <img src={slide.image} alt="Canvas" className="SliderImg" />
+              <img
+                src={slide.image}
+                alt="A Waiting Smile"
+                className="SliderImg"
+              />
             )}
           </div>
         )
@@ -48,12 +51,9 @@ function CanvasImgSlider({ slides }) {
   )
 }
 
-CanvasImgSlider.propTypes = {
+SmileImgSlider.propTypes = {
   slides: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-    })
-  ),
+    PropTypes.shape({ image: PropTypes.string.isRequired })
+  ).isRequired,
 }
-
-export default CanvasImgSlider
+export default SmileImgSlider
