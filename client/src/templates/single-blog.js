@@ -3,6 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import PropTypes from "prop-types"
 import PortableTextComponent from "../components/PortableText"
+import Layout from "../components/Layout"
 
 export const postQuery = graphql`
   query singleNewsQuery($id: String!) {
@@ -24,20 +25,22 @@ function SingleBlog({ data }) {
   const { title, date, author, coverImage, _rawBody } = data.sanityBlog
   console.log("data", data)
   return (
-    <div className="container">
-      <h1>{title}</h1>
-      <p>{date}</p>
-      <p>{author}</p>
-      <article>
-        <PortableTextComponent value={_rawBody} />
-      </article>
-      <span>
-        <GatsbyImage
-          image={coverImage.asset.gatsbyImageData}
-          alt={coverImage.alt}
-        />
-      </span>
-    </div>
+    <Layout>
+      <div className="blogsContainer">
+        <h1>{title}</h1>
+        <p>{date}</p>
+        <p>{author}</p>
+        <article>
+          <PortableTextComponent value={_rawBody} />
+        </article>
+        <span>
+          <GatsbyImage
+            image={coverImage.asset.gatsbyImageData}
+            alt={coverImage.alt}
+          />
+        </span>
+      </div>
+    </Layout>
   )
 }
 

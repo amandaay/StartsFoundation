@@ -15,7 +15,7 @@ export function OurTeam() {
       </div>
 
       <div className="d-flex justify-content-center">
-        <div className="row gx-5 mt-4 p-4 w-75 scroll">
+        <div className="row gx-5 mt-4 p-4 w-75 ourTeamScrollbar">
           <div className="col-6 d-flex justify-content-center">
             <PersonalInfo
               image="../images/about/about-2.jpg"
