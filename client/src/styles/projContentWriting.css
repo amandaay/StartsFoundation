@@ -12,7 +12,7 @@
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.18rem;
   color: rgb(255, 255, 255);
-  padding-bottom: 5%;
+  padding-bottom: 2.5%;
   padding-top: 2%;
   text-align: center;
 }
@@ -70,10 +70,12 @@
 
 .col.stories-col-div {
   margin: auto;
-  text-align: center;
+  text-align: left;
+  justify-content: center;
 }
 
 .row.stories-row {
   display: flex;
   justify-content: center;
+  margin: auto;
 }

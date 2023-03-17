@@ -1,5 +1,4 @@
 import React from "react"
-// import { graphql } from "gatsby"
 import "../../styles/Projects.css"
 import Layout from "../../components/Layout"
 import LifeImgSlider from "../../components/LifeImgSlider"
@@ -51,33 +50,35 @@ function AidForLivingLife() {
 }
 
 AidForLivingLife.propTypes = {}
-// export const query = graphql`
-//   query aidForLivingLifeQuery {
-//     allSanityProjectGenericDescription(
-//       sort: { date: DESC }
-//       filter: { project: { eq: "aid-for-living-life" } }
-//       limit: 1
-//     ) {
-//       nodes {
-//         _id
-//         project
-//         slug {
-//           current
-//         }
-//         body {
-//           children {
-//             text
-//           }
-//         }
-//         imagesGallery {
-//           _key
-//           asset {
-//             gatsbyImageData(placeholder: BLURRED, fit: FILLMAX)
-//             altText
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+{
+  /* export const query = graphql`
+  query {
+    allSanityProjectGenericDescription(
+      sort: { date: DESC }
+      filter: { project: { eq: "aid-for-living-life" } }
+      limit: 1
+    ) {
+      nodes {
+        _id
+        project
+        slug {
+          current
+        }
+        body {
+          children {
+            text
+          }
+        }
+        imagesGallery {
+          _key
+          asset {
+            gatsbyImageData(placeholder: BLURRED, fit: FILLMAX)
+            altText
+          }
+        }
+      }
+    }
+  }
+` */
+}
 export default AidForLivingLife
