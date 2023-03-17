@@ -52,18 +52,6 @@
   border-radius: 0.5em;
 }
 
-.proj-content-right-arrow {
-  font-size: 12rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.proj-content-left-arrow {
-  font-size: 12rem;
-  cursor: pointer;
-  user-select: none;
-}
-
 .projText {
   padding: 0.5em 1.5em 0.5em 1.5em;
 }
