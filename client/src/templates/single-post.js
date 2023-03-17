@@ -40,7 +40,7 @@ function SinglePost({ data }) {
             image={image.asset.gatsbyImageData}
             alt={image.alt}
           />
-          <p>{caption}</p>
+          <p className="post-caption">{caption}</p>
         </span>
       </div>
     </Layout>

@@ -26,7 +26,6 @@ export const newsQuery = graphql`
     }
   }
 `
-console.log("DATA", newsQuery)
 
 function NewsPosts({ data, pageContext }) {
   useEffect(() => {
@@ -37,7 +36,6 @@ function NewsPosts({ data, pageContext }) {
     }
     onTop()
   }, [])
-  console.log("News Posts TEMPLATE CONTEXT", data)
 
   const news = data.allSanityNews.nodes
 
@@ -66,11 +64,15 @@ function NewsPosts({ data, pageContext }) {
             </div>
           ))}
         </div>
-        <Pagination
-          currentPage={pageContext.currentPage}
-          pageCount={pageContext.pageCount}
-          base={"News"}
-        />
+        <div className="paginationDiv">
+          {pageContext.pageCount > 1 && (
+            <Pagination
+              currentPage={pageContext.currentPage}
+              pageCount={pageContext.pageCount}
+              base={"News"}
+            />
+          )}
+        </div>
       </div>
     </Layout>
   )
@@ -78,6 +80,7 @@ function NewsPosts({ data, pageContext }) {
 
 NewsPosts.propTypes = {
   data: PropTypes.object,
+  pageContext: PropTypes.object,
 }
 
 export default NewsPosts

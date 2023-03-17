@@ -5,14 +5,7 @@ import "../styles/Pagination.css"
 
 export const Pagination = ({ currentPage, pageCount, base }) => (
   <div className="pagination">
-    {/* {currentPage > 1 ? (
-      // <Link title="Go to previous page" to={`/page/${currentPage - 1}`}>
-      <Link title="Go to previous page" to={`/${base}/page=${currentPage - 1}`}>
-        ← Newer posts
-      </Link>
-    ) :
-      <span />
-    } */}
+    
     {
       <Link className={`${currentPage > 1 ? "visible" : "invisible"}`} title="Go to previous page" to={`/${base}/page=${currentPage - 1}`}>
         ← Newer posts
