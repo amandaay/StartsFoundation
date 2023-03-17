@@ -16,9 +16,19 @@
     font-weight: bold;
 }
 
+.section{
+    min-height: 200vh;
+    padding-top:10%;
+    padding-left: 25%;
+    background-color: #1b75bb;
+    border-bottom: 1px solid #fff;
+}
+
+
 .sections{
     display: flex;
     flex-direction: column;
+
 }
 
 .subSection{
