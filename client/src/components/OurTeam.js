@@ -10,7 +10,8 @@ export function OurTeam() {
       <div className="mt-3 text-center text-white fs-5">
         Meet the exceptional hands behind thefoundation of STARTS.
         <br />
-        The joint effort of everyone involved to start a change finally makes the change.
+        The joint effort of everyone involved to start a change finally makes
+        the change.
       </div>
 
       <div className="d-flex justify-content-center">

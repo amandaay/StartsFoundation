@@ -17,11 +17,13 @@ function Footer() {
                 alt="starts foundation logo"
               />
             </div>
-            <i className="footerText">
-              Starts Foundation is a pivotal platform for people to start and
-              take action for meaningful, socio-economic change and upliftment
-              of individuals in the Nepali society
-            </i>
+            <div className="footerTextDiv">
+              <i className="footerText">
+                Starts Foundation is a pivotal platform for people to start and
+                take action for meaningful, socio-economic change and upliftment
+                of individuals in the Nepali society
+              </i>
+            </div>
           </div>
           {/* second footer division */}
           <div className="footer2">

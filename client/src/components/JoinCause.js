@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 function JoinCause() {
   return (
-    <div className="aboutMainDiv">
+    <div className="joinDiv">
       <div className="container containerCause">
         <h1 className="joinCauseTitle">Join the Cause</h1>
         <div className="row join-row">

@@ -1,0 +1,42 @@
+.proj-top-container {
+  margin: 2rem;
+}
+
+.ProjectHeader {
+  color: #1b75bb;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  padding-bottom: 3%;
+  padding-top: 0.8em;
+  text-align: center;
+}
+
+.row.proj-top-row {
+  display: flex;
+}
+
+.col.proj-top-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col.proj-top-right {
+  font-weight: 500;
+  color: black;
+  line-height: 2;
+  font-size: 1.05rem;
+  margin: auto;
+  padding: 0em 3em 3em 3em;
+}
+
+.projImg {
+  justify-content: center;
+  border-radius: 10%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

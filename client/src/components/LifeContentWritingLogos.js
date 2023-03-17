@@ -17,7 +17,7 @@ function LifeContentLogos() {
           id
           name
           childImageSharp {
-            gatsbyImageData(height: 100, width: 70)
+            gatsbyImageData
           }
         }
       }
@@ -32,13 +32,11 @@ function LifeContentLogos() {
           {logos.map(logo => {
             return (
               <div key={logo.id} className="col life-col-div">
-                <div className="circle">
+                <div className="life-circle">
                   <GatsbyImage
                     alt={logo.name.slice(2)}
                     image={logo.childImageSharp.gatsbyImageData}
                     className="life-content-logo"
-                    width={logos.width}
-                    height={logo.name === "Volunteer" ? 130 : logos.height}
                   />
                 </div>
                 <span className="life-logo-content-title">
@@ -53,15 +51,4 @@ function LifeContentLogos() {
   )
 }
 
-// LifeContent.propTypes = {
-//   logos: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       title: PropTypes.string.isRequired,
-//       src: PropTypes.string.isRequired,
-//       width: PropTypes.number.isRequired,
-//       height: PropTypes.number.isRequired,
-//     })
-//   ).isRequired,
-// }
 export default LifeContentLogos

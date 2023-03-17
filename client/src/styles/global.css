@@ -216,12 +216,13 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
   align-items: center;
-  padding-left: 7%;
-  padding-right: 7%;
 }
 
+.footerTextDiv {
+  width: 80%;
+}
 .footer {
-  background-color: #1b75bb;
+  background-color: #1968a5;
   color: white;
   min-height: 40vh;
   max-height: 100%;
@@ -239,7 +240,7 @@ img {
   flex-direction: column;
   align-items: center;
   height: 35vh;
-  padding-top: 3vh;
+  padding-top: 6vh;
 }
 
 .footerText {

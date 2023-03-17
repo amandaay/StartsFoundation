@@ -40,11 +40,14 @@ function RecentNews() {
 
             return (
               <div className="col" key={item._id}>
-                <GatsbyImage
-                  className="imgs"
-                  image={item.image.asset.gatsbyImageData}
-                  alt={item.image.alt}
-                />
+                <Link to={`/News/${item.slug.current}`}>
+                  <GatsbyImage
+                    className="imgs"
+                    image={item.image.asset.gatsbyImageData}
+                    alt={item.image.alt}
+                  />
+                </Link>
+
                 <div className="caption-div">
                   <div className="date-div">
                     <div className="day-div">{dateStringSplit[1]}</div>
@@ -67,8 +70,6 @@ function RecentNews() {
           </span>
         </div>
       </div>
-
-      <hr className="hrNews" />
     </div>
   )
 }

@@ -194,76 +194,15 @@ function Navbar(props) {
                   </ul>
                 </span>
               </li>
-              {/* <li className="nav-item">
-                <span className="dropdown">
-                  <span
-                    className="nav-link dropdown-toggle"
-                    role="button"
-                 
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    onClick={() => {
-                      window.location.pathname === "/"
-                        ? props.scrollToSection(props.about)
-                        : navigate("/#projects")
-                    }}
-                  >
-                  Projects</span>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="dropdownMenuLink"
-                  >
-                    <li onClick={() => showMenu()}>
-                      <span
-                        className="dropdown-item"
-                        onClick={() => {
-                          window.location.pathname === "/"
-                            ? props.scrollToSection(props.news)
-                            : navigate("/#aid-for-living-life")
-                        }}
-                      >
-                        Aid for Living Life
-                      </span>
-                    </li>
-                    <li onClick={() => showMenu()}>
-                      <span
-                        className="dropdown-item"
-                        onClick={() => {
-                          window.location.pathname === "/"
-                            ? props.scrollToSection(props.join)
-                            : navigate("/#canvas")
-                        }}
-                      >
-                        Canvas
-                      </span>
-                </li>
-                <li onClick={() => showMenu()}>
-                      <span
-                        className="dropdown-item"
-                        onClick={() => {
-                          window.location.pathname === "/"
-                            ? props.scrollToSection(props.join)
-                            : navigate("/#a-waiting-smile")
-                        }}
-                      >
-                        A waiting Smile
-                      </span>
-                </li>
-                </ul>
-                </span>
-              </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/media">
-                  Media
-                </Link>
-              </li> */}
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link" to="/Contact">
                   Contact Us
                 </Link>
               </li>
               <li className="joinClass">
-                <button className="joinBtn">Join Us</button>
+                <Link to="/JoinUs">
+                  <button className="joinBtn">Join Us</button>
+                </Link>
               </li>
               <li className="donateClass">
                 <Link to="/donation">

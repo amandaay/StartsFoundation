@@ -13,12 +13,14 @@ import projectsCanvas from './documents/projectsCanvas'
 import projectsSmile from './documents/projectsSmile'
 import teams from './documents/teams'
 import testimonials from './documents/testimonials'
+import projectsDescription from './documents/projectsDescription'
 
 export const schemaTypes = [
   //document schemas
   blogs,
   gallery,
   news,
+  projectsDescription,
   projectsLife,
   projectsCanvas,
   projectsSmile,

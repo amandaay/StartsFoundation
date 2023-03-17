@@ -1,6 +1,6 @@
 .containerMission {
   padding-top: 2%;
-  height: 50vh;
+  /* height: 50vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -9,6 +9,7 @@
 
 .MissionDiv {
   background-color: #f7feff;
+  height: 50vh;
 }
 .missionTitle,
 .visionTitle,
@@ -38,13 +39,13 @@
 }
 
 .left-quote-icon {
-  transform: translateX(-2.2vw);
+  transform: translateX(-2.2rem);
   color: rgb(2, 77, 147);
   opacity: 0.5;
 }
 
 .right-quote-icon {
-  transform: translateX(19vw);
+  transform: translateX(18rem);
   color: rgb(2, 77, 147);
   opacity: 0.5;
 }

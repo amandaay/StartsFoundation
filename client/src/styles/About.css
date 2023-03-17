@@ -1,29 +1,26 @@
 .aboutMainDiv {
   background-color: #1b75bb;
   width: 100vw;
-  height: 105vh;
+  height: 110vh;
 }
 
-.contentDiv {
-  transform: translateY(3vh);
-  padding-top: 5%;
+.upper-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.aboutContentDiv {
+  padding-top: 12vh;
+  height: 110vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 .first-pic {
-  min-width: 35vw;
-  height: 45vh;
+  max-height: 80%;
 }
 
-.first-pic-div {
-  min-width: 40vw;
-  height: 50vh;
-  margin-right: 1.5%;
-}
-
-.aboutUsDiv {
-  width: 40vw;
-  min-height: 40vh;
-}
 .aboutTitle {
   color: white;
   font-size: 2rem;
@@ -38,19 +35,4 @@
   font-weight: 500;
   color: white;
   line-height: 2;
-  font-size: 1.05rem;
-}
-
-.small-img {
-  width: 28vw;
-  height: 35vh;
-}
-
-.small-img-class {
-  max-width: 28vw;
-  height: 35vh;
-}
-
-.line-break-about {
-  margin-top: 5%;
 }

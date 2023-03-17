@@ -1,50 +1,15 @@
 .ProjectMainDiv {
-  /* background-color: #1b75bb; */
-  /* background-color: white; */
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.ProjectHeader {
-  color: #1b75bb;
-  font-size: 2rem;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-thickness: 0.18rem;
-  padding-bottom: 3%;
-  padding-top: 0.8em;
-  text-align: center;
-}
-
-.quote {
-  font-style: italic;
-}
-
 .ProjectContent {
   padding-top: 87px;
-  /* padding-bottom: 87px; */
-  /* margin: 2rem; */
-}
-
-.ProjectTopContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  margin: 2rem;
-}
-
-.ProjectKeyPointsContent {
-  font-weight: 500;
-  color: black;
-  line-height: 2;
-  font-size: 1.05rem;
 }
 
 .ProjectMidContainer {
-  /* background-color: #1b75bb; */
-  /* background-color: #b3cee5; */
   align-items: center;
   justify-content: center;
   padding: 1em 1em 1em 1em;
