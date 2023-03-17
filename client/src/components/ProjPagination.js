@@ -15,17 +15,21 @@ function ProjectPagination({
 }) {
   return (
     <div className="d-flex justify-content-between align-items-center">
-      {currentPage > 0 && (
+      {totalPages > 1 && (
         <FcPrevious
           className="proj-content-left-arrow"
-          onClick={() => onPageChange(currentPage - 1)}
+          onClick={() =>
+            onPageChange(currentPage === 0 ? totalPages - 1 : currentPage - 1)
+          }
         />
       )}
       {children}
-      {currentPage < totalPages - 1 && (
+      {totalPages > 1 && (
         <FcNext
           className="proj-content-right-arrow"
-          onClick={() => onPageChange(currentPage + 1)}
+          onClick={() =>
+            onPageChange(currentPage === totalPages - 1 ? 0 : currentPage + 1)
+          }
         />
       )}
     </div>
