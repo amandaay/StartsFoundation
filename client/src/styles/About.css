@@ -1,18 +1,24 @@
 .aboutMainDiv {
   background-color: #1b75bb;
   width: 100vw;
-  height: 100vh;
- 
+  height: 110vh;
 }
 
-.upper-row{
+.upper-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
-  margin-bottom: 10vh;
 }
-.contentDiv {
-  padding-top: 7%;
+
+.aboutContentDiv {
+  padding-top: 12vh;
+  height: 110vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.first-pic {
+  max-height: 80%;
 }
 
 .aboutTitle {
@@ -26,23 +32,7 @@
 }
 
 .aboutContent {
-  
   font-weight: 500;
   color: white;
   line-height: 2;
-  font-size: 1.05rem;
-}
-
-.small-img {
-  width: 28vw;
-  height: 35vh;
-}
-
-.small-img-class {
-  max-width: 28vw;
-  height: 35vh;
-}
-
-.line-break-about {
-  margin-top: 5%;
 }

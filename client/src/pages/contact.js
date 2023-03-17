@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Layout from "../components/Layout"
 import * as styles from "../styles/Contact.module.css"
+import { navigate } from "gatsby"
 
 export default function Contact() {
   const [email, setEmail] = useState("")
@@ -20,10 +21,18 @@ export default function Contact() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
-    const mailSent = await res.json()["success"]
+    const { mailSent } = await res.json()
     if (mailSent) {
       console.log("Sent Mail Successfully")
+      window.alert(
+        "Hi, Thanks for reaching out. Our team will Contact you soon through email"
+      )
+    } else {
+      window.alert(
+        "There were some issue in mail server. Our team will fix it Soon!! In the meantime, you could contact us directly through below mentioned email or phone"
+      )
     }
+    navigate("/")
   }
   return (
     <Layout>

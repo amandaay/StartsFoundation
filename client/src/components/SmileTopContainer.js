@@ -54,7 +54,9 @@ function SmileTopContainer() {
 
   return (
     <section className="proj-top-container">
-      <h1 className="ProjectHeader">Project - {project === "SMILE"? "A WAITING SMILE": project}</h1>
+      <h1 className="ProjectHeader">
+        Project - {project === "SMILE" ? "A WAITING SMILE" : project}
+      </h1>
       <div className="row proj-top-row">
         <div className="col proj-top-left">
           <ProjectPagination

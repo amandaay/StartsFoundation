@@ -1,58 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans:wght@300;400;500;600;900&family=Open+Sans:wght@300&family=PT+Sans&family=Poppins:wght@100;400&display=swap");
 
 .body {
-    position: relative;
-    color: #000000;
-    font-weight:lighter;
-    font-size: 15px;
-
+  position: relative;
+  color: #000000;
+  font-weight: lighter;
+  font-size: 15px;
 }
 
-.header{
-    text-align: center;
-    position: relative;
-    color: #1b75bb;
-    font-size: 25px;
-    font-weight: bold;
+.header {
+  text-align: center;
+  position: relative;
+  color: #1b75bb;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.sections{
-    display: flex;
-    flex-direction: column;
+.sections {
+  display: flex;
+  flex-direction: column;
 }
 
-.subSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding:2em
-
+.subSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2em;
 }
 
-.label{ color: #1b75bb;
-    text-align: center;
+.label {
+  color: #1b75bb;
+  text-align: center;
 }
-.leftSection{
-    max-width:30%;
-    display: flex;
-    flex-direction: column;
+.leftSection {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 
-.rightSection{
-    width:50%
+.rightSection {
+  width: 50%;
 }
-.button{
-    background-color:#1b75bb;
-    color:#fff ;
-    border-radius:5px;
-    border:#1b75bb;
-    min-width: 200px;
+.button {
+  background-color: #1b75bb;
+  color: #fff;
+  border-radius: 5px;
+  border: #1b75bb;
+  min-width: 200px;
 }
-.section{
-    min-width: 600px;
-    width: 100vw;
-    height: 100vh;
-    padding-top:10%;
-    background-color: #fff;
-    border-bottom: 1px solid #fff;
+.section {
+  min-width: 600px;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10%;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
 }

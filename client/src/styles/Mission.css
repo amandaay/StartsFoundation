@@ -1,6 +1,6 @@
 .containerMission {
   padding-top: 2%;
-  height: 50vh;
+  /* height: 50vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -9,6 +9,7 @@
 
 .MissionDiv {
   background-color: #f7feff;
+  height: 50vh;
 }
 .missionTitle,
 .visionTitle,

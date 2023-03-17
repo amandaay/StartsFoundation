@@ -4,7 +4,6 @@
   padding-right: 10vw; */
 }
 
-
 .recentNewsTitle {
   color: white;
   font-size: 2rem;
@@ -59,7 +58,7 @@
   color: white;
   display: flex;
   align-items: center;
-  padding-left: 2%
+  padding-left: 2%;
 }
 
 .caption:hover {
