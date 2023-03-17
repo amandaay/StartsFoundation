@@ -5,15 +5,15 @@ import "../styles/ProjTopContainer.css"
 import { HandleText, HandleImage } from "./ProjDescriptionDataProcess"
 
 /**
- * top container for Aid for living life in projects
+ * top container for Canvas in projects
  * @returns JSX for top container
  */
-function LifeTopContainer() {
+function CanvasTopContainer() {
   const data = useStaticQuery(graphql`
     query {
       allSanityProjectGenericDescription(
         sort: { date: DESC }
-        filter: { project: { eq: "aid-for-living-life" } }
+        filter: { project: { eq: "canvas" } }
         limit: 1
       ) {
         nodes {
@@ -54,9 +54,7 @@ function LifeTopContainer() {
 
   return (
     <section className="proj-top-container">
-      <h1 className="ProjectHeader">
-        Project - {project === "SMILE" ? "A WAITING SMILE" : project}
-      </h1>
+      <h1 className="ProjectHeader">Project - {project === "SMILE"? "A WAITING SMILE": project}</h1>
       <div className="row proj-top-row">
         <div className="col proj-top-left">
           <ProjectPagination
@@ -75,4 +73,4 @@ function LifeTopContainer() {
   )
 }
 
-export default LifeTopContainer
+export default CanvasTopContainer
