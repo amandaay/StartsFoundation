@@ -13,7 +13,7 @@ function Canvas() {
     <div className="ProjectMainDiv">
       <Layout>
         <div className="ProjectContent">
-        <CanvasTopContainer/>
+          <CanvasTopContainer />
           <div className="ProjectMidContainer">
             <CanvasContentWriting />
           </div>
