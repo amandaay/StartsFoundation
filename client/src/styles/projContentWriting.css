@@ -70,4 +70,10 @@
 
 .col.stories-col-div {
   margin: auto;
+  text-align: center;
+}
+
+.row.stories-row {
+  display: flex;
+  justify-content: center;
 }
