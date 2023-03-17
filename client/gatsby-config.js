@@ -18,6 +18,11 @@ module.exports = {
     author: ``,
     siteUrl: `http://www.startsfoundation.org`,
   },
+  proxy: {
+    prefix: "/api",
+    url: "http://localhost:5001",
+  },
+
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
