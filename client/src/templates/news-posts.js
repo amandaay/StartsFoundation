@@ -30,7 +30,9 @@ console.log("DATA", newsQuery)
 function NewsPosts({ data }) {
   useEffect(() => {
     const onTop = () => {
-      window.scrollTo(0, 0)
+      if (window !== "undefined") {
+        window.scrollTo(0, 0)
+      }
     }
     onTop()
   }, [])
