@@ -1,9 +1,10 @@
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import Layout from "../components/Layout"
 import { Blog } from "../components/RecentBlogs"
 import "../styles/Blogs.css"
+import { Pagination } from "../components/Pagination"
 
 export const blogsQuery = graphql`
   query allNewsQuery($skip: Int!, $limit: Int!) {
@@ -32,7 +33,7 @@ export const blogsQuery = graphql`
   }
 `
 
-function BlogsPosts({ data }) {
+function BlogsPosts({ data, pageContext }) {
   useEffect(() => {
     const onTop = () => {
       window.scrollTo(0, 0)
@@ -40,7 +41,7 @@ function BlogsPosts({ data }) {
     onTop()
   }, [])
   console.log("BLogs Posts TEMPLATE CONTEXT", data)
-
+  console.log(window.location)
   const blogs = data.allSanityBlog.nodes
 
   return (
@@ -59,6 +60,11 @@ function BlogsPosts({ data }) {
             )
           })}
         </div>
+        <Pagination
+          currentPage={pageContext.currentPage}
+          pageCount={pageContext.pageCount}
+          base={"Blogs"}
+        />
       </div>
     </Layout>
   )

@@ -4,6 +4,7 @@ import React, { useEffect } from "react"
 import "../styles/News.css"
 import PropTypes from "prop-types"
 import Layout from "../components/Layout"
+import { Pagination } from "../components/Pagination"
 
 export const newsQuery = graphql`
   query allNewsQuery($skip: Int!, $limit: Int!) {
@@ -27,7 +28,7 @@ export const newsQuery = graphql`
 `
 console.log("DATA", newsQuery)
 
-function NewsPosts({ data }) {
+function NewsPosts({ data, pageContext }) {
   useEffect(() => {
     const onTop = () => {
       window.scrollTo(0, 0)
@@ -63,6 +64,11 @@ function NewsPosts({ data }) {
             </div>
           ))}
         </div>
+        <Pagination
+          currentPage={pageContext.currentPage}
+          pageCount={pageContext.pageCount}
+          base={"News"}
+        />
       </div>
     </Layout>
   )
