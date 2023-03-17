@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/projContentWriting.css"
+import "../styles/ProjPagination.css"
 import { FcPrevious, FcNext } from "react-icons/fc"
 import PropTypes from "prop-types"
 
