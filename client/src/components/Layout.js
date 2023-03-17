@@ -9,7 +9,7 @@ function Layout(props) {
   return (
     <SearchModalContextProvider>
       <Navbar {...props} />
-      <Search/>
+      <Search />
       {props.children}
       <Footer />
     </SearchModalContextProvider>

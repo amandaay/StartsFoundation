@@ -1,7 +1,7 @@
 import React, { createContext, useState, useMemo } from "react"
 import PropTypes from "prop-types"
 
-const SearchModalContext = createContext();
+const SearchModalContext = createContext()
 
 function SearchModalContextProvider({ children }) {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState()
@@ -28,4 +28,4 @@ function SearchModalContextProvider({ children }) {
 SearchModalContextProvider.propTypes = {
   children: PropTypes.any,
 }
-export { SearchModalContextProvider, SearchModalContext };
+export { SearchModalContextProvider, SearchModalContext }

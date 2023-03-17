@@ -125,14 +125,74 @@ function Navbar(props) {
                 </span>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">
-                  Projects
-                </Link>
+                <span className="dropdown">
+                  <span
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Projects
+                  </span>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="dropdownMenuLink"
+                  >
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/projects/aidForLivingLife"
+                      >
+                        Aid For Living Life
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/projects/canvas">
+                        Canvas
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/projects/aWaitingSmile"
+                      >
+                        A waiting Smile
+                      </Link>
+                    </li>
+                  </ul>
+                </span>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/media">
-                  Media
-                </Link>
+                <span className="dropdown">
+                  <span
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Media
+                  </span>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="dropdownMenuLink"
+                  >
+                    <li>
+                      <Link className="dropdown-item" to="/media/blogs">
+                        Blogs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/media/news">
+                        News
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/media/gallery">
+                        Gallery
+                      </Link>
+                    </li>
+                  </ul>
+                </span>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/Contact">

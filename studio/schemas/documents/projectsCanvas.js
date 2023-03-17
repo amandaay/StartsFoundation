@@ -2,8 +2,8 @@ import {RiHammerLine} from 'react-icons/ri'
 import {format} from 'date-fns'
 
 export default {
-  title: 'Project',
-  name: 'project',
+  title: 'Projects: Canvas',
+  name: 'Canvas',
   type: 'document',
   icon: RiHammerLine,
   fields: [
@@ -11,6 +11,7 @@ export default {
       title: 'Title',
       name: 'title',
       type: 'string',
+      validation: (Rule) => Rule.error('Title cannot be empty').required(),
     },
     {
       title: 'Slug',
@@ -23,13 +24,20 @@ export default {
       title: 'Date',
       name: 'date',
       type: 'datetime',
+      validation: (Rule) => Rule.error('Date cannot be empty').required(),
     },
     {
       title: 'Cover Image',
       name: 'coverImage',
       type: 'customImage',
+      validation: (Rule) => Rule.error('Image cannot be empty').required(),
     },
-    {title: 'Project Content', name: 'body', type: 'bodyText'},
+    {
+      title: 'Project Content',
+      name: 'body',
+      type: 'bodyText',
+      validation: (Rule) => Rule.error('Body cannot be empty').required(),
+    },
   ],
   preview: {
     select: {

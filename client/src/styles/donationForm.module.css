@@ -80,7 +80,7 @@
 .submitForm {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 15px;
+  padding: 10px;
   margin: 15px;
 }
 
@@ -186,7 +186,7 @@
 
 .back {
   cursor: pointer;
-  align-self: center;
+  align-self: flex-start;
   margin: auto 30px;
 }
 
@@ -245,6 +245,12 @@ label {
   margin-top: 5px;
   margin-bottom: 0;
   color: gray;
+}
+
+@media (max-width: 992px) {
+  .checkBoxContent {
+    margin-left: 25px;
+  }
 }
 
 input {

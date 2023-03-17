@@ -47,6 +47,7 @@ function RecentNews() {
                     alt={item.image.alt}
                   />
                 </Link>
+
                 <div className="caption-div">
                   <div className="date-div">
                     <div className="day-div">{dateStringSplit[1]}</div>

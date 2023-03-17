@@ -1,0 +1,81 @@
+.containerLifeContent {
+  padding-top: 1%;
+}
+
+.lifeContent-row {
+  padding-top: 2vh;
+}
+
+.ContentTitle {
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  color: rgb(255, 255, 255);
+  padding-bottom: 2.5%;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.life-logo-content-title {
+  font-size: 1.5rem;
+  padding-top: 0.5em;
+  padding-bottom: 10%;
+  color: rgb(255, 255, 255);
+}
+
+.life-col-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.life-circle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.life-content-logo {
+  margin: auto;
+  width: 7em;
+  height: 7em;
+  justify-content: center;
+}
+
+.Activities {
+  background-color: #b3cee5;
+  border-radius: 0.5em;
+}
+
+.proj-content-right-arrow {
+  font-size: 12rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.proj-content-left-arrow {
+  font-size: 12rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.projText {
+  padding: 0.5em 1.5em 0.5em 1.5em;
+}
+
+.col.stories-col-div {
+  margin: auto;
+  text-align: left;
+  justify-content: center;
+}
+
+.row.stories-row {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}

@@ -10,7 +10,7 @@ import {
   Objectives,
   OurTeam,
   Testimonials,
-  Blogs,
+  RecentBlogs,
 } from "../components/Components"
 
 /**
@@ -29,7 +29,7 @@ function Home() {
     })
   }
 
-  console.log("home pathname", window.location.pathname)
+  // console.log("home pathname", window.location.pathname)
 
   return (
     <div className="App">
@@ -95,8 +95,6 @@ function Home() {
               </div>
             </div>
           </div>
-
-
         </main>
         {/* About Section */}
         <section className="sectionAbout" id="about" ref={about}>
@@ -125,7 +123,7 @@ function Home() {
           <OurTeam />
         </section>
         <section className="sectionBlog" id="blog">
-          <Blogs />
+          <RecentBlogs />
         </section>
         <span className="scrollBtnSpan">
           <ScrollToTop />
