@@ -4,45 +4,45 @@ import { StaticImage } from "gatsby-plugin-image"
 
 export function OurTeam() {
   return (
-    <div className="aboutMainDiv ">
-      <h1 className="ourTeamBannerColor py-3">Our Team</h1>
+    <div className="ourTeamMainDiv ">
+      <h1 className="outTeamTitle py-3">Our Team</h1>
 
-      <div className="mt-3 d-flex justify-content-center">
-        <div className="ourTeamText bg-white text-center fs-5 col-12">
-          Test -
-        </div>
+      <div className="mt-3 text-center text-white fs-5">
+        Meet the exceptional hands behind thefoundation of STARTS.
+        <br />
+        The joint effort of everyone involved to start a change finally makes the change.
       </div>
 
       <div className="d-flex justify-content-center">
-        <div className="row gx-5 mt-4 p-4 bg-white w-75">
-          <div className="col-5 d-flex justify-content-center">
+        <div className="row gx-5 mt-4 p-4 w-75 scroll">
+          <div className="col-6 d-flex justify-content-center">
             <PersonalInfo
               image="../images/about/about-2.jpg"
-              css=""
+              css="w-100 h-100"
               imageCss="memberLeftPic"
             ></PersonalInfo>
           </div>
 
-          <div className="col-7">
+          <div className="col-6">
             <div className="row g-5">
               <PersonalInfo
                 image="../images/about/about-2.jpg"
-                css="col-6"
+                css="col-6 h-100"
                 imageCss="memberRightPic"
               ></PersonalInfo>
               <PersonalInfo
                 image="../images/about/about-2.jpg"
-                css="col-6"
+                css="col-6 h-100"
                 imageCss="memberRightPic"
               ></PersonalInfo>
               <PersonalInfo
                 image="../images/about/about-2.jpg"
-                css="col-6"
+                css="col-6 h-100"
                 imageCss="memberRightPic"
               ></PersonalInfo>
               <PersonalInfo
                 image="../images/about/about-2.jpg"
-                css="col-6"
+                css="col-6 h-100"
                 imageCss="memberRightPic"
               ></PersonalInfo>
             </div>
@@ -50,11 +50,11 @@ export function OurTeam() {
         </div>
       </div>
 
-      <div className="mt-4 d-flex justify-content-center">
+      {/* <div className="mt-4 d-flex justify-content-center">
         <div className="ourTeamText bg-white text-center fs-5 col-12">
           Test -
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

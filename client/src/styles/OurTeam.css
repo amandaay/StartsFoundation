@@ -1,7 +1,8 @@
 .ourTeamMainDiv {
   background-color: #1b75bb;
   width: 100vw;
-  height: 105vh;
+  /* height: 105vh; */
+  padding-bottom: 5%;
 }
 
 .ourTeamBannerColor {
@@ -10,6 +11,17 @@
   text-align: center;
   color: #ffffff;
   /* font-size: 2rem; */
+}
+
+.outTeamTitle {
+  color: white;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  color: #ffffff;
+  padding-bottom: 5%;
+  text-align: center;
 }
 
 .memberLeftPic {
@@ -29,4 +41,9 @@
 .memberIntro {
   --bs-bg-opacity: 0.3;
   background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
+}
+
+.scroll {
+  overflow-y: scroll;
+  height: 75vh;
 }

@@ -71,7 +71,7 @@ function RecentNews() {
         </div>
       </div>
 
-      <hr className="hrNews" />
+      
     </div>
   )
 }

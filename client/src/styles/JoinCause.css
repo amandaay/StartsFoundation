@@ -2,6 +2,11 @@
   padding-top: 7%;
 }
 
+.joinDiv {
+  background-color: #f7feff;
+  height: 80vh;
+}
+
 .join-row {
   padding-top: 5vh;
 }
@@ -11,7 +16,7 @@
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.18rem;
-  color: rgb(255, 255, 255);
+  color:rgb(6, 67, 128);
   padding-bottom: 5%;
   text-align: center;
 }
@@ -19,7 +24,7 @@
 .join-title {
   font-size: 1.5rem;
   padding-bottom: 10%;
-  color: rgb(8, 2, 27);
+  color: rgb(6, 67, 128);
 }
 
 .join-col-div {
@@ -29,10 +34,10 @@
   align-items: center;
 }
 .circle {
-  width: 10rem;
-  height: 10rem;
+  width: 13rem;
+  height: 13rem;
   border-radius: 50%;
-  background-color: white;
+  background-color: rgb(215, 236, 254);
   display: flex;
   justify-content: center;
 }
@@ -57,5 +62,5 @@
 .bottom-title {
   padding-top: 10%;
   font-size: 1.4rem;
-  color: white;
+  color: rgb(6, 67, 128);
 }
