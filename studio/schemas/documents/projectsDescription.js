@@ -3,7 +3,7 @@ import {format} from 'date-fns'
 
 export default {
   title: 'All Projects Description',
-  name: 'GenericDescription',
+  name: 'ProjectGenericDescription',
   type: 'document',
   icon: RiHammerLine,
   fields: [
@@ -13,11 +13,10 @@ export default {
       type: 'string',
       options: {
         list: [
-            {title: 'Aid For Living Life', value: 'aid-for-living-life'},
-            {title: 'Canvas', value: 'canvas'},
-            {title: 'A Waiting Smile', value: 'smile'},
-            {title: 'Others', value: 'others'},
-        ]
+          {title: 'Aid For Living Life', value: 'aid-for-living-life'},
+          {title: 'Canvas', value: 'canvas'},
+          {title: 'A Waiting Smile', value: 'smile'},
+        ],
       },
       validation: (Rule) => Rule.error('Project name cannot be empty').required(),
     },
@@ -32,14 +31,29 @@ export default {
       title: 'Date',
       name: 'date',
       type: 'datetime',
-      description: 'Only the latest project description will be displayed. It is recommeded to unpublish the old descriptions.',
+      description:
+        'Only the latest project date description will be displayed. It is recommeded to unpublish the old descriptions.',
       validation: (Rule) => Rule.error('Date cannot be empty').required(),
     },
     {
       title: 'Images gallery',
       name: 'imagesGallery',
       type: 'array',
-      of: [{type: 'image'}],
+      of: [
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alt text',
+              description: 'A short description of the image for screen readers and search engines',
+              validation: (Rule) =>
+                Rule.max(100).warning('Alt text should be less than 100 characters'),
+            },
+          ],
+        },
+      ],
       validation: (Rule) => Rule.error('Image cannot be empty').required(),
     },
     {

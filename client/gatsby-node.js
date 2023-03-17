@@ -174,7 +174,7 @@ const createBlogsPages = async (blogs, createPage) => {
 }
 
 const createBlogPosts = async (blogs, createPage) => {
-  return blogs.forEach((blog) => {
+  return blogs.forEach(blog => {
     createPage({
       path: `/Blogs/${blog.slug.current}`,
       component: require.resolve(`./src/templates/single-blog.js`),
