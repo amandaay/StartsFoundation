@@ -2,10 +2,9 @@
   background-color: #1b75bb;
   width: 100vw;
   height: 100vh;
- 
 }
 
-.upper-row{
+.upper-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
@@ -26,7 +25,6 @@
 }
 
 .aboutContent {
-  
   font-weight: 500;
   color: white;
   line-height: 2;

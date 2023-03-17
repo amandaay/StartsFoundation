@@ -4,82 +4,8 @@
 //  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
 //  */
 
-// /**
-//  * @type {import('gatsby').GatsbyNode['createPages']}
-//  */
-// exports.createPages = async ({ actions }) => {
-//   const { createPage } = actions
-//   createPage({
-//     path: "/News",
-//     component: require.resolve("./src/templates/news-posts.js"),
-//     context: {},
-//     defer: true,
-//   })
-// // }
-// const path = require(`path`)
-// const { createFilePath } = require(`gatsby-source-filesystem`)
-// const createPaginatedPages = require("gatsby-paginate")
-
-// exports.createPages = async ({ graphql, actions, reporter }) => {
-//   const { createPage } = actions
-//   const newsPost = path.resolve(`./src/templates/post.js`)
-//   const result = await graphql(`
-//     {
-//       allSanityNews(sort: { date: DESC }, limit: 10) {
-//         nodes {
-//           _id
-//           slug {
-//             current
-//           }
-//           title
-//           date(formatString: "MMM Do, YYYY")
-//           image {
-//             alt
-//             asset {
-//               gatsbyImageData(width: 200, placeholder: BLURRED)
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   if (result.errors) {
-//     reporter.panicOnBuild(
-//       `There was an error loading the news posts`,
-//       result.errors
-//     )
-//     return
-//   }
-//   const posts = result.data.allSanityNews.nodes
-
-//   createPaginatedPages({
-//     //edges is the array of nodes that comes from the GraphQL query.
-//     edges: posts,
-//     createPage,
-//     pageTemplate: "/src/templates/news-posts.js",
-//     pageLength: 6,
-//     // pathPrefix:"/news"
-//   })
-
-//   if (posts.length > 0) {
-//     posts.forEach((post, index) => {
-//       const previousPostId = index === 0 ? null : posts[index - 1].id
-//       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
-//       createPage({
-//         path: post.slug.current,
-//         component: newsPost,
-//         context: {
-//           id: post.id,
-//           previousPostId,
-//           nextPostId,
-//         },
-//       })
-//     })
-//   }
-// }
-
 /**
- * Pagination section
+ * News Posts Pagination Section
  */
 const pageSize = 6
 /**
@@ -88,9 +14,8 @@ const pageSize = 6
  * @param {function} createPage function from Gatsby
  * @returns createPage object
  */
-const createPaginationPages = (newsPost, createPage) => {
-  const pageCount = Math.ceil(newsPost.length / pageSize)
-  console.log("create pagintaion")
+const createNewsPagination = (allNewsPosts, createPage) => {
+  const pageCount = Math.ceil(allNewsPosts.length / pageSize)
   return Array.from({ length: pageCount }).map((_, index) =>
     createPage({
       path: `/News/page=${index + 1}`,
@@ -104,12 +29,13 @@ const createPaginationPages = (newsPost, createPage) => {
     })
   )
 }
-//GraphQL query for News Page pagination
-const newsResults = `
+//GraphQL query for all news
+const allNewsQuery = `
   {
     allSanityNews(sort: { date: DESC }) {
       nodes {
         _id
+        _rawBody
         slug {
           current
         }
@@ -126,8 +52,24 @@ const newsResults = `
   }
 `
 /**
- * END OF PAGINATION -----------
+ * END OF NEWS POSTS PAGINATION -----------
  */
+
+/**
+ * function that creates single news posts pages
+ * @param {*} allNewsPosts
+ * @param {*} createPage
+ * @returns single news posts pages
+ */
+const createNewsPost = (newsPost, createPage) => {
+  return newsPost.forEach(post => {
+    createPage({
+      path: `/News/${post.slug.current}`,
+      component: require.resolve("./src/templates/single-post.js"),
+      context: { id: post._id },
+    })
+  })
+}
 
 // createBlogsPages Section
 const blogsQuery = `
@@ -191,54 +133,18 @@ const createBlogPosts = async (blogs, createPage) => {
  */
 exports.createPages = async ({ graphql, actions }) => {
   /**
-   * Pagination for news pages
+   * Sanity CMS create news posts pagination and single news post page
    */
   const { createPage } = actions
-  const resultNews = await graphql(newsResults)
+  const resultNews = await graphql(allNewsQuery)
   if (resultNews.errors) throw resultNews.errors
-  const newsPosts = resultNews.data.allSanityNews.nodes
-  createPaginationPages(newsPosts, createPage)
+  const allNewsPosts = resultNews.data.allSanityNews.nodes
+  createNewsPagination(allNewsPosts, createPage)
+  createNewsPost(allNewsPosts, createPage)
 
   /**
-   * Sanity CMS
+   * Sanity CMS create blog posts pagination and single blog post pages
    */
-
-  //template paths (resolving paths)
-  const singlePostTemplate = require.resolve("./src/templates/single-post.js")
-
-  const result = await graphql(`
-    query {
-      allSanityNews {
-        nodes {
-          _id
-          _rawBody
-          slug {
-            current
-          }
-          title
-          image {
-            asset {
-              gatsbyImageData(placeholder: BLURRED, width: 200)
-            }
-            alt
-          }
-          date(formatString: "MMM Do, YYYY")
-        }
-      }
-    }
-  `)
-  if (result.errors) throw result.errors
-  const newsPost = result.data.allSanityNews.nodes
-
-  //single news post pages
-  newsPost.forEach(post => {
-    createPage({
-      path: `/News/${post.slug.current}`,
-      component: singlePostTemplate,
-      context: { id: post._id },
-    })
-  })
-
   const blogsResult = await graphql(blogsQuery)
   if (blogsResult.errors) throw blogsResult.errors
   const blogs = blogsResult.data.allSanityBlog.nodes

@@ -4,7 +4,7 @@
 
 .joinDiv {
   background-color: #f7feff;
-  height: 80vh;
+  height: 90vh;
 }
 
 .join-row {
@@ -16,7 +16,7 @@
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.18rem;
-  color:rgb(6, 67, 128);
+  color: rgb(6, 67, 128);
   padding-bottom: 5%;
   text-align: center;
 }

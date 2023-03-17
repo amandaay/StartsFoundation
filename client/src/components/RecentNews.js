@@ -70,8 +70,6 @@ function RecentNews() {
           </span>
         </div>
       </div>
-
-      
     </div>
   )
 }
