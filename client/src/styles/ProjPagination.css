@@ -1,6 +1,7 @@
-.proj-content-right-arrow, .proj-content-left-arrow {
-    font-size: 8rem;
-    cursor: pointer;
-    user-select: none;
-    transform: scale(1);
-  }
+.proj-content-right-arrow,
+.proj-content-left-arrow {
+  font-size: 8rem;
+  cursor: pointer;
+  user-select: none;
+  transform: scale(1);
+}

@@ -10,7 +10,7 @@ function About() {
   return (
     <>
       <div className="aboutMainDiv">
-        <div className="container contentDiv">
+        <div className="container aboutContentDiv">
           <div className="row upper-row">
             <div className="first-pic-div">
               <StaticImage
