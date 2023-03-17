@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
+//Import routes
+import contactRouter from "./routes/contact.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -14,7 +16,7 @@ app.use(express.static(path.join(__dirname, "client/build")));
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use("/api", contactRouter);
 app.listen(
   PORT,
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
