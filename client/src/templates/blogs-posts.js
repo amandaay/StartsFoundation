@@ -56,6 +56,7 @@ function BlogsPosts({ data, pageContext }) {
                 colCSS="col-4"
                 imgCSS="imgHeight"
                 contextCSS="contextHeight"
+                key={blog._id}
               />
             )
           })}
