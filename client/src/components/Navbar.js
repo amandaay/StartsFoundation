@@ -135,12 +135,14 @@ function Navbar(props) {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link" to="/Contact">
                   Contact Us
                 </Link>
               </li>
               <li className="joinClass">
-                <button className="joinBtn">Join Us</button>
+                <Link to="/JoinUs">
+                  <button className="joinBtn">Join Us</button>
+                </Link>
               </li>
               <li className="donateClass">
                 <Link to="/donation">

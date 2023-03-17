@@ -38,3 +38,23 @@ body {
     padding: 1.5em;
     margin-left: 25%
 }
+
+.contact{
+    padding:2em;
+
+    display: flex;
+    justify-content: space-around
+}
+.phone{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align:center;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align:center;
+}

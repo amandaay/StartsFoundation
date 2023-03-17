@@ -1,8 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/Layout"
-import * as styles from "../styles/contact.module.css"
+import * as styles from "../styles/Contact.module.css"
 
-export default function contact() {
+export default function Contact() {
+  const [email, setEmail] = useState("")
+  const [fName, setFName] = useState("")
+  const [message, setMessage] = useState("")
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+
+    const data = {
+      email,
+      fName,
+      message,
+    }
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+    const mailSent = await res.json()["success"]
+    if (mailSent) {
+      console.log("Sent Mail Successfully")
+    }
+  }
   return (
     <Layout>
       <section className={styles.section}>
@@ -15,7 +37,11 @@ export default function contact() {
               We’d be happy to answer your queries.
             </p>
           </div>
-          <form className={styles.form}>
+          <form
+            className={styles.form}
+            id="contact-form"
+            onSubmit={handleSubmit}
+          >
             <div className="form-group">
               <label for="fullName">Full Name</label>
               <input
@@ -24,6 +50,7 @@ export default function contact() {
                 id="fullName"
                 aria-describedby="name"
                 placeholder="Enter Name"
+                onChange={e => setFName(e.target.value)}
               />
             </div>
 
@@ -35,6 +62,7 @@ export default function contact() {
                 id="Email"
                 aria-describedby="email"
                 placeholder="Enter email"
+                onChange={e => setEmail(e.target.value)}
               />
             </div>
 
@@ -45,6 +73,7 @@ export default function contact() {
                 id="message"
                 aria-describedby="message"
                 placeholder="Message"
+                onChange={e => setMessage(e.target.value)}
               />
             </div>
             <button
@@ -55,6 +84,16 @@ export default function contact() {
               Submit
             </button>
           </form>
+        </div>
+        <div className={styles.contact}>
+          <div className={styles.phone}>
+            <label>Phone</label>
+            <p>+9779867504884</p>
+          </div>
+          <div className={styles.email}>
+            <label>Email Address</label>
+            <p>startsfoundation@gmail.com</p>
+          </div>
         </div>
       </section>
     </Layout>

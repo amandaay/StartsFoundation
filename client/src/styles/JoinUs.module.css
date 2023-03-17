@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans:wght@300;400;500;600;900&family=Open+Sans:wght@300&family=PT+Sans&family=Poppins:wght@100;400&display=swap");
+
+body {
+    position: relative;
+    color: #000000;
+    font-weight: 100;
+}
+
+.header{
+    text-align: center;
+    position: relative;
+    color: #1b75bb;
+    font-size: 25px;
+    font-weight: bold;
+    border: solid
+}
+
+
+
+.section{
+    min-width: 600px;
+    width: 100vw;
+    height: 100vh;
+    padding-top:10%;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
