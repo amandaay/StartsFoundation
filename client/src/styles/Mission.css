@@ -38,13 +38,13 @@
 }
 
 .left-quote-icon {
-  transform: translateX(-2.2vw);
+  transform: translateX(-2.2rem);
   color: rgb(2, 77, 147);
   opacity: 0.5;
 }
 
 .right-quote-icon {
-  transform: translateX(19vw);
+  transform: translateX(18rem);
   color: rgb(2, 77, 147);
   opacity: 0.5;
 }

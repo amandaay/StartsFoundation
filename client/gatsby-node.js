@@ -207,22 +207,22 @@ exports.createPages = async ({ graphql, actions }) => {
   const singlePostTemplate = require.resolve("./src/templates/single-post.js")
 
   const result = await graphql(`
-    {
+    query {
       allSanityNews {
         nodes {
           _id
+          _rawBody
           slug {
             current
           }
           title
-          date(formatString: "MMM Do, YYYY")
           image {
-            alt
             asset {
-              gatsbyImageData(width: 200, placeholder: BLURRED)
+              gatsbyImageData(placeholder: BLURRED, width: 200)
             }
+            alt
           }
-          _rawBody
+          date(formatString: "MMM Do, YYYY")
         }
       }
     }
