@@ -43,7 +43,30 @@
   background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
 }
 
-.scroll {
+.ourTeamScrollbar {
   overflow-y: scroll;
-  height: 75vh;
+  height: 60vh;
+}
+
+.ourTeamScrollbar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.ourTeamScrollbar::-webkit-scrollbar-button {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.ourTeamScrollbar::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+.ourTeamScrollbar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.ourTeamScrollbar::-webkit-scrollbar-track {
+  box-shadow: transparent;
 }
