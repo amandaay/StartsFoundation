@@ -320,6 +320,7 @@ export default function DonationForm() {
               value={donatedAmount}
               donateMonthly={donateMonthly}
               userInfo={userInfo}
+              subscribed={checked}
             />
           ) : (
             <button onClick={onDonateClick} className={styles.btn}>
