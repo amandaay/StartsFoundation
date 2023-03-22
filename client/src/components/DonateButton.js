@@ -2,6 +2,7 @@ import React from "react"
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 import PropTypes from "prop-types"
 import { navigate } from "gatsby"
+import emailjs from '@emailjs/browser';
 
 const url = "http://localhost:5050"
 
@@ -86,6 +87,11 @@ const ButtonWrapper = ({
             // Your code here after create the order
             try {
               write({ ...userInfo, subscribed })
+                .then((result)=>{
+                  console.log(result.text)
+                }, (error) => {
+                  console.log(error.text)
+                })
             } catch (error) {
               console.log(error.message)
             }
@@ -97,6 +103,7 @@ const ButtonWrapper = ({
           // Your code here after capture the order
           try {
             update(userInfo)
+            emailjs.send('service_a5wgn62', 'template_1j6whfq', {...userInfo, value}, 'cfXaPyimGdQFLjpA7')
           } catch (error) {
             console.log(error.message)
           }
