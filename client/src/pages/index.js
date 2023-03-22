@@ -21,6 +21,8 @@ function Home() {
   const about = useRef(null)
   const news = useRef(null)
   const join = useRef(null)
+  const blog = useRef(null)
+  const testimonials = useRef(null)
 
   const scrollToSection = elementRef => {
     window.scrollTo({
@@ -38,6 +40,8 @@ function Home() {
         about={about}
         news={news}
         join={join}
+        testimonials={testimonials}
+        blog={blog}
       >
         <main>
           <div className="mainContainer" role="main">
@@ -71,13 +75,17 @@ function Home() {
         <section className="sectionJoin" id="join-cause" ref={join}>
           <JoinCause />
         </section>
-        <section className="sectionTestimonials" id="testimonials">
+        <section
+          className="sectionTestimonials"
+          id="testimonials"
+          ref={testimonials}
+        >
           <Testimonials />
         </section>
         <section className="sectionOurTeam" id="our-team">
           <OurTeam />
         </section>
-        <section className="sectionBlog" id="blog">
+        <section className="sectionBlog" id="blog" ref={blog}>
           <RecentBlogs />
         </section>
         <span className="scrollBtnSpan">
