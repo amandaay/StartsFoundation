@@ -30,7 +30,8 @@ export default function DonationForm() {
   const [donatedAmount, setDonatedAmount] = useState(0)
   const [showFormDetails, setShowFormDetails] = useState(false)
   function onOtherAmountChange(e) {
-    setDonatedAmount(e.target.value)
+    const otherAmountInput = parseFloat(e.target.value) || 0
+    setDonatedAmount(otherAmountInput)
     if (showWarning) {
       setShowWarning(false)
     }
@@ -76,7 +77,7 @@ export default function DonationForm() {
       <input
         id="number"
         type="number"
-        value={donatedAmount}
+        value={donatedAmount===0?"":donatedAmount}
         onChange={onOtherAmountChange}
         onKeyDown={onOtherAmountReturn}
         className={styles.amountInput}
