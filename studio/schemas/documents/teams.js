@@ -1,4 +1,4 @@
-import {BsPeople} from 'react-icons/bs'
+import { BsPeople } from 'react-icons/bs'
 
 export default {
   title: 'Starts Foundation Team',
@@ -17,7 +17,13 @@ export default {
       name: 'slug',
       type: 'slug',
       validation: (Rule) => Rule.error('Title cannot be empty').required(),
-      options: {source: 'memberName', maxLength: 96},
+      options: { source: 'memberName', maxLength: 96 },
+    },
+    {
+      title: 'Member Title',
+      name: 'memberTitle',
+      type: 'string',
+      validation: (Rule) => Rule.error('Title cannot be empty').required(),
     },
     {
       title: 'Member Portrait',
@@ -37,7 +43,7 @@ export default {
       image: 'memberPortrait',
       title: 'memberName',
     },
-    prepare({image, title}) {
+    prepare({ image, title }) {
       return {
         title,
         media: image,

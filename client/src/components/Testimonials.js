@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import "../styles/Testimonials.css"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
@@ -13,6 +13,7 @@ export function Testimonials() {
           _id
           name
           image {
+            alt
             asset {
               gatsbyImageData
             }
@@ -45,7 +46,6 @@ export function Testimonials() {
     },
   }
   const testimonials = data.allSanityTestimonials.nodes
-  console.log(testimonials)
   return (
     <div className="aboutMainDiv ">
       <div className="container containerCause">
@@ -63,6 +63,7 @@ export function Testimonials() {
                 image={testimonial.image.asset.gatsbyImageData}
                 name={testimonial.name}
                 body={testimonial.body}
+                key={testimonial._id}
               />
             )
           })}
@@ -73,12 +74,17 @@ export function Testimonials() {
 }
 
 function Testimonial(props) {
+  console.log(props)
   return (
     <div className="py-4 w-100 bg-white d-flex justify-content-center h-auto">
       <div className="bg-white testimonialHeight w-85">
         <div className="row ">
           <div className="col-4 d-flex justify-content-center">
-            <GatsbyImage className="rounded-circle w-75" image={props.image} />
+            <GatsbyImage
+              className="rounded-circle w-75"
+              image={props.image}
+              alt={props.name}
+            />
           </div>
           <div className="col-8 d-flex align-items-center">
             <div>

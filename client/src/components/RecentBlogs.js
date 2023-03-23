@@ -34,7 +34,6 @@ function RecentBlogs() {
     }
   `)
   const blogs = data.allSanityBlog.nodes
-  console.log(blogs)
   const createRightBlog = blogs => {
     let length = blogs.length > 5 ? 5 : blogs.length
     const rightBlogs = []
@@ -45,6 +44,7 @@ function RecentBlogs() {
           colCSS="col-md-6"
           imgCSS="rightImgHeight"
           contextCSS="rightContextHeight"
+          key={blogs[i]._id}
         />
       )
     }
@@ -62,8 +62,9 @@ function RecentBlogs() {
             imgCSS="leftImgHeight"
             contextCSS="leftContextHeight"
             show
+            key={blogs[0]._id}
           />
-          <div className="col-8">
+          <div className="col-8" key="rightblogs">
             <div className="row gy-4">{createRightBlog(blogs ?? [])}</div>
           </div>
           <div className="row newsRow">
@@ -81,6 +82,7 @@ function RecentBlogs() {
 
 export function Blog(props) {
   const blog = props.blog
+  console.log(blog._id)
   return (
     <div className={`${props.colCSS}`}>
       <Link to={`/Blogs/${blog.slug.current}`}>
@@ -103,17 +105,12 @@ export function Blog(props) {
           <h6 className="mt-2 text-secondary">
             {IoPersonOutline()} Blog by {blog.author}
           </h6>
-
-          {props.show ? (
-            <div>
-              <div className="w-100 mt-3 border-bottom"></div>
-              <div className={`mt-3 fst-italic text-secondary overflow-hidden`}>
-                {blog.excerpt[0].children[0].text}
-              </div>
+          <div className={`${props.show ? "visible" : "d-none"}`}>
+            <div className="w-100 mt-3 border-bottom"></div>
+            <div className={`mt-3 fst-italic text-secondary overflow-hidden`}>
+              {blog.excerpt[0].children[0].text}
             </div>
-          ) : (
-            <div></div>
-          )}
+          </div>
         </div>
       </div>
     </div>
