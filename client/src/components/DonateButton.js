@@ -22,20 +22,21 @@ const write = async userInfo => {
   }).then(resp => resp.json())
 }
 
-const update = async userInfo => {
-  await fetch(`${url}/`, {
-    method: "PATCH",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      firstName: userInfo.firstName,
-      lastName: userInfo.lastName,
-      email: userInfo.email,
-      phoneNumber: userInfo.phoneNumber,
-    }),
-  }).then(resp => resp.json())
-}
+// const update = async userInfo => {
+//   await fetch(`${url}/`, {
+//     method: "PATCH",
+//     headers: {
+//       "content-type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       firstName: userInfo.firstName,
+//       lastName: userInfo.lastName,
+//       email: userInfo.email,
+//       phoneNumber: userInfo.phoneNumber,
+//       subscribed: userInfo.subscribed,
+//     }),
+//   }).then(resp => resp.json())
+// }
 
 const ButtonWrapper = ({
   value,
@@ -88,7 +89,7 @@ const ButtonWrapper = ({
             try {
               write({ ...userInfo, subscribed })
                 .then((result)=>{
-                  console.log(result.text)
+                  return result;
                 }, (error) => {
                   console.log(error.text)
                 })
@@ -102,7 +103,7 @@ const ButtonWrapper = ({
         return actions.order.capture().then(function () {
           // Your code here after capture the order
           try {
-            update(userInfo)
+            // update({...userInfo, subscribed})
             emailjs.send('service_a5wgn62', 'template_1j6whfq', {...userInfo, value}, 'cfXaPyimGdQFLjpA7')
           } catch (error) {
             console.log(error.message)
