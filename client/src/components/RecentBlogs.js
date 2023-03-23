@@ -129,7 +129,7 @@ export function Blog(props) {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 

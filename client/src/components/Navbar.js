@@ -96,18 +96,6 @@ function Navbar(props) {
                         className="dropdown-item"
                         onClick={() => {
                           window.location.pathname === "/"
-                            ? props.scrollToSection(props.news)
-                            : navigate("/#recent-news")
-                        }}
-                      >
-                        Recent News
-                      </span>
-                    </li>
-                    <li onClick={() => showMenu()}>
-                      <span
-                        className="dropdown-item"
-                        onClick={() => {
-                          window.location.pathname === "/"
                             ? props.scrollToSection(props.join)
                             : navigate("/#join-cause")
                         }}
@@ -119,7 +107,16 @@ function Navbar(props) {
                       <span className="dropdown-item">Partners</span>
                     </li>
                     <li>
-                      <span className="dropdown-item">Testimonials</span>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => {
+                          window.location.pathname === "/"
+                            ? props.scrollToSection(props.testimonials)
+                            : navigate("/#testimonials")
+                        }}
+                      >
+                        Testimonials
+                      </span>
                     </li>
                   </ul>
                 </span>
@@ -177,14 +174,28 @@ function Navbar(props) {
                     aria-labelledby="dropdownMenuLink"
                   >
                     <li>
-                      <Link className="dropdown-item" to="/media/blogs">
+                      <span
+                        className="dropdown-item"
+                        onClick={() => {
+                          window.location.pathname === "/"
+                            ? props.scrollToSection(props.blog)
+                            : navigate("/#blog")
+                        }}
+                      >
                         Blogs
-                      </Link>
+                      </span>
                     </li>
-                    <li>
-                      <Link className="dropdown-item" to="/media/news">
-                        News
-                      </Link>
+                    <li onClick={() => showMenu()}>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => {
+                          window.location.pathname === "/"
+                            ? props.scrollToSection(props.news)
+                            : navigate("/#recent-news")
+                        }}
+                      >
+                        Recent News
+                      </span>
                     </li>
                     <li>
                       <Link className="dropdown-item" to="/media/gallery">
@@ -237,6 +248,8 @@ Navbar.propTypes = {
   about: PropTypes.any,
   news: PropTypes.any,
   join: PropTypes.any,
+  blog: PropTypes.any,
+  testimonials: PropTypes.any,
 }
 
 export default Navbar

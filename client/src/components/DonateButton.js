@@ -1,10 +1,12 @@
 import React from "react"
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 import PropTypes from "prop-types"
+import { navigate } from "gatsby"
+import emailjs from '@emailjs/browser';
 
 const url = "http://localhost:5050"
 
-const write = async ({ userInfo, subscribed }) => {
+const write = async userInfo => {
   await fetch(`${url}/`, {
     method: "POST",
     headers: {
@@ -15,25 +17,26 @@ const write = async ({ userInfo, subscribed }) => {
       lastName: userInfo.lastName,
       email: userInfo.email,
       phoneNumber: userInfo.phoneNumber,
-      subscribed: subscribed,
+      subscribed: userInfo.subscribed,
     }),
   }).then(resp => resp.json())
 }
 
-const update = async userInfo => {
-  await fetch(`${url}/`, {
-    method: "PATCH",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      firstName: userInfo.firstName,
-      lastName: userInfo.lastName,
-      email: userInfo.email,
-      phoneNumber: userInfo.phoneNumber,
-    }),
-  }).then(resp => resp.json())
-}
+// const update = async userInfo => {
+//   await fetch(`${url}/`, {
+//     method: "PATCH",
+//     headers: {
+//       "content-type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       firstName: userInfo.firstName,
+//       lastName: userInfo.lastName,
+//       email: userInfo.email,
+//       phoneNumber: userInfo.phoneNumber,
+//       subscribed: userInfo.subscribed,
+//     }),
+//   }).then(resp => resp.json())
+// }
 
 const ButtonWrapper = ({
   value,
@@ -83,15 +86,29 @@ const ButtonWrapper = ({
           })
           .then(orderId => {
             // Your code here after create the order
-            write({ userInfo, subscribed })
+            try {
+              write({ ...userInfo, subscribed })
+                .then((result)=>{
+                  return result;
+                }, (error) => {
+                  console.log(error.text)
+                })
+            } catch (error) {
+              console.log(error.message)
+            }
             return orderId
           })
       }}
       onApprove={function (data, actions) {
         return actions.order.capture().then(function () {
           // Your code here after capture the order
-          update(userInfo)
-          console.log(data)
+          try {
+            // update({...userInfo, subscribed})
+            emailjs.send('service_a5wgn62', 'template_1j6whfq', {...userInfo, value}, 'cfXaPyimGdQFLjpA7')
+          } catch (error) {
+            console.log(error.message)
+          }
+          navigate("/success", { replace: true })
         })
       }}
     />
