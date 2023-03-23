@@ -25,12 +25,12 @@
 }
 
 .memberLeftPic {
-  max-width: 32vw;
+  max-width: 100%;
   height: 100%;
 }
 
 .memberRightPic {
-  max-width: 24vw;
+  max-width: 100%;
   height: 26vh;
 }
 
@@ -70,3 +70,4 @@
 .ourTeamScrollbar::-webkit-scrollbar-track {
   box-shadow: transparent;
 }
+
