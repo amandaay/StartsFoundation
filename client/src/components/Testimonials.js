@@ -74,9 +74,8 @@ export function Testimonials() {
 }
 
 function Testimonial(props) {
-  console.log(props)
   return (
-    <div className="py-4 w-100 bg-white d-flex justify-content-center h-auto">
+    <div className="py-4 w-100 bg-white d-flex justify-content-center h-100">
       <div className="bg-white testimonialHeight w-85">
         <div className="row ">
           <div className="col-4 d-flex justify-content-center">
@@ -99,7 +98,7 @@ function Testimonial(props) {
             <div className="w-100 border-bottom border-secondary"></div>
           </div>
           <div className="mt-3 d-flex justify-content-center">
-            <p>{props.body[0].children[0].text}</p>
+            {props.body[0].children[0].text}
           </div>
         </div>
       </div>
