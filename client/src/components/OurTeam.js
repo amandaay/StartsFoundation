@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import "../styles/OurTeam.css"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
@@ -43,7 +43,7 @@ export function OurTeam() {
     }
     return newAmount
   }
-  const [amount, setAmount] = useState(countMembersAmount())
+  const amount = countMembersAmount()
 
   const createRightContent = (members) => {
     // let amount = blogs.amount > 5 ? 5 : blogs.length
@@ -63,14 +63,14 @@ export function OurTeam() {
     return rightMembers
   }
 
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      setAmount(countMembersAmount())
-    };
-    window.addEventListener("resize", updateWindowDimensions);
-    return () => window.removeEventListener("resize", updateWindowDimensions)
-  }, [members.length])
-  console.log(members.slice(amount))
+  // useEffect(() => {
+  //   const updateWindowDimensions = () => {
+  //     setAmount(countMembersAmount())
+  //   };
+  //   window.addEventListener("resize", updateWindowDimensions);
+  //   return () => window.removeEventListener("resize", updateWindowDimensions)
+  // }, [amount, countMembersAmount])
+
   return (
     <div className="ourTeamMainDiv ">
       <h1 className="outTeamTitle py-3">Our Team</h1>

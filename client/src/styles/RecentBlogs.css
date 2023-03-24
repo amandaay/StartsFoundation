@@ -50,22 +50,12 @@
   width: 90%;
 }
 
-.titleFont {
-  font-size: 1.3rem;
-  color: rgb(60, 59, 59);
-}
-
 .moreBlogsp {
   white-space: nowrap;
   color: #c6c5c5;
   text-decoration: underline;
   text-underline-offset: 3px;
   font-size: 1.2rem;
-}
-
-.blogsTitle {
-  font-size: 1.2rem;
-  font-weight: 600;
 }
 
 .titleOverflow {
@@ -83,4 +73,32 @@
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .font-size {
+    font-size: 1rem;
+  }
+}
+
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 992px) {
+  .font-size {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .title-font-size {
+    font-size: 1.2rem;
+    color: rgb(60, 59, 59);
+  }
+}
+
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 992px) {
+  .title-font-size {
+    font-size: 1rem;
+    color: rgb(60, 59, 59);
+  }
 }
