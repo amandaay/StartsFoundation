@@ -24,7 +24,7 @@ export const postQuery = graphql`
 `
 function SinglePost({ data }) {
   const { title, date, _rawBody, image, caption } = data.sanityNews
-  console.log("data", data)
+  
   return (
     <Layout>
       <div className="container postContent">

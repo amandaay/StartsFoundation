@@ -198,7 +198,7 @@ function Navbar(props) {
                       </span>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/media/gallery">
+                      <Link className="dropdown-item" to="/Gallery">
                         Gallery
                       </Link>
                     </li>

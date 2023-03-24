@@ -1,0 +1,32 @@
+.galleryRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2.5rem;
+}
+
+.galleryCol {
+  padding-top: 3rem;
+}
+
+.galleryContainer {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+}
+
+.galleryHeader {
+  text-align: center;
+  color: rgb(60, 59, 59);
+}
+
+.imageCaption {
+  padding-top: 2%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(60, 59, 59);
+}
+
+.paginateDiv {
+  padding-top: 5%;
+}
