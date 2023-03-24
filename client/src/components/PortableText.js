@@ -7,6 +7,6 @@ function PortableTextComponent({ value }) {
 }
 
 PortableTextComponent.propTypes = {
-  value: PropTypes.func,
+  value: PropTypes.array,
 }
 export default PortableTextComponent
