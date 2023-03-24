@@ -24,12 +24,12 @@
   text-align: center;
 }
 
-.memberLeftPic {
+.memberMainPic {
   max-width: 100%;
   height: 100%;
 }
 
-.memberRightPic {
+.memberPic {
   max-width: 100%;
   height: 26vh;
 }
@@ -45,7 +45,7 @@
 
 .ourTeamScrollbar {
   overflow-y: scroll;
-  height: 60vh;
+  height: 65vh;
 }
 
 .ourTeamScrollbar::-webkit-scrollbar {
@@ -71,3 +71,16 @@
   box-shadow: transparent;
 }
 
+.generalOverflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mainOverflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 13;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
