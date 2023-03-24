@@ -4,17 +4,61 @@
 //  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
 //  */
 
+//page size for pagination
+const pageSize = 6
+/**
+ * Gallery Section
+ */
+
+/**
+ * creates pagination for gallery
+ * @param {*} allGalleryImages
+ * @param {*} createPage
+ * @returns new createPage() object
+ */
+const createGalleryPages = (allGalleryImages, createPage) => {
+  const pageCount = Math.ceil(allGalleryImages.length / pageSize)
+  return Array.from({ length: pageCount }).map((_, index) =>
+    createPage({
+      path: `/Gallery/page=${index + 1}`,
+      component: require.resolve(`./src/templates/gallery-images.js`),
+      context: {
+        skip: index * pageSize,
+        limit: pageSize,
+        pageCount,
+        currentPage: index + 1,
+      },
+    })
+  )
+}
+const allImagesQuery = `
+  {
+    allSanityGallery {
+      nodes {
+        id
+        image {
+          alt
+          asset {
+            gatsbyImageData(width: 200, placeholder: BLURRED)
+          }
+        }
+        caption
+      }
+    }
+  }
+`
+
 /**
  * News Posts Pagination Section
  */
-const pageSize = 6
+
 /**
  * function that returns pagination for all News Posts
  * @param {array} data to be mapped
  * @param {function} createPage function from Gatsby
  * @returns createPage object
  */
-const createNewsPagination = (allNewsPosts, createPage) => {
+const createNewsPages = (allNewsPosts, createPage) => {
   const pageCount = Math.ceil(allNewsPosts.length / pageSize)
   return Array.from({ length: pageCount }).map((_, index) =>
     createPage({
@@ -139,7 +183,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const resultNews = await graphql(allNewsQuery)
   if (resultNews.errors) throw resultNews.errors
   const allNewsPosts = resultNews.data.allSanityNews.nodes
-  createNewsPagination(allNewsPosts, createPage)
+  createNewsPages(allNewsPosts, createPage)
   createNewsPost(allNewsPosts, createPage)
 
   /**
@@ -150,4 +194,12 @@ exports.createPages = async ({ graphql, actions }) => {
   const blogs = blogsResult.data.allSanityBlog.nodes
   createBlogsPages(blogs, createPage)
   createBlogPosts(blogs, createPage)
+
+  /**
+   * Sanity CMS create gallery images pagination
+   */
+  const galleryResult = await graphql(allImagesQuery)
+  if (galleryResult.errors) throw galleryResult.errors
+  const galleryImages = galleryResult.data.allSanityGallery.nodes
+  createGalleryPages(galleryImages, createPage)
 }

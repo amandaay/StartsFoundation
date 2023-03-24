@@ -1,8 +1,9 @@
 .ourTeamMainDiv {
   background-color: white;
   width: 100vw;
-  /* height: 105vh; */
+  height: 105vh;
   padding-bottom: 5%;
+  padding-top:7%;
 }
 
 .ourTeamBannerColor {
@@ -13,8 +14,12 @@
   /* font-size: 2rem; */
 }
 
+.team-description{
+  color:rgb(6, 67, 128)
+}
+
 .outTeamTitle {
-  color: white;
+  color: rgb(6, 67, 128);
   font-size: 2rem;
   text-decoration: underline;
   text-underline-offset: 1rem;
