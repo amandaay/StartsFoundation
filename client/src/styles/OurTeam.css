@@ -1,5 +1,5 @@
 .ourTeamMainDiv {
-  background-color: #1b75bb;
+  background-color: white;
   width: 100vw;
   /* height: 105vh; */
   padding-bottom: 5%;
@@ -19,9 +19,13 @@
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.18rem;
-  color: #ffffff;
+  color: #1b75bb;
   padding-bottom: 5%;
   text-align: center;
+}
+
+.text-blue {
+  color: #1b75bb;
 }
 
 .memberMainPic {
@@ -63,8 +67,8 @@
 
 .ourTeamScrollbar::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
+  background-color: #1b75bb;
+  border: 1px solid #1b75bb;
 }
 
 .ourTeamScrollbar::-webkit-scrollbar-track {

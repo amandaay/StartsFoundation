@@ -75,7 +75,7 @@ export function OurTeam() {
     <div className="ourTeamMainDiv ">
       <h1 className="outTeamTitle py-3">Our Team</h1>
 
-      <div className="mt-3 text-center text-white fs-5">
+      <div className="mt-3 text-center text-blue fs-5">
         Meet the exceptional hands behind thefoundation of STARTS.
         <br />
         The joint effort of everyone involved to start a change finally makes
