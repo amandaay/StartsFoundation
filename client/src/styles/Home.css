@@ -16,7 +16,7 @@ body {
 
 /* main banner of landing page */
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0.5, 0.35), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0.5, 0.25), rgba(0, 0, 0, 0.35)),
     url(https://i.postimg.cc/KYy4bCnC/DSC1103-292-min.jpg);
 }
 

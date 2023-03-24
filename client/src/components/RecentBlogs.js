@@ -34,14 +34,26 @@ function RecentBlogs() {
     }
   `)
   const blogs = data.allSanityBlog.nodes
+  const countBlogsAmount = () => {
+    let newAmount = 0
+
+    if (window.innerWidth < 768) {
+      newAmount = blogs.length > 3 ? 3 : blogs.length
+    } else {
+      newAmount = blogs.length > 5 ? 5 : blogs.length
+    }
+    return newAmount
+  }
+  const amount = countBlogsAmount()
   const createRightBlog = blogs => {
-    let length = blogs.length > 5 ? 5 : blogs.length
+    // let amount = blogs.amount > 5 ? 5 : blogs.length
     const rightBlogs = []
-    for (let i = 1; i < length; i++) {
+
+    for (let i = 1; i < amount; i++) {
       rightBlogs.push(
         <Blog
           blog={blogs[i]}
-          colCSS="col-md-6"
+          colCSS="col-12 col-md-6"
           imgCSS="rightImgHeight"
           contextCSS="rightContextHeight"
           key={blogs[i]._id}
@@ -51,29 +63,36 @@ function RecentBlogs() {
     return rightBlogs
   }
 
+  // useEffect(() => {
+  //   const updateWindowDimensions = () => {
+  //     setAmount(countBlogsAmount())
+  //   };
+  //   window.addEventListener("resize", updateWindowDimensions);
+  //   return () => window.removeEventListener("resize", updateWindowDimensions)
+  // }, [blogs, countBlogsAmount])
+
   return (
-    <div className="BlogsMainDiv">
+    <div className="BlogsMainDiv px-3 px-md-0">
       <div className="container containerCause">
         <h1 className="blogTitle ">Blogs</h1>
-        <div className="row gx-4">
+        <div className="row g-4">
           <Blog
             blog={blogs[0]}
-            colCSS="col-4"
+            colCSS="col-12 col-md-4"
             imgCSS="leftImgHeight"
             contextCSS="leftContextHeight"
             show
             key={blogs[0]._id}
           />
-          <div className="col-8" key="rightblogs">
+          <div className="col-12 col-md-8" key="rightblogs">
             <div className="row gy-4">{createRightBlog(blogs ?? [])}</div>
           </div>
-          <div className="row newsRow">
-            <span className="moreNews">
-              <Link className="moreBlogsp" to="/Blogs">
-                More Blogs <AiOutlineArrowRight />
-              </Link>
-            </span>
-          </div>
+
+        </div>
+        <div className="d-flex justify-content-end mt-3">
+          <Link className="moreBlogsp" to="/Blogs">
+            More Blogs <AiOutlineArrowRight />
+          </Link>
         </div>
       </div>
     </div>
@@ -82,7 +101,6 @@ function RecentBlogs() {
 
 export function Blog(props) {
   const blog = props.blog
-  console.log(blog._id)
   return (
     <div className={`${props.colCSS}`}>
       <Link to={`/Blogs/${blog.slug.current}`}>
@@ -95,19 +113,19 @@ export function Blog(props) {
       <div
         className={`d-flex justify-content-center bg-white rounded-bottom ${props.contextCSS} shadow-lg`}
       >
-        <div className="mt-3 w-90 overflow-hidden">
-          <Link className="titleFont" to={`/Blogs/${blog.slug.current}`}>
-            {blog.title}
+        <div className="mt-3 mb-3 w-90">
+          <Link style={{ textDecoration: 'none' }} to={`/Blogs/${blog.slug.current}`}>
+            <p className="title-font-size titleOverflow">{blog.title}</p>
           </Link>
-          <h6 className="mt-2 text-secondary">
+          <h6 className="mt-2 text-secondary font-size">
             {CiCalendarDate()} {blog._createdAt}
           </h6>
-          <h6 className="mt-2 text-secondary">
+          <h6 className="mt-2 text-secondary font-size">
             {IoPersonOutline()} Blog by {blog.author}
           </h6>
           <div className={`${props.show ? "visible" : "d-none"}`}>
             <div className="w-100 mt-3 border-bottom"></div>
-            <div className={`mt-3 fst-italic text-secondary overflow-hidden`}>
+            <div className={`mt-3 fst-italic text-secondary contextOverflow`}>
               {blog.excerpt[0].children[0].text}
             </div>
           </div>

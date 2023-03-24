@@ -1,8 +1,9 @@
 .ourTeamMainDiv {
-  background-color: #1b75bb;
+  background-color: white;
   width: 100vw;
-  /* height: 105vh; */
+  height: 105vh;
   padding-bottom: 5%;
+  padding-top:7%;
 }
 
 .ourTeamBannerColor {
@@ -13,24 +14,32 @@
   /* font-size: 2rem; */
 }
 
+.team-description{
+  color:rgb(6, 67, 128)
+}
+
 .outTeamTitle {
-  color: white;
+  color: rgb(6, 67, 128);
   font-size: 2rem;
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.18rem;
-  color: #ffffff;
+  color: #1b75bb;
   padding-bottom: 5%;
   text-align: center;
 }
 
-.memberLeftPic {
-  max-width: 32vw;
+.text-blue {
+  color: #1b75bb;
+}
+
+.memberMainPic {
+  max-width: 100%;
   height: 100%;
 }
 
-.memberRightPic {
-  max-width: 24vw;
+.memberPic {
+  max-width: 100%;
   height: 26vh;
 }
 
@@ -45,7 +54,7 @@
 
 .ourTeamScrollbar {
   overflow-y: scroll;
-  height: 60vh;
+  height: 65vh;
 }
 
 .ourTeamScrollbar::-webkit-scrollbar {
@@ -63,10 +72,24 @@
 
 .ourTeamScrollbar::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
+  background-color: #1b75bb;
+  border: 1px solid #1b75bb;
 }
 
 .ourTeamScrollbar::-webkit-scrollbar-track {
   box-shadow: transparent;
+}
+
+.generalOverflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mainOverflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 13;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

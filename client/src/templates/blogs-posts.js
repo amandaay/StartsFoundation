@@ -55,7 +55,7 @@ function BlogsPosts({ data, pageContext }) {
             return (
               <Blog
                 blog={blog}
-                colCSS="col-4"
+                colCSS="col-12 col-md-6 col-lg-4"
                 imgCSS="imgHeight"
                 contextCSS="contextHeight"
                 key={blog._id}

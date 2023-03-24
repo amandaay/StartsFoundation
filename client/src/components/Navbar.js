@@ -12,10 +12,8 @@ function Navbar(props) {
 
   useEffect(() => {
     if (isNavOpen) {
-      console.log("nav opened")
       document.body.style.overflow = "hidden"
     } else {
-      console.log("nav closed")
       document.body.style.overflow = "initial"
     }
   }, [isNavOpen])
@@ -104,7 +102,12 @@ function Navbar(props) {
                       </span>
                     </li>
                     <li>
-                      <span className="dropdown-item">Partners</span>
+                      <span className="dropdown-item"
+                        onClick={() => {
+                          window.location.pathname === "/"
+                            ? props.scrollToSection(props.partners)
+                            : navigate("/#partners")
+                        }}>Partners</span>
                     </li>
                     <li>
                       <span
@@ -198,7 +201,7 @@ function Navbar(props) {
                       </span>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/media/gallery">
+                      <Link className="dropdown-item" to="/Gallery">
                         Gallery
                       </Link>
                     </li>
@@ -250,6 +253,7 @@ Navbar.propTypes = {
   join: PropTypes.any,
   blog: PropTypes.any,
   testimonials: PropTypes.any,
+  partners: PropTypes.any,
 }
 
 export default Navbar

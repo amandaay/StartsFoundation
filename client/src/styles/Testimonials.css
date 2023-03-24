@@ -13,7 +13,7 @@
 }
 
 .testimonialHeight {
-  height: 48vh;
+  height: 100%;
 }
 
 .testimonialProfile {
@@ -25,4 +25,32 @@
 
 .w-85 {
   width: 85%;
+}
+
+.testimonialScrollbar {
+  height: 40vh;
+  overflow: scroll;
+}
+
+.testimonialScrollbar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.testimonialScrollbar::-webkit-scrollbar-button {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.testimonialScrollbar::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+.testimonialScrollbar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.testimonialScrollbar::-webkit-scrollbar-track {
+  box-shadow: transparent;
 }
