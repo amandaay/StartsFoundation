@@ -7,7 +7,6 @@ import { IoPersonOutline } from "react-icons/io5"
 import { AiOutlineArrowRight } from "react-icons/ai"
 
 function RecentBlogs() {
-  const [amount, setAmount] = useState(0)
   const data = useStaticQuery(graphql`
     {
       allSanityBlog(sort: { _createdAt: DESC }) {
@@ -35,6 +34,17 @@ function RecentBlogs() {
     }
   `)
   const blogs = data.allSanityBlog.nodes
+  const countBlogsAmount = () => {
+    let newAmount = 0
+
+    if (window.innerWidth < 768) {
+      newAmount = blogs.length > 3 ? 3 : blogs.length
+    } else {
+      newAmount = blogs.length > 5 ? 5 : blogs.length
+    }
+    return newAmount
+  }
+  const [amount, setAmount] = useState(countBlogsAmount())
   const createRightBlog = blogs => {
     // let amount = blogs.amount > 5 ? 5 : blogs.length
     const rightBlogs = []
@@ -55,15 +65,7 @@ function RecentBlogs() {
 
   useEffect(() => {
     const updateWindowDimensions = () => {
-      if (window.innerWidth < 768) {
-        let newAmount = blogs.length > 3 ? 3 : blogs.length
-        setAmount(newAmount)
-      }
-
-      if (window.innerWidth >= 768) {
-        let newAmount = blogs.length > 5 ? 5 : blogs.length
-        setAmount(newAmount)
-      }
+      setAmount(countBlogsAmount())
     };
     window.addEventListener("resize", updateWindowDimensions);
     return () => window.removeEventListener("resize", updateWindowDimensions)
