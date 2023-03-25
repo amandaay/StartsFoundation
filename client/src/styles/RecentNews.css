@@ -4,6 +4,12 @@
   padding-right: 10vw; */
 }
 
+.mainDiv {
+  background-color: #1b75bb;
+  width: 100vw;
+  height: 100vh;
+}
+
 .recentNewsTitle {
   color: white;
   font-size: 2rem;

@@ -47,7 +47,7 @@ export function Testimonials() {
   }
   const testimonials = data.allSanityTestimonials.nodes
   return (
-    <div className="aboutMainDiv ">
+    <div className="mainDiv ">
       <div className="container containerCause">
         <h1 className="testimonialsTitle">Testimonials</h1>
         <Carousel

@@ -15,7 +15,7 @@ function SearchModalContextProvider({ children }) {
       closeSearchModal: () => {
         setIsSearchModalOpen(false)
       },
-    }
+    } 
   })
 
   return (
