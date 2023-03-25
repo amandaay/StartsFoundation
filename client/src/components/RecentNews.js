@@ -30,7 +30,7 @@ function RecentNews() {
   console.log("data", data)
   console.log("news", news)
   return (
-    <div className="aboutMainDiv">
+    <div className="mainDiv">
       <div className="container containerNews">
         <h1 className="recentNewsTitle">Recent News</h1>
         <div className="row">
