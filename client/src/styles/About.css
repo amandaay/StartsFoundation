@@ -1,7 +1,7 @@
 .aboutMainDiv {
   background-color: #1b75bb;
   width: 100vw;
-  height: 110vh;
+  /* height: 110vh; */
 }
 
 .upper-row {
@@ -12,9 +12,10 @@
 
 .aboutContentDiv {
   padding-top: 12vh;
-  height: 110vh;
+  /* height: 110vh; */
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 0.75fr;
+  grid-gap:2rem
 }
 
 .first-pic {
