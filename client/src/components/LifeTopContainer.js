@@ -32,7 +32,7 @@ function LifeTopContainer() {
           imagesGallery {
             _key
             asset {
-              gatsbyImageData(placeholder: BLURRED)
+              gatsbyImageData(placeholder: BLURRED, fit: FILL)
               altText
             }
           }
@@ -64,7 +64,10 @@ function LifeTopContainer() {
             totalPages={pageSize}
             onPageChange={setPage}
           >
-            <HandleImage className="projImg" image={images} />
+          <div className="proj-top-img">
+          <HandleImage className="projImg" image={images} />
+          </div>
+            
           </ProjectPagination>
         </div>
         <div className="col proj-top-right">

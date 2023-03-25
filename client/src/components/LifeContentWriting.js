@@ -53,7 +53,7 @@ function LifeContentWriting() {
           <LifeContentWritingLogos />
           {lifeData.body.map(section => {
             return (
-              <div key={section._key}>
+              <div className="life-proj-text" key={section._key}>
                 {section.children.map(child => {
                   return (
                     <p className="projText" key={child._key}>
