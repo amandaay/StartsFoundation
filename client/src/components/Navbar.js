@@ -141,20 +141,20 @@ function Navbar(props) {
                     <li>
                       <Link
                         className="dropdown-item"
-                        to="/projects/aidForLivingLife"
+                        to="/projects/AidForLivingLife"
                       >
                         Aid for Living Life
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/projects/canvas">
+                      <Link className="dropdown-item" to="/projects/Canvas">
                         Canvas
                       </Link>
                     </li>
                     <li>
                       <Link
                         className="dropdown-item"
-                        to="/projects/aWaitingSmile"
+                        to="/projects/WaitingSmile"
                       >
                         A waiting Smile
                       </Link>

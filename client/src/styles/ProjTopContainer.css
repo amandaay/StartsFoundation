@@ -4,12 +4,12 @@
 
 .ProjectHeader {
   color: #1b75bb;
-  font-size: 2rem;
+  font-size: max(4vh, 2em, 2rem);
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.55rem;
   text-decoration-thickness: 0.18rem;
   padding-bottom: 3%;
-  padding-top: 0.8em;
+  padding-top: 0.5em;
   text-align: center;
 }
 
@@ -25,18 +25,15 @@
 }
 
 .col.proj-top-right {
-  font-weight: 500;
   color: black;
-  line-height: 2;
-  font-size: 1.05rem;
+  line-height: 1.5;
   margin: auto;
-  padding: 0em 3em 3em 3em;
+  padding-right: 2.5em;
+  width: clamp(45ch, 50%, 75ch);
 }
 
-.projImg {
-  justify-content: center;
-  border-radius: 10%;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.proj-top-img {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  
 }

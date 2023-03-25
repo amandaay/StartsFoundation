@@ -7,9 +7,9 @@
 }
 
 .ContentTitle {
-  font-size: 2rem;
+  font-size: max(4vh, 2em, 2rem);
   text-decoration: underline;
-  text-underline-offset: 1rem;
+  text-underline-offset: 0.55rem;
   text-decoration-thickness: 0.18rem;
   color: rgb(255, 255, 255);
   padding-bottom: 2.5%;
@@ -50,15 +50,20 @@
 .Activities {
   background-color: #b3cee5;
   border-radius: 0.5em;
+  width: max(100%, 900px);
 }
 
 .projText {
-  padding: 0.5em 1.5em 0.5em 1.5em;
+  text-align: left;
+}
+
+.life-proj-text {
+  padding: 0.3em 2em 0.5em 2em;
 }
 
 .col.stories-col-div {
   margin: auto;
-  text-align: left;
+  padding: 0.5em 1.5em 1em 1.5em;
   justify-content: center;
 }
 
