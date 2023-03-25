@@ -143,7 +143,7 @@ function Navbar(props) {
                         className="dropdown-item"
                         to="/projects/aidForLivingLife"
                       >
-                        Aid For Living Life
+                        Aid for Living Life
                       </Link>
                     </li>
                     <li>
