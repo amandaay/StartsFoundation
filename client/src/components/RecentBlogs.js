@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import "../styles/RecentBlogs.css"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -7,7 +7,6 @@ import { IoPersonOutline } from "react-icons/io5"
 import { AiOutlineArrowRight } from "react-icons/ai"
 
 function RecentBlogs() {
-  const [amount, setAmount] = useState(0)
   const data = useStaticQuery(graphql`
     {
       allSanityBlog(sort: { _createdAt: DESC }) {
@@ -35,6 +34,17 @@ function RecentBlogs() {
     }
   `)
   const blogs = data.allSanityBlog.nodes
+  const countBlogsAmount = () => {
+    let newAmount = 0
+
+    if (window.innerWidth < 768) {
+      newAmount = blogs.length > 3 ? 3 : blogs.length
+    } else {
+      newAmount = blogs.length > 5 ? 5 : blogs.length
+    }
+    return newAmount
+  }
+  const amount = countBlogsAmount()
   const createRightBlog = blogs => {
     // let amount = blogs.amount > 5 ? 5 : blogs.length
     const rightBlogs = []
@@ -53,21 +63,13 @@ function RecentBlogs() {
     return rightBlogs
   }
 
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      if (window.innerWidth < 768) {
-        let newAmount = blogs.length > 3 ? 3 : blogs.length
-        setAmount(newAmount)
-      }
-
-      if (window.innerWidth >= 768) {
-        let newAmount = blogs.length > 5 ? 5 : blogs.length
-        setAmount(newAmount)
-      }
-    };
-    window.addEventListener("resize", updateWindowDimensions);
-    return () => window.removeEventListener("resize", updateWindowDimensions)
-  }, [blogs.length])
+  // useEffect(() => {
+  //   const updateWindowDimensions = () => {
+  //     setAmount(countBlogsAmount())
+  //   };
+  //   window.addEventListener("resize", updateWindowDimensions);
+  //   return () => window.removeEventListener("resize", updateWindowDimensions)
+  // }, [blogs, countBlogsAmount])
 
   return (
     <div className="BlogsMainDiv px-3 px-md-0">
@@ -113,12 +115,12 @@ export function Blog(props) {
       >
         <div className="mt-3 mb-3 w-90">
           <Link style={{ textDecoration: 'none' }} to={`/Blogs/${blog.slug.current}`}>
-            <p className="titleFont titleOverflow">{blog.title}</p>
+            <p className="title-font-size titleOverflow">{blog.title}</p>
           </Link>
-          <h6 className="mt-2 text-secondary">
+          <h6 className="mt-2 text-secondary font-size">
             {CiCalendarDate()} {blog._createdAt}
           </h6>
-          <h6 className="mt-2 text-secondary">
+          <h6 className="mt-2 text-secondary font-size">
             {IoPersonOutline()} Blog by {blog.author}
           </h6>
           <div className={`${props.show ? "visible" : "d-none"}`}>
