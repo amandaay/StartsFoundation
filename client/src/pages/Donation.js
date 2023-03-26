@@ -3,7 +3,7 @@ import DonationForm from "../components/DonationForm"
 import Layout from "../components/Layout"
 import * as styles from "../styles/donation.module.css"
 
-export default function donation() {
+export default function Donation() {
   return (
     <Layout>
       <section className={styles.banner}>
