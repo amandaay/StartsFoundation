@@ -54,3 +54,17 @@
 .testimonialScrollbar::-webkit-scrollbar-track {
   box-shadow: transparent;
 }
+
+.leftButtonPosition {
+  left: -0%;
+  transform: translate(0, -50%);
+}
+
+.rightButtonPosition {
+  right: -0%;
+  transform: translate(0, -50%);
+}
+
+.text-blue {
+  color: #1b75bb;
+}
