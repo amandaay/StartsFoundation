@@ -209,7 +209,7 @@ function Navbar(props) {
                 </span>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Contact">
+                <Link className="nav-link" to="/ContactUs">
                   Contact Us
                 </Link>
               </li>
