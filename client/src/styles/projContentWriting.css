@@ -38,6 +38,7 @@
   background-color: white;
   display: flex;
   justify-content: center;
+  box-shadow: 0 0 8px 3px rgb(13 110 253 / 20%);
 }
 
 .life-content-logo {
