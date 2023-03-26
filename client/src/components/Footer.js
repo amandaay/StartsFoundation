@@ -33,7 +33,7 @@ function Footer() {
             </h2>
             <div className="horizontalLine">
               <span className="donateSpan">
-                <Link to="/donation">
+                <Link to="/Donation">
                   <button className="donateBtn">Donate</button>
                 </Link>
               </span>
