@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { AiOutlineLeftCircle, AiOutlineRightCircle } from "react-icons/ai"
 
 export function Testimonials() {
   const data = useStaticQuery(graphql`
@@ -46,6 +47,17 @@ export function Testimonials() {
     }
   }
   const testimonials = data.allSanityTestimonials.nodes
+
+  // const CustomLeftArrow = ({ onClick }) => {
+
+  //   return <AiOutlineLeftCircle className="position-absolute leftButtonPosition fs-1 text-blue" onClick={() => onClick()} />;
+  // }
+
+  // const CustomRightArrow = ({ onClick }) => {
+
+  //   return <AiOutlineRightCircle className="position-absolute rightButtonPosition fs-1 text-blue" onClick={() => onClick()} />;
+  // };
+
   return (
     <div className="mainDiv ">
       <div className="container containerCause">
@@ -56,6 +68,8 @@ export function Testimonials() {
           additionalTransfrom={0}
           itemClass="px-3 h-auto"
           containerClass="react-multi-carousel-list"
+        // customLeftArrow={<CustomLeftArrow />}
+        // customRightArrow={<CustomRightArrow />}
         >
           {testimonials.map(testimonial => {
             return (
