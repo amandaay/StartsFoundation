@@ -11,7 +11,7 @@
 .closeBtn {
   float: right;
   /* position: absolute; */
-  transform: translateY(-100%);
+  transform: translateY(-90%);
   top: -10px;
   right: 0;
   border-color: rgb(218, 4, 47);
@@ -24,4 +24,19 @@
   border-style: solid;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.searchResult {
+  width: 60vw;
+  background-color: rgb(230, 243, 255);
+  height: 60vh;
+  border-radius: 4px;
+  margin-top: 2%;
+  overflow-y: scroll;
+  scrollbar-color: light;
+  white-space: no-wrap;
+}
+
+.searchInnerDiv {
+  padding: 2% 3% 2% 3%;
 }
