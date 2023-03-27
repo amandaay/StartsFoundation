@@ -181,8 +181,9 @@ exports.createPages = async ({ graphql, actions }) => {
    */
   const { createPage } = actions
   const resultNews = await graphql(allNewsQuery)
+  console.log(resultNews)
   if (resultNews.errors) throw resultNews.errors
-  const allNewsPosts = resultNews.data.allSanityNews.nodes
+  const allNewsPosts = resultNews.data.allSanityNews.nodes || []
   createNewsPages(allNewsPosts, createPage)
   createNewsPost(allNewsPosts, createPage)
 
@@ -191,7 +192,7 @@ exports.createPages = async ({ graphql, actions }) => {
    */
   const blogsResult = await graphql(blogsQuery)
   if (blogsResult.errors) throw blogsResult.errors
-  const blogs = blogsResult.data.allSanityBlog.nodes
+  const blogs = blogsResult.data.allSanityBlog.nodes || []
   createBlogsPages(blogs, createPage)
   createBlogPosts(blogs, createPage)
 
@@ -200,6 +201,6 @@ exports.createPages = async ({ graphql, actions }) => {
    */
   const galleryResult = await graphql(allImagesQuery)
   if (galleryResult.errors) throw galleryResult.errors
-  const galleryImages = galleryResult.data.allSanityGallery.nodes
+  const galleryImages = galleryResult.data.allSanityGallery.nodes || []
   createGalleryPages(galleryImages, createPage)
 }

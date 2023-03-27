@@ -2,11 +2,13 @@ import { navigate } from "gatsby"
 import PropTypes from "prop-types"
 
 function Blogs({ location }) {
-  location.pathname === "/Blogs/"
-    ? navigate("/Blogs/page=1")
-    : navigate(location.pathname)
+  if (typeof window !== "undefined") {
+    location.pathname === "/Blogs/"
+      ? navigate("/Blogs/page=1")
+      : navigate(location.pathname)
 
-  return
+    return
+  }
 }
 Blogs.propTypes = {
   location: PropTypes.object,
