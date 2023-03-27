@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Layout from "../components/Layout"
-import * as styles from "../styles/Contact.module.css"
+import * as styles from "../styles/contact.module.css"
 import { navigate } from "gatsby"
 
 export default function Contact() {
@@ -37,7 +37,7 @@ export default function Contact() {
   return (
     <Layout>
       <section className={styles.section}>
-        <div className="row" style={{ "text-align": "center" }}>
+        <div className="row" style={{ "textAlign": "center" }}>
           <div className={styles.header}>
             <h3>Contact Us</h3>
             <p>
@@ -52,7 +52,7 @@ export default function Contact() {
             onSubmit={handleSubmit}
           >
             <div className="form-group">
-              <label for="fullName">Full Name</label>
+              <label htmlFor="fullName">Full Name</label>
               <input
                 type="text"
                 className="form-control"
@@ -64,7 +64,7 @@ export default function Contact() {
             </div>
 
             <div className="form-group">
-              <label for="Email">Email address</label>
+              <label htmlFor="Email">Email address</label>
               <input
                 type="email"
                 className="form-control"
@@ -76,7 +76,7 @@ export default function Contact() {
             </div>
 
             <div className="form-group">
-              <label for="message">Message</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 className="form-control"
                 id="message"
