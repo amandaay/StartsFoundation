@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Layout from "../components/Layout"
-import * as styles from "../styles/Contact.module.css"
+import * as styles from "../styles/contact.module.css"
 import { navigate } from "gatsby"
 
 export default function Contact() {
