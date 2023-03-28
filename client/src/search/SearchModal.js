@@ -76,13 +76,19 @@ function Search() {
         }}
       >
         <div className="searchDiv">
-          <span className="closeBtn" onClick={() => closeSearchModal()}>
+          <span
+            className="closeBtn"
+            onClick={() => closeSearchModal()}
+            onKeyDown={() => closeSearchModal}
+          >
             <MdClose size={40} />
           </span>
           <SearchField
             value={searchQuery}
             setValue={setSearchQuery}
+            tabIndex={0}
             onFocus={handleOnFocus}
+            onKeyPress={handleOnFocus}
           />
           {searchQuery && blogsIndexStore && newsIndexStore && (
             <div className="searchResult">

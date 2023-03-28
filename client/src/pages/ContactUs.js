@@ -37,7 +37,7 @@ export default function Contact() {
   return (
     <Layout>
       <section className={styles.section}>
-        <div className="row" style={{ "textAlign": "center" }}>
+        <div className="row" style={{ textAlign: "center" }}>
           <div className={styles.header}>
             <h3>Contact Us</h3>
             <p>
@@ -96,11 +96,11 @@ export default function Contact() {
         </div>
         <div className={styles.contact}>
           <div className={styles.phone}>
-            <label>Phone</label>
+            <label htmlFor="phone">Phone</label>
             <p>+9779867504884</p>
           </div>
           <div className={styles.email}>
-            <label>Email Address</label>
+            <label htmlFor="email">Email Address</label>
             <p>startsfoundation@gmail.com</p>
           </div>
         </div>
