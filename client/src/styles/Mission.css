@@ -1,12 +1,11 @@
 .containerMission {
   padding-top: 2%;
-  /* height: 50vh; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
 }
-
+.mission-rows {
+  display: flex;
+}
 .MissionDiv {
   background-color: #f7feff;
   height: 50vh;
@@ -15,7 +14,7 @@
 .visionTitle,
 .goalTitle {
   color: rgb(6, 67, 128);
-  font-size: 2rem;
+  font-size: 2em;
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-thickness: 0.18rem;
@@ -33,21 +32,9 @@
   padding-left: 10%;
   padding-right: 10%;
   color: rgb(20, 1, 82);
-  font-size: 1.2rem;
+  font-size: 1.1em;
   text-align: left;
   line-height: 2;
-}
-
-.left-quote-icon {
-  transform: translateX(-2.2rem);
-  color: rgb(2, 77, 147);
-  opacity: 0.5;
-}
-
-.right-quote-icon {
-  transform: translateX(18rem);
-  color: rgb(2, 77, 147);
-  opacity: 0.5;
 }
 
 .row-box {
@@ -57,4 +44,133 @@
   width: 50vw;
   height: 40vh;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media only screen and (max-width: 980px) {
+  .missionTitle,
+.visionTitle,
+.goalTitle {
+  color: rgb(6, 67, 128);
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  padding-bottom: 5%;
+  text-align: center;
+}
+  .vision-p,
+.mission-p,
+.goal-p {
+  color: #cecece;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: rgb(20, 1, 82);
+  font-size: 1em;
+  text-align: left;
+  line-height: 2;
+}
+
+}
+
+@media only screen and (max-width: 853px) {
+  .missionTitle,
+.visionTitle,
+.goalTitle {
+  color: rgb(6, 67, 128);
+  font-size: 1.2em;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  padding-bottom: 5%;
+
+}
+  .vision-p,
+.mission-p,
+.goal-p {
+  color: #cecece;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: rgb(20, 1, 82);
+  font-size: 1em;
+  line-height: 2;
+  margin: auto;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+  .row-box{
+    width: 50vw;
+  }
+  .MissionDiv{
+    height:auto;
+
+  }
+  .mission-rows {
+  display: grid;
+  justify-content: center;
+  
+}
+  .missionTitle,
+.visionTitle,
+.goalTitle {
+  color: rgb(6, 67, 128);
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  padding-top:5%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+  .vision-p,
+.mission-p,
+.goal-p {
+  color: #cecece;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: rgb(20, 1, 82);
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 2;
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+  .row-box{
+    width: 100%;
+  }
+  .MissionDiv{
+    padding-top: 10%;
+    height:auto;
+  }
+  .mission-rows {
+  display: grid;
+  justify-content: center;
+  
+}
+  .missionTitle,
+.visionTitle,
+.goalTitle {
+  color: rgb(6, 67, 128);
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.18rem;
+  padding-bottom: 5%;
+  text-align: center;
+}
+  .vision-p,
+.mission-p,
+.goal-p {
+  color: #cecece;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: rgb(20, 1, 82);
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 2;
+}
+
 }

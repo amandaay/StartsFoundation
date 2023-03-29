@@ -1,7 +1,6 @@
 .aboutMainDiv {
   background-color: #1b75bb;
   width: 100vw;
-  /* height: 110vh; */
 }
 
 .upper-row {
@@ -12,14 +11,14 @@
 
 .aboutContentDiv {
   padding-top: 12vh;
-  /* height: 110vh; */
   display: grid;
   grid-template-rows: 1fr 0.75fr;
-  grid-gap:2rem
+  grid-gap: 2rem;
 }
 
 .first-pic {
   max-height: 80%;
+  top: 2%;
 }
 
 .aboutTitle {
@@ -36,4 +35,19 @@
   font-weight: 500;
   color: white;
   line-height: 2;
+  font-size: 1.1em;
+}
+
+@media only screen and (max-width: 991px) {
+  .upper-row {
+    grid-template-columns: none;
+    grid-gap: 0;
+  }
+
+  .bottom-row {
+    display: grid;
+  }
+  .small-img {
+    padding-bottom: 2%;
+  }
 }

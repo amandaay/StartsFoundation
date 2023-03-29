@@ -1,24 +1,13 @@
-/* container */
-.postContent {
-  margin-top: 15vh;
-  margin-bottom: 10vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
+.inline-text {
+  font-size: 16px;
+  overflow: wrap;
 }
-
-/* image */
-.postImage {
-  width: 30vw;
+.inline-img{
+  width: 50vw;
 }
-
-.postTitle {
-  font-size: 2rem;
-  padding-bottom: 1%;
-}
-
-.date {
-  color: rgb(70, 70, 70);
-  padding-bottom: 1%;
+.inline-image-text {
+  width: 45%;
+  float: left;
 }
 
 .post-caption {

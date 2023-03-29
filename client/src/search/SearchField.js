@@ -15,7 +15,7 @@ function SearchField({ value, setValue, onFocus }) {
           onChange={e => setValue(e.target.value)}
           onFocus={onFocus && onFocus}
         />
-        {/* <FiSearch className="searchFieldIcon" size={40} /> */}
+        <FiSearch className="searchFieldIcon" size={40} />
       </div>
     </>
   )

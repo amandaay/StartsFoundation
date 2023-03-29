@@ -15,7 +15,7 @@ function BlogsSearchResultItem({ blog }) {
         />
       </div>
       <div className="blogResultInnerDiv2">
-        <Link to={`/${blog.slug}`} className="searchBlogTitle">
+        <Link to={`/Blogs/${blog.slug.current}`} className="searchBlogTitle">
           {" "}
           {blog.title}{" "}
         </Link>
@@ -39,7 +39,7 @@ function NewsSearchResultItem({ news }) {
         />
       </div>
       <div className="blogResultInnerDiv2">
-        <Link to={`/${news.slug}`} className="searchBlogTitle">
+        <Link to={`/News/${news.slug.current}`} className="searchBlogTitle">
           {" "}
           {news.title}{" "}
         </Link>

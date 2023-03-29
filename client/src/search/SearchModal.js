@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { MdClose } from "react-icons/md"
 import { SearchModalContext } from "../context/searchModalContext"
 import "../styles/searchModal.css"
@@ -25,6 +25,14 @@ function Search() {
   const data = useStaticQuery(query)
   const [blogsIndexStore, setBlogsIndexStore] = useState(null)
   const [newsIndexStore, setNewsIndexStore] = useState(null)
+
+  useEffect(() => {
+    if (isSearchModalOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "initial"
+    }
+  },[isSearchModalOpen])
 
   //destructure publicStoreURL and publicIndexURL properties from data
   const {
@@ -76,25 +84,37 @@ function Search() {
         }}
       >
         <div className="searchDiv">
-          <span className="closeBtn" onClick={() => closeSearchModal()}>
-            <MdClose size={40} />
-          </span>
-          <SearchField
-            value={searchQuery}
-            setValue={setSearchQuery}
-            onFocus={handleOnFocus}
-          />
-          {searchQuery && blogsIndexStore && newsIndexStore && (
-            <div className="searchResult">
-              <div className="searchInnerDiv">
-                <SearchResult
-                  searchQuery={searchQuery}
-                  blogsIndexStore={blogsIndexStore}
-                  newsIndexStore={newsIndexStore}
-                ></SearchResult>
+          <div className="closeBtnDiv">
+            <span
+              className="closeBtn"
+              onClick={() => closeSearchModal()}
+              onKeyDown={() => closeSearchModal}
+            >
+              <MdClose size={40} />
+            </span>
+          </div>
+          <div className="searchFieldDiv">
+            <SearchField
+              value={searchQuery}
+              setValue={setSearchQuery}
+              tabIndex={0}
+              onFocus={handleOnFocus}
+              onKeyPress={handleOnFocus}
+            />
+          </div>
+          <div className="searchResultDiv">
+            {searchQuery && blogsIndexStore && newsIndexStore && (
+              <div className="searchResult">
+                <div className="searchInnerDiv">
+                  <SearchResult
+                    searchQuery={searchQuery}
+                    blogsIndexStore={blogsIndexStore}
+                    newsIndexStore={newsIndexStore}
+                  ></SearchResult>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </>

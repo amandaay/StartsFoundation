@@ -31,3 +31,9 @@
   width: 8rem;
   border-radius: 4px;
 }
+
+@media only screen and (max-width: 768px) {
+    .searchResultTitle,.noResults{
+        font-size:1.5rem ;
+    }
+}
