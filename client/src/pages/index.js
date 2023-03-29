@@ -52,7 +52,12 @@ function Home() {
                 <h1 className="startsFoundation">STARTS FOUNDATION</h1>
                 <p className="tagline">Helping the communities in need</p>
 
-                <button className="learnBtnMain">Learn More</button>
+                <button
+                  className="learnBtnMain"
+                  onClick={() => scrollToSection(about)}
+                >
+                  Learn More
+                </button>
               </div>
             </div>
           </div>

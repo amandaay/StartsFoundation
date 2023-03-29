@@ -37,7 +37,7 @@ export default function Contact() {
   return (
     <Layout>
       <section className={styles.section}>
-        <div className="row" style={{ textAlign: "center" }}>
+        <div className="row">
           <div className={styles.header}>
             <h3>Contact Us</h3>
             <p>
@@ -79,6 +79,7 @@ export default function Contact() {
               <label htmlFor="message">Message</label>
               <textarea
                 className="form-control"
+                rows="4"
                 id="message"
                 aria-describedby="message"
                 placeholder="Message"
@@ -88,7 +89,7 @@ export default function Contact() {
             <button
               type="submit"
               className="btn btn-primary"
-              style={{ margin: "1em" }}
+              style={{ margin: "1em"}}
             >
               Submit
             </button>

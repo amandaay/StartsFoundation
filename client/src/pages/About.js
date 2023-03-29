@@ -11,7 +11,7 @@ function About() {
     <>
       <div className="aboutMainDiv">
         <div className="container aboutContentDiv">
-          <div className="row upper-row">
+          <div className="upper-row">
             <div className="first-pic-div">
               <StaticImage
                 className="first-pic"

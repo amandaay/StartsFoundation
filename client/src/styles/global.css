@@ -155,7 +155,94 @@ img {
 }
 
 /* Responsive screen */
+@media only screen and (max-width: 1200px) {
+.navContainer{
+  padding-left: 2%;
+}
+.navbrand-link{
+  font-size: 1em;
+}
+.nav-link{
+  font-size: 1.1em;
+}
+.joinBtn,.donateBtn{
+  width:90px
+}
+}
+
+@media only screen and (max-width: 1024px) {
+.navContainer{
+  padding-left: 2%;
+}
+.navbrand-link{
+  font-size: 0.9em;
+}
+.nav-link{
+  font-size: 1em;
+}
+.joinBtn,.donateBtn{
+  width:80px;
+  font-size:0.8em
+}
+}
+@media only screen and (max-width: 918px) {
+.navContainer{
+  padding-left: 1%;
+  padding-right:1%
+}
+.navbrand-link{
+  font-size: 0.9em;
+}
+.nav-link{
+  font-size: 0.9em;
+}
+.joinBtn,.donateBtn{
+  width:70px;
+  font-size:0.8em
+}
+.logo{
+  width:2em
+}
+.searchIcon{
+  width: 2em;
+}
+}
+
+@media only screen and (max-width: 836px) {
+.navContainer{
+  padding-left: 1%;
+  padding-right:1%
+}
+.navbrand-link{
+  font-size: 0.8em;
+}
+.nav-link{
+  font-size: 0.8em;
+}
+.joinBtn,.donateBtn{
+  width:70px;
+  font-size:0.8em
+}
+.logo{
+  width:2em
+}
+.searchIcon{
+  width: 2em;
+}
+}
+
+
 @media only screen and (max-width: 768px) {
+  .navbrand-link{
+  font-size: 1em;
+}
+.nav-link{
+  font-size: 1.2em;
+}
+.joinBtn,.donateBtn{
+  width:90px;
+  font-size:1em
+}
   #navLinks {
     padding-top: 3vh;
     display: inline-block;
@@ -189,6 +276,7 @@ img {
     background-color: #1b75bb;
     transition: 1s ease;
   }
+
   .close {
     display: initial;
     color: white;
@@ -205,9 +293,22 @@ img {
     color: white;
     cursor: pointer;
   }
+
   .menu.close {
     display: none;
   }
+
+  .startsFoundation{
+    font-size: 1.8em;
+  }
+
+  .tagline{
+    font-size:1.2em
+  }
+  .learnBtnMain{
+    font-size: 1em;
+  }
+
 }
 
 /* footer css */
