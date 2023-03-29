@@ -13,7 +13,7 @@ function Footer() {
             <div className="logoDiv">
               <StaticImage
                 src="../images/logos/whitelogo.png"
-                className="logo"
+                className="logoFooter"
                 alt="starts foundation logo"
               />
             </div>

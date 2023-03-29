@@ -41,11 +41,11 @@ function NewsPosts({ data, pageContext }) {
 
   return (
     <Layout>
-      <div className="container newsContainer">
+      <div className="newsContainer">
         <h1 className="newsHeader">All News </h1>
-        <div className="row newsRow">
+        <div className="newsRow">
           {news.map(item => (
-            <div className="col newsCol" key={item._id}>
+            <div className="newsCol" key={item._id}>
               <Link to={`/News/${item.slug.current}`}>
                 <GatsbyImage
                   className="imgs"

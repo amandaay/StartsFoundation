@@ -36,9 +36,9 @@ function GalleryImages({ data, pageContext }) {
 
   return (
     <Layout>
-      <div className="container galleryContainer">
+      <div className="galleryContainer">
         <h1 className="galleryHeader">Gallery</h1>
-        <div className="row galleryRow">
+        <div className="galleryRow">
           {galleryImages.map(item => (
             <div className="galleryCol" key={item.id}>
               <GatsbyImage
