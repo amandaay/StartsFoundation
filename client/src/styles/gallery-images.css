@@ -11,6 +11,8 @@
 .galleryContainer {
   margin-top: 15vh;
   margin-bottom: 10vh;
+  padding-left:5%;
+  padding-right:5%
 }
 
 .galleryHeader {
@@ -29,4 +31,38 @@
 
 .paginateDiv {
   padding-top: 5%;
+}
+
+
+@media screen and (max-width:879px) {
+  .galleryContainer{
+    padding-left:1%;
+    padding-right:1%
+  }
+  .galleryRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .galleryCol{
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width:699px) {
+  .galleryContainer{
+    padding-left:0;
+    padding-right:0;
+  }
+  .galleryRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .galleryCol{
+    flex-basis: 50%;
+  }
+  .imageCaption{
+    font-size: 1em;
+  }
 }
