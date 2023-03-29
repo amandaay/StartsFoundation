@@ -31,15 +31,15 @@ function RecentNews() {
   console.log("news", news)
   return (
     <div className="mainDiv">
-      <div className="container containerNews">
+      <div className=" containerNews">
         <h1 className="recentNewsTitle">Recent News</h1>
-        <div className="row">
+        <div className="news-row">
           {news.map(item => {
             const dateString = item.date
             const dateStringSplit = dateString.split(" ")
 
             return (
-              <div className="col" key={item._id}>
+              <div className="col news-col" key={item._id}>
                 <Link to={`/News/${item.slug.current}`}>
                   <GatsbyImage
                     className="imgs"
