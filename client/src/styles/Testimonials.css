@@ -1,3 +1,9 @@
+.TestimonialsMainDiv {
+  background-color: #1b75bb;
+  width: 100vw;
+  padding-bottom: 10%;
+}
+
 .containerCause {
   padding-top: 7%;
 }
@@ -56,12 +62,14 @@
 }
 
 .leftButtonPosition {
-  left: -0%;
+  top: 50%;
+  left: -5%;
   transform: translate(0, -50%);
 }
 
 .rightButtonPosition {
-  right: -0%;
+  top: 50%;
+  right: -5%;
   transform: translate(0, -50%);
 }
 
