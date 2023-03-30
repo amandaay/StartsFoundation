@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { AiOutlineLeftCircle, AiOutlineRightCircle } from "react-icons/ai"
 
 export function Testimonials() {
   const data = useStaticQuery(graphql`
@@ -46,28 +47,48 @@ export function Testimonials() {
     }
   }
   const testimonials = data.allSanityTestimonials.nodes
+
+  const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+
+    const { carouselState: { currentSlide, slidesToShow, totalItems } } = rest;
+    // console.log(rest)
+    // console.log(next)
+    return (
+      <div className="carousel-button-group">
+        <AiOutlineLeftCircle className={`${currentSlide === 0 ? 'd-none' : ''} position-absolute leftButtonPosition fs-1 text-white`} onClick={() => previous()} />
+        <AiOutlineRightCircle className={`${currentSlide + slidesToShow === totalItems ? 'd-none' : ''} position-absolute rightButtonPosition fs-1 text-white`} onClick={() => next()} />
+      </div>
+    );
+  };
+
   return (
-    <div className="mainDiv ">
-      <div className="container containerCause">
+    <div className="TestimonialsMainDiv px-3">
+      <div className="container containerCause px-3">
         <h1 className="testimonialsTitle">Testimonials</h1>
-        <Carousel
-          responsive={responsive}
-          slidesToSlide={1}
-          additionalTransfrom={0}
-          itemClass="px-3 h-auto"
-          containerClass="react-multi-carousel-list"
-        >
-          {testimonials.map(testimonial => {
-            return (
-              <Testimonial
-                image={testimonial.image.asset.gatsbyImageData}
-                name={testimonial.name}
-                body={testimonial.body}
-                key={testimonial._id}
-              />
-            )
-          })}
-        </Carousel>
+        <div className="position-relative">
+          <Carousel
+            responsive={responsive}
+            slidesToSlide={1}
+            additionalTransfrom={0}
+            itemClass="px-3 h-auto"
+            containerClass="react-multi-carousel-list"
+            arrows={false}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup />}
+          >
+            {testimonials.map(testimonial => {
+              return (
+                <Testimonial
+                  image={testimonial.image.asset.gatsbyImageData}
+                  name={testimonial.name}
+                  body={testimonial.body}
+                  key={testimonial._id}
+                />
+              )
+            })}
+          </Carousel>
+        </div>
+
       </div>
     </div>
   )

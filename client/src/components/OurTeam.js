@@ -105,17 +105,16 @@ export function OurTeam() {
             <div className="row g-5">
               {members.length > amount
                 ? members.slice(amount).map(member => {
-                    console.log(member)
-                    return (
-                      <PersonalInfo
-                        member={member}
-                        css="col-6 col-lg-3"
-                        imageCss="memberPic"
-                        contextOverflow={"generalOverflow"}
-                        key={member._id}
-                      />
-                    )
-                  })
+                  return (
+                    <PersonalInfo
+                      member={member}
+                      css="col-6 col-lg-3"
+                      imageCss="memberPic"
+                      contextOverflow={"generalOverflow"}
+                      key={member._id}
+                    />
+                  )
+                })
                 : null}
             </div>
           </div>
