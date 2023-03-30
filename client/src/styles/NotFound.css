@@ -33,3 +33,29 @@
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width:768px) {
+  .errorHeader404{
+    font-size:4em
+  }
+
+  .notFound{
+    font-size:2em
+  }
+}
+
+@media screen and (max-width:380px) {
+  .errorHeader404{
+    font-size:3em
+  }
+
+  .notFound{
+    font-size:2em;
+    padding-top:2%;
+    padding-bottom:2%
+  }
+  .backHome{
+    font-size:1em
+  }
+
+}

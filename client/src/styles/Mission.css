@@ -174,3 +174,15 @@
 }
 
 }
+
+@media only screen and (min-width: 1800px) {
+  .vision-p,
+.mission-p,
+.goal-p {
+  padding:10% 10% 10% 10%;
+  color: rgb(20, 1, 82);
+  font-size: 1.3em;
+  text-align: left;
+  line-height: 2;
+}
+}

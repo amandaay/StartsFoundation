@@ -49,3 +49,9 @@ input[type="text"]:focus {
     right: 2%;
   }
 }
+
+@media only screen and (min-width: 1670px) {
+  .searchFieldIcon {
+    margin-top: 1%;
+  }
+}

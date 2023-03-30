@@ -60,7 +60,7 @@ function Footer() {
             <ul className="footer__usefulList">
               {usefulLinks.map(item => (
                 <li key={item.name}>
-                  <a href={item.url}>{item.name}</a>
+                  <a className="footerLinks" href={item.url}>{item.name}</a>
                 </li>
               ))}
             </ul>

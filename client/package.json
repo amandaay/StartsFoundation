@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "starts-foundation",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Official website for the Starts Foundation of Nepal developed with Gatbsy",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Casper Huang, So Man Amanda Au-Yeung, Hau Chu, Kasi Viswanath Vandanapu, Benson Wu, Yian Chen",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@paypal/react-paypal-js": "^7.8.2",
