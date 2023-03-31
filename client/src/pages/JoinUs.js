@@ -1,7 +1,15 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "../components/Layout"
 import * as styles from "../styles/JoinUs.module.css"
-import { Link, navigate } from "gatsby"
+import { Link } from "gatsby"
+import { SEO } from "../components/SEO"
+
+/**
+ * SEO section
+ */
+const title = "Join Starts Foundation"
+const content = "Join Starts Foundation and support their humanitarian work"
+export const Head = () => <SEO title={title} content={content} />
 
 export default function JoinUs() {
   return (

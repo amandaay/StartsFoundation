@@ -1,7 +1,15 @@
 import React from "react"
 import "../styles/About.css"
 import { StaticImage } from "gatsby-plugin-image"
+import { SEO } from "../components/SEO"
 
+/**
+ * SEO section
+ */
+const title = "About Starts Foundation"
+const content =
+  "Starts was initiated as a pivotal platform to embark much needed journeys towards sustainable development in Nepali society"
+export const Head = () => <SEO title={title} content={content} />
 /**
  * about page
  * @returns JSX of about page
