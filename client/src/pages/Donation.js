@@ -7,7 +7,7 @@ import { SEO } from "../components/SEO"
 /**
  * SEO section
  */
-const title = "Donate"
+const title = "Support and Donate to Starts Foundation"
 const content =
   "Donate and join Starts Foundation to save and support the life of people in Nepal and the foundation's humanitarian work"
 export const Head = () => <SEO title={title} content={content} />
