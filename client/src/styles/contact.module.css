@@ -9,13 +9,14 @@ body {
 .header {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
+  text-align: center;
 }
 
 .section {
   min-width: 600px;
   width: 100vw;
   height: 100vh;
-  padding-top: 10%;
+  padding-top: 7%;
   background-color: #1b75bb;
   border-bottom: 1px solid #fff;
 }
@@ -26,13 +27,15 @@ body {
   align-items: center;
 }
 
+label{
+  padding-top: 2%
+}
 .form {
   display: flex;
   flex-direction: column;
   background-color: #fff;
   border-radius: 10px;
   max-width: 50%;
-  max-height: 50vh;
   padding: 1.5em;
   margin-left: 25%;
 }
@@ -56,3 +59,4 @@ body {
   color: #fff;
   text-align: center;
 }
+

@@ -38,8 +38,98 @@ module.exports = {
       resolve: "gatsby-source-sanity",
       options: {
         ...sanityConfig,
-        watchMode: true,
+        watchMode: false,
       },
     },
+    {
+      resolve: "gatsby-plugin-local-search",
+      options: {
+        name: "blog",
+        engine: "flexsearch",
+        engineOptions: {
+          tokenize: "forward",
+        },
+        query: `
+        {
+          allSanityBlog{
+            nodes{
+              id
+              title
+              author
+              _createdAt
+              coverImage{
+                asset{
+                   gatsbyImageData
+                }
+                alt
+              }
+              excerpt {
+               children {
+                  text
+                }
+              }
+              slug {
+                current
+                }
+            }
+          }
+        }
+        `,
+        ref: "id",
+        index: ["title"],
+        store: ["id", "title", "_createdAt", "slug", "coverImage"],
+        normalizer: ({ data }) =>
+          data.allSanityBlog.nodes.map(node => ({
+            id: node.id,
+            title: node.title,
+            author: node.author,
+            createdAt: node._createdAt,
+            slug: node.slug,
+            coverImage: node.coverImage,
+          })),
+      },
+    },
+    {
+      resolve: "gatsby-plugin-local-search",
+      options: {
+        name: "news",
+        engine: "flexsearch",
+        engineOptions: {
+          tokenize: "forward",
+        },
+        query: `
+        {
+          allSanityNews {
+              nodes {
+                id
+                slug {
+                  current
+                }
+                title
+                date
+                image {
+                  alt
+                  asset {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
+          }
+        `,
+        ref: "id",
+        index: ["title"],
+        store: ["id", "title", "date", "slug", "image"],
+        normalizer: ({ data }) =>
+          data.allSanityNews.nodes.map(node => ({
+            id: node.id,
+            title: node.title,
+            date: node.date,
+            slug: node.slug,
+            image: node.image,
+          })),
+      },
+    },
+    
   ],
 }

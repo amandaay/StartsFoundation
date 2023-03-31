@@ -26,7 +26,11 @@
   padding-bottom: 10%;
   color: rgb(6, 67, 128);
 }
-
+.join-row{
+  display: flex;
+  justify-content: space-evenly;
+  gap:5%
+}
 .join-col-div {
   display: flex;
   flex-direction: column;
@@ -63,4 +67,34 @@
   padding-top: 10%;
   font-size: 1.4rem;
   color: rgb(6, 67, 128);
+}
+
+@media screen and (max-width: 1199px) {
+ .join-title,.bottom-title {
+  font-size: 1.2em;
+}
+}
+
+@media screen and (max-width: 952px) {
+  .joinDiv{
+    height: auto;
+  }
+ .join-title,.bottom-title {
+  font-size: 1.2em;
+}
+.join-row{
+  flex-wrap:wrap;
+  margin-bottom: 10%;
+}
+.join-col-div{
+  flex-basis:40%
+}
+ .collab-icon,.funding-icon,.crowd-icon{
+    width: 6em;
+  }
+}
+@media screen and (max-width: 461px){
+  .collab-icon,.funding-icon,.crowd-icon{
+    width: 5em;
+  }
 }

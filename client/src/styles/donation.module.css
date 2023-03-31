@@ -14,7 +14,7 @@ body {
   -webkit-background-size: cover;
   background-position: left top;
   background-repeat: no-repeat;
-  height: 110vh;
+  min-height: 100vh;
 }
 
 @media (max-width: 992px) {
@@ -46,7 +46,7 @@ body {
 .firstSection {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 15%;
+  padding-top: 30vh;
   justify-content: right;
   width: 100%;
 }
@@ -59,6 +59,7 @@ body {
   background-color: white;
   border: solid 1px white;
   border-radius: 5px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 992px) {
