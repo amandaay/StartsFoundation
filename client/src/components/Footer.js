@@ -37,9 +37,9 @@ function Footer() {
                   <button className="donateBtn">Donate</button>
                 </Link>
               </span>
-              <span className="joinSpan">
+              <Link to="/JoinUs" className="joinSpan">
                 <button className="joinBtn">Join</button>
-              </span>
+              </Link>
             </div>
 
             <ul className="footer__socialList">
@@ -60,7 +60,9 @@ function Footer() {
             <ul className="footer__usefulList">
               {usefulLinks.map(item => (
                 <li key={item.name}>
-                  <a className="footerLinks" href={item.url}>{item.name}</a>
+                  <a className="footerLinks" href={item.url}>
+                    {item.name}
+                  </a>
                 </li>
               ))}
             </ul>
