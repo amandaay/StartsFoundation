@@ -1,3 +1,9 @@
+.TestimonialsMainDiv {
+  background-color: #1b75bb;
+  width: 100vw;
+  padding-bottom: 10%;
+}
+
 .containerCause {
   padding-top: 7%;
 }
@@ -53,4 +59,20 @@
 
 .testimonialScrollbar::-webkit-scrollbar-track {
   box-shadow: transparent;
+}
+
+.leftButtonPosition {
+  top: 50%;
+  left: -5%;
+  transform: translate(0, -50%);
+}
+
+.rightButtonPosition {
+  top: 50%;
+  right: -5%;
+  transform: translate(0, -50%);
+}
+
+.text-blue {
+  color: #1b75bb;
 }
