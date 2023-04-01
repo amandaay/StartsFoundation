@@ -1,3 +1,11 @@
+.singleNewsContainer {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 .inline-text {
   font-size: 16px;
   overflow: wrap;
@@ -8,7 +16,7 @@
 }
 .inline-image-text {
   width: 45%;
-  float: left;
+ 
 }
 
 .post-caption {
@@ -23,5 +31,14 @@
 @media screen and (max-width: 768px) {
   .img-div {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .content {
+    width: 50%;
+  }
+  .img-div {
+    max-width: 50%;
   }
 }

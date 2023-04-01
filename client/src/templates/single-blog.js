@@ -26,7 +26,7 @@ export const postQuery = graphql`
 `
 function SingleBlog({ data }) {
   const { title, _createdAt, author, coverImage, _rawBody } = data.sanityBlog
-  console.log("TEXT from rawbody in SingleBlogPost", _rawBody)
+
   return (
     <Layout>
       <div className="blogsContainer d-flex justify-content-center">
@@ -55,6 +55,12 @@ function SingleBlog({ data }) {
   )
 }
 
+SingleBlog.propTypes = {
+  data: PropTypes.any,
+}
+
+export default SingleBlog
+
 /**
  * SEO section
  */
@@ -75,8 +81,3 @@ export const Head = ({ data }) => {
 
   return <SEO title={title} content={text} />
 }
-SingleBlog.propTypes = {
-  data: PropTypes.any,
-}
-
-export default SingleBlog

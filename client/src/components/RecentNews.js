@@ -27,8 +27,7 @@ function RecentNews() {
   `)
 
   const news = data.allSanityNews.nodes
-  console.log("data", data)
-  console.log("news", news)
+ 
   return (
     <div className="mainDiv">
       <div className=" containerNews">

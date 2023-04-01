@@ -180,7 +180,6 @@ exports.createPages = async ({ graphql, actions }) => {
    */
   const { createPage } = actions
   const resultNews = await graphql(allNewsQuery)
-  console.log(resultNews)
   if (resultNews.errors) throw resultNews.errors
   const allNewsPosts = resultNews.data.allSanityNews.nodes || []
   createNewsPages(allNewsPosts, createPage)

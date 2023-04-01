@@ -54,7 +54,6 @@ function Search() {
       fetch(newsPublicStoreURL).then(response => response.json()),
     ])
 
-    console.log("blogsIndex", blogsIndex)
     setBlogsIndexStore({
       index: blogsIndex,
       store: blogsStore,
