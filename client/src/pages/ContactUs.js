@@ -1,10 +1,6 @@
 import React, { useRef, useState } from "react"
 import Layout from "../components/Layout"
-<<<<<<< HEAD
 import * as styles from "../styles/ContactUs.module.css"
-=======
-import * as styles from "../styles/contact.module.css"
->>>>>>> 96d9c3660c1a3472371e354abd79133d783c09ac
 import { navigate } from "gatsby"
 import emailjs from "@emailjs/browser"
 
@@ -14,7 +10,6 @@ export default function Contact() {
 
   const handleSubmit = async evt => {
     evt.preventDefault()
-    console.log(form.current)
     emailjs
       .sendForm(
         "service_ho4liy5",
