@@ -26,7 +26,7 @@ export const postQuery = graphql`
 `
 function SingleBlog({ data }) {
   const { title, _createdAt, author, coverImage, _rawBody } = data.sanityBlog
-
+  console.log("TEXT from rawbody in SingleBlogPost", _rawBody)
   return (
     <Layout>
       <div className="blogsContainer d-flex justify-content-center">
@@ -49,9 +49,7 @@ function SingleBlog({ data }) {
             />
             <PortableTextComponent value={_rawBody} />
           </article>
-
         </div>
-
       </div>
     </Layout>
   )
@@ -63,11 +61,18 @@ function SingleBlog({ data }) {
 export const Head = ({ data }) => {
   const { title, _rawBody } = data.sanityBlog
 
-  const text = _rawBody.reduce((accum, currVal) => {
-    currVal = currVal.children[0].text
-    return accum + currVal
-  }, "")
-  console.log("TEXT", text)
+  let text = `${title}`
+  if (
+    _rawBody[0].length !== 0 ||
+    _rawBody[0] !== undefined ||
+    _rawBody[0] !== null
+  ) {
+    text = _rawBody[0].children.reduce((accumulative, currentValue) => {
+      currentValue = currentValue.text
+      return accumulative + currentValue
+    }, "")
+  }
+
   return <SEO title={title} content={text} />
 }
 SingleBlog.propTypes = {
