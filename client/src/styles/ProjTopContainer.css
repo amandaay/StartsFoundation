@@ -33,6 +33,6 @@
 }
 
 .proj-description {
-  font-size: clamp(10px, 1.5vw, 16px);
+  font-size: clamp(14px, 1.5vw, 18px);
   line-height: 2;
 }
