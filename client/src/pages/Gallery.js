@@ -2,11 +2,13 @@ import { navigate } from "gatsby"
 import PropTypes from "prop-types"
 
 function Gallery({ location }) {
-  location.pathname === "/Gallery/"
-    ? navigate("/Gallery/page=1")
-    : navigate(location.pathname)
+  if (typeof window !== "undefined") {
+    location.pathname === "/Gallery/"
+      ? navigate("/Gallery/page=1")
+      : navigate(location.pathname)
 
-  return
+    return
+  }
 }
 
 Gallery.propTypes = {

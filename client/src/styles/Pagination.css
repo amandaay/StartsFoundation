@@ -3,3 +3,10 @@ div.pagination {
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (min-width:1680px) {
+
+  div.pagination{
+    font-size:1.2em
+  }
+}

@@ -219,7 +219,7 @@ function Navbar(props) {
                 </Link>
               </li>
               <li className="donateClass">
-                <Link to="/donation">
+                <Link to="/Donation">
                   <button className="donateBtn">Donate</button>
                 </Link>
               </li>

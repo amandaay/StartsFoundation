@@ -32,7 +32,7 @@ function CanvasTopContainer() {
           imagesGallery {
             _key
             asset {
-              gatsbyImageData(placeholder: BLURRED, fit: FILL)
+              gatsbyImageData(placeholder: BLURRED,  layout: CONSTRAINED)
               altText
             }
           }
@@ -58,7 +58,7 @@ function CanvasTopContainer() {
         Project - {project === "SMILE" ? "A WAITING SMILE" : project}
       </h1>
       <div className="row proj-top-row">
-        <div className="col proj-top-left">
+        <div className="col-xs-12 col-sm-12 col-md-4 col-lg-6 proj-top-left">
           <ProjectPagination
             currentPage={page}
             totalPages={pageSize}
@@ -69,7 +69,7 @@ function CanvasTopContainer() {
             </div>
           </ProjectPagination>
         </div>
-        <div className="col proj-top-right">
+        <div className="col-xs-12 col-sm-12 col-md-4 col-lg-6 proj-top-right">
           <HandleText description={para} />
         </div>
       </div>

@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import * as styles from '../styles/success.module.css'
 
-export default function success() {
+export default function Success() {
     function handleClick() {
         navigate('/', { replace: true });
     }

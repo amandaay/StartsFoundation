@@ -1,6 +1,15 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "../components/Layout"
 import * as styles from "../styles/Membership.module.css"
+import { SEO } from "../components/SEO"
+
+/**
+ * SEO section
+ */
+const title = "Starts Foundation Member"
+const content =
+  "Become a member at Starts Foundation and support their humanitarian work"
+export const Head = () => <SEO title={title} content={content} />
 
 export default function Membership() {
   return (

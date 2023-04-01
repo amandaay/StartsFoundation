@@ -2,8 +2,21 @@ import React from "react"
 import DonationForm from "../components/DonationForm"
 import Layout from "../components/Layout"
 import * as styles from "../styles/donation.module.css"
+import { SEO } from "../components/SEO"
 
-export default function donation() {
+/**
+ * SEO section
+ */
+const title = "Support and Donate to Starts Foundation"
+const content =
+  "Donate and join Starts Foundation to save and support the life of people in Nepal and the foundation's humanitarian work"
+export const Head = () => <SEO title={title} content={content} />
+
+/**
+ * Donation module
+ * @returns donation JSX for Starts Foundation
+ */
+export default function Donation() {
   return (
     <Layout>
       <section className={styles.banner}>

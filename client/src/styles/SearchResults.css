@@ -1,0 +1,45 @@
+.noResults {
+  font-size: 2rem;
+  color: rgb(0, 85, 159);
+}
+
+.noResultsDiv {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.searchResultTitle {
+  padding-top: 2%;
+  font-size: 2rem;
+  color: rgb(0, 85, 159);
+}
+
+.blogResultDiv {
+  margin-top: 5%;
+  background-color: rgb(255, 255, 255);
+  height: auto;
+  padding: 1% 1% 1% 1%;
+  display: flex;
+}
+
+.blogResultInnerDiv2 {
+  padding-left: 2%;
+  align-self: center;
+}
+
+.miniImg {
+  width: 8rem;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    .searchResultTitle,.noResults{
+        font-size:1.5rem ;
+    }
+}
+
+@media only screen and (min-width: 1680px){
+    .searchBlogTitle{
+        font-size:1.2em
+    }
+}

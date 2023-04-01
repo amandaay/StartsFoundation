@@ -29,7 +29,7 @@ function CanvasContentWriting() {
           coverImage {
             alt
             asset {
-              gatsbyImageData(fit: FILL, placeholder: BLURRED)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
             }
           }
         }
@@ -51,17 +51,17 @@ function CanvasContentWriting() {
         <div className="Activities">
           <h1 className="ContentTitle">{canvasData.title}</h1>
           <div className="row stories-row">
-            <div className="col stories-col-div">
+            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-6 stories-col-div">
               <GatsbyImage
                 className="stories-img"
                 image={getImage(canvasData.coverImage.asset.gatsbyImageData)}
                 alt={canvasData.coverImage.alt}
               />
             </div>
-            <div className="col stories-col-div">
+            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-6 stories-col-div">
               {canvasData.body.map(section => {
                 return (
-                  <div key={section._key}>
+                  <div className="centered-stories" key={section._key}>
                     {section.children.map(child => {
                       return (
                         <div key={child._key}>

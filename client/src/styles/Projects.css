@@ -10,8 +10,8 @@
 }
 
 .ProjectMidContainer {
-  align-items: center;
-  justify-content: center;
   padding: 1em 1em 1em 1em;
-  margin: 3em 4em 3em 4em;
+  margin: clamp(1rem, 2rem, 3rem);
+  display: flex;
+  flex-direction: column;
 }

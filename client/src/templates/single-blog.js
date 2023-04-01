@@ -6,6 +6,7 @@ import PortableTextComponent from "../components/PortableText"
 import Layout from "../components/Layout"
 import { CiCalendarDate } from "react-icons/ci"
 import { IoPersonOutline } from "react-icons/io5"
+import { SEO } from "../components/SEO"
 
 export const postQuery = graphql`
   query singleNewsQuery($id: String!) {
@@ -25,7 +26,7 @@ export const postQuery = graphql`
 `
 function SingleBlog({ data }) {
   const { title, _createdAt, author, coverImage, _rawBody } = data.sanityBlog
-  console.log("data", data)
+
   return (
     <Layout>
       <div className="blogsContainer d-flex justify-content-center">
@@ -56,6 +57,19 @@ function SingleBlog({ data }) {
   )
 }
 
+/**
+ * SEO section
+ */
+export const Head = ({ data }) => {
+  const { title, _rawBody } = data.sanityBlog
+
+  const text = _rawBody.reduce((accum, currVal) => {
+    currVal = currVal.children[0].text
+    return accum + currVal
+  }, "")
+  console.log("TEXT", text)
+  return <SEO title={title} content={text} />
+}
 SingleBlog.propTypes = {
   data: PropTypes.any,
 }

@@ -77,7 +77,7 @@ export default function DonationForm() {
       <input
         id="number"
         type="number"
-        value={donatedAmount===0?"":donatedAmount}
+        value={donatedAmount || ""}
         onChange={onOtherAmountChange}
         onKeyDown={onOtherAmountReturn}
         className={styles.amountInput}

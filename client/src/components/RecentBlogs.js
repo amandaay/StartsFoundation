@@ -36,13 +36,14 @@ function RecentBlogs() {
   const blogs = data.allSanityBlog.nodes
   const countBlogsAmount = () => {
     let newAmount = 0
-
-    if (window.innerWidth < 768) {
-      newAmount = blogs.length > 3 ? 3 : blogs.length
-    } else {
-      newAmount = blogs.length > 5 ? 5 : blogs.length
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 768) {
+        newAmount = blogs.length > 3 ? 3 : blogs.length
+      } else {
+        newAmount = blogs.length > 5 ? 5 : blogs.length
+      }
+      return newAmount
     }
-    return newAmount
   }
   const amount = countBlogsAmount()
   const createRightBlog = blogs => {
@@ -87,7 +88,6 @@ function RecentBlogs() {
           <div className="col-12 col-md-8" key="rightblogs">
             <div className="row gy-4">{createRightBlog(blogs ?? [])}</div>
           </div>
-
         </div>
         <div className="d-flex justify-content-end mt-3">
           <Link className="moreBlogsp" to="/Blogs">
@@ -114,7 +114,10 @@ export function Blog(props) {
         className={`d-flex justify-content-center bg-white rounded-bottom ${props.contextCSS} shadow-lg`}
       >
         <div className="mt-3 mb-3 w-90">
-          <Link style={{ textDecoration: 'none' }} to={`/Blogs/${blog.slug.current}`}>
+          <Link
+            style={{ textDecoration: "none" }}
+            to={`/Blogs/${blog.slug.current}`}
+          >
             <p className="title-font-size titleOverflow">{blog.title}</p>
           </Link>
           <h6 className="mt-2 text-secondary font-size">

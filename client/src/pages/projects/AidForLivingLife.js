@@ -3,6 +3,13 @@ import "../../styles/Projects.css"
 import Layout from "../../components/Layout"
 import LifeContentWriting from "../../components/LifeContentWriting"
 import LifeTopContainer from "../../components/LifeTopContainer"
+import { SEO } from "../../components/SEO"
+
+/** SEO section */
+const title = "Aid For Living Life"
+const content =
+  "Starts foundation project for humanitarian work to support marginalized and underserved communities in Nepal"
+export const Head = () => <SEO title={title} content={content} />
 
 /**
  * /Projects/AidForLivingLife page

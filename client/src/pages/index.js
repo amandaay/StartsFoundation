@@ -12,6 +12,15 @@ import {
   Testimonials,
   RecentBlogs,
 } from "../components/Components"
+import { SEO } from "../components/SEO"
+
+/**
+ * SEO section
+ */
+const title="Starts Foundation Homepage"
+const content=
+  "The homepage of the official Starts Foundation Website that helps the communities in Nepal. Starts Foundation is a nonprofit organization that focuses on humanitarian work in Nepal"
+export const Head = () => <SEO title={title} content={content} />
 
 /**
  * Home page module
@@ -32,8 +41,6 @@ function Home() {
     })
   }
 
-  // console.log("home pathname", window.location.pathname)
-
   return (
     <div className="App">
       <Layout
@@ -52,7 +59,12 @@ function Home() {
                 <h1 className="startsFoundation">STARTS FOUNDATION</h1>
                 <p className="tagline">Helping the communities in need</p>
 
-                <button className="learnBtnMain">Learn More</button>
+                <button
+                  className="learnBtnMain"
+                  onClick={() => scrollToSection(about)}
+                >
+                  Learn More
+                </button>
               </div>
             </div>
           </div>

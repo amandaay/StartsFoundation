@@ -42,8 +42,7 @@ function BlogsPosts({ data, pageContext }) {
     }
     onTop()
   }, [])
-  console.log("BLogs Posts TEMPLATE CONTEXT", data)
-  console.log(window.location)
+
   const blogs = data.allSanityBlog.nodes
 
   return (

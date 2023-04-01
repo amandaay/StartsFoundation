@@ -25,7 +25,6 @@ export function OurTeam() {
             alt
           }
           _rawBody
-          
         }
       }
     }
@@ -35,17 +34,18 @@ export function OurTeam() {
 
   const countMembersAmount = () => {
     let newAmount = 0
-
-    if (window.innerWidth < 768) {
-      newAmount = members.length > 3 ? 3 : members.length
-    } else {
-      newAmount = members.length > 5 ? 5 : members.length
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 768) {
+        newAmount = members.length > 3 ? 3 : members.length
+      } else {
+        newAmount = members.length > 5 ? 5 : members.length
+      }
+      return newAmount
     }
-    return newAmount
   }
   const amount = countMembersAmount()
 
-  const createRightContent = (members) => {
+  const createRightContent = members => {
     // let amount = blogs.amount > 5 ? 5 : blogs.length
     const rightMembers = []
 
@@ -85,8 +85,7 @@ export function OurTeam() {
       <div className="d-flex justify-content-center">
         <div className="row g-5 mt-4 w-75 ourTeamScrollbar">
           <div className="col-12 col-lg-6 d-flex justify-content-center">
-            {
-              members.length > 0 &&
+            {members.length > 0 && (
               <PersonalInfo
                 // image={members[0].memberPortrait.asset.gatsbyImageData}
                 // alt={members[0].memberPortrait.alt}
@@ -96,37 +95,29 @@ export function OurTeam() {
                 imageCss="img-fluid w-100 h-100 "
                 contextOverflow={"mainOverflow"}
               />
-            }
+            )}
           </div>
 
           <div className="col-12 col-lg-6">
-            <div className="row g-5">
-              {
-                createRightContent(members ?? [])
-              }
-            </div>
+            <div className="row g-5">{createRightContent(members ?? [])}</div>
           </div>
           <div className="col-12">
             <div className="row g-5">
-              {
-                members.length > amount ?
-                  members.slice(amount).map((member) => {
-                    console.log(member)
-                    return (
-                      <PersonalInfo
-                        member={member}
-                        css="col-6 col-lg-3"
-                        imageCss="memberPic"
-                        contextOverflow={"generalOverflow"}
-                        key={member._id}
-                      />
-                    )
-                  })
-                  : null}
+              {members.length > amount
+                ? members.slice(amount).map(member => {
+                  return (
+                    <PersonalInfo
+                      member={member}
+                      css="col-6 col-lg-3"
+                      imageCss="memberPic"
+                      contextOverflow={"generalOverflow"}
+                      key={member._id}
+                    />
+                  )
+                })
+                : null}
             </div>
-
           </div>
-
         </div>
       </div>
 
@@ -161,7 +152,9 @@ function PersonalInfo(props) {
             </div>
             <div className="w-100">
               <div className="border-bottom border-white"> </div>
-              <div className="fs-4 font-weight-bold">{props.member.memberName}</div>
+              <div className="fs-4 font-weight-bold">
+                {props.member.memberName}
+              </div>
               <div className="fs-6 fst-italic">{props.member.memberTitle}</div>
             </div>
           </div>

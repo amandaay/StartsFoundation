@@ -9,6 +9,10 @@
   padding-top: 3%;
 }
 
+.objective-row{
+  display: flex;
+
+}
 /*box containing the texts*/
 .objective-box {
   margin: 1%;
@@ -35,10 +39,14 @@
   text-decoration-thickness: 0.18rem;
   padding-bottom: 5%;
 }
+.core-span{
+  font-size:1em;
+}
 
 .core-p,
 .obj-p {
   line-height: 1.7;
+  font-size:1.1em
 }
 
 .core-title {
@@ -48,3 +56,35 @@
 .obj-p li {
   padding-bottom: 1%;
 }
+
+@media screen and (max-width: 986px) {
+  .core-p,.core-span{
+    font-size: 1em;
+  }
+  .obj-p{
+    font-size: 1em;
+  }
+  .objective-row{
+    display:grid
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .core-p,.core-span{
+    font-size: 1em;
+  }
+  .objective-row{
+    display:grid
+  }
+  .objectives-title,.values-title{
+    font-size:1.3em;
+    text-align: center;
+  }
+  .objective-box{
+    padding:3% 3% 3% 3%
+  }
+  .obj-p{
+    font-size: 1em;
+  }
+}
+
