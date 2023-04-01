@@ -1,6 +1,7 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
+import "../styles/ProjTopContainer.css"
 
 /**
  * this function handles the complex data of the images from proj description
@@ -12,7 +13,7 @@ function HandleText({ description }) {
       {description.map(section => (
         <div key={section._key}>
           {section.children.map(paragraph => (
-            <p key={paragraph._key}>{paragraph.text}</p>
+            <p className="proj-description" key={paragraph._key}>{paragraph.text}</p>
           ))}
         </div>
       ))}

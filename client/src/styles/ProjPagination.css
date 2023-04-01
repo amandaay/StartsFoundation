@@ -1,7 +1,19 @@
 .proj-content-right-arrow,
 .proj-content-left-arrow {
-  font-size: max(min(1vw, 1em), 2rem);
   cursor: pointer;
   user-select: none;
   transform: scale(1);
+}
+
+.pagination-circle {
+  font-size: max(min(0.3vw, 0.3em), 1rem);
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  box-shadow: 0 0 18px 3px rgb(13 110 253 / 20%);
+}
+
+.pagination-content{
+  padding: 1.2em;
+  display: flex;
 }
