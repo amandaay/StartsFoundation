@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans:wght@300;400;500;600;900&family=Open+Sans:wght@300&family=PT+Sans&family=Poppins:wght@100;400&display=swap");
+
+body {
+  /* position: relative;
+  color: #000000;
+  font-weight: 100; */
+
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+  position: relative;
+}
+
+.header {
+  font-family: "Noto Sans", sans-serif;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;  
+}
+
+.banner {
+  background-color: #1968a5;
+  height: 120vh;
+  border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 992px) {
+  .banner {
+    background-size: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 993px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 13%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+  min-width: 50vw;
+  max-height: 50vh;
+  padding: 1.5em;
+}
+
+
+.contact {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.phone {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.modalAlign{
+  padding-top: 15%;
+}
