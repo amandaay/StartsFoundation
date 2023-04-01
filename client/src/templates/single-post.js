@@ -34,10 +34,10 @@ export const postQuery = graphql`
  */
 function SinglePost({ data }) {
   const { title, date, _rawBody, image, caption } = data.sanityNews
-  console.log("rawBODY", _rawBody[0].children)
+
   return (
     <Layout>
-      <div className="blogsContainer d-flex justify-content-center">
+      <div className="singleNewsContainer">
         <div className="w-75">
           <h2>{title}</h2>
           <h6 className="mt-2 text-secondary">
@@ -68,22 +68,30 @@ function SinglePost({ data }) {
   )
 }
 
+SinglePost.propTypes = {
+  data: PropTypes.any,
+}
+
+export default SinglePost
+
 /**
  * SEO section
  */
 export const Head = ({ data }) => {
   const { title, _rawBody } = data.sanityNews
 
-  const text = _rawBody.reduce((accum, currVal) => {
-    currVal = currVal.children[0].text
-    return accum + currVal
-  }, "")
-  console.log("TEXT", text)
+  let text = `${title}`
+  if (
+    _rawBody[0].length !== 0 ||
+    _rawBody[0] !== undefined ||
+    _rawBody[0] !== null
+  ) {
+    text = _rawBody[0].children.reduce((accumulative, currentValue) => {
+      currentValue = currentValue.text
+      return accumulative + currentValue
+    }, "")
+  }
+
   return <SEO title={title} content={text} />
 }
 
-SinglePost.propTypes = {
-  data: PropTypes.any,
-}
-
-export default SinglePost

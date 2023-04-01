@@ -169,21 +169,20 @@ img {
   .donateBtn {
     width: 100px;
   }
-  .footerTextDiv{
-    font-size:1.2em
+  .footerTextDiv {
+    font-size: 1.2em;
   }
-  .copyright{
-    font-size:1.1em
+  .copyright {
+    font-size: 1.1em;
   }
-  .footerH3{
-    padding-bottom:5%
+  .footerH3 {
+    padding-bottom: 5%;
   }
-  .footerLinks{
-    font-size:1.1em
+  .footerLinks {
+    font-size: 1.1em;
   }
 }
 @media only screen and (min-width: 2000px) {
-  
   .navbrand-link {
     font-size: 1.2em;
   }
@@ -193,12 +192,12 @@ img {
   .joinBtn,
   .donateBtn {
     width: 110px;
-    font-size:1.1em
+    font-size: 1.1em;
   }
 
-  .navContainer{
-    padding-left:0;
-    padding-right:0
+  .navContainer {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -480,8 +479,8 @@ ul.footer__usefulList {
   .footerH3 {
     font-size: 1.2em;
   }
-  .copyright{
-    font-size:0.8em
+  .copyright {
+    font-size: 0.8em;
   }
 }
 
