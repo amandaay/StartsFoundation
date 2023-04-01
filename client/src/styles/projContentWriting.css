@@ -77,7 +77,7 @@
 
 .projText {
   text-align: left;
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: clamp(14px, 1.5vw, 16px);
   line-height: 2;
 }
 

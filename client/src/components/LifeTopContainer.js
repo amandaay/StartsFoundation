@@ -58,7 +58,7 @@ function LifeTopContainer() {
         Project - {project === "SMILE" ? "A WAITING SMILE" : project}
       </h1>
       <div className="row proj-top-row">
-        <div className="col-xs-12 col-sm-12 col-md-8 col-lg-6 proj-top-left">
+        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 proj-top-left">
           <ProjectPagination
             currentPage={page}
             totalPages={pageSize}
@@ -70,7 +70,7 @@ function LifeTopContainer() {
             
           </ProjectPagination>
         </div>
-        <div className="col-xs-12 col-sm-12 col-md-4 col-lg-6 proj-top-right">
+        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 proj-top-right">
           <HandleText description={para} />
         </div>
       </div>
