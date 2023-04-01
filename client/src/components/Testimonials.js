@@ -51,8 +51,7 @@ export function Testimonials() {
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
 
     const { carouselState: { currentSlide, slidesToShow, totalItems } } = rest;
-    // console.log(rest)
-    // console.log(next)
+
     return (
       <div className="carousel-button-group">
         <AiOutlineLeftCircle className={`${currentSlide === 0 ? 'd-none' : ''} position-absolute leftButtonPosition fs-1 text-white`} onClick={() => previous()} />

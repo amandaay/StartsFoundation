@@ -91,10 +91,10 @@ const ButtonWrapper = ({
                 .then((result)=>{
                   return result;
                 }, (error) => {
-                  console.log(error.text)
+                  console.error(error.text)
                 })
             } catch (error) {
-              console.log(error.message)
+              console.error(error.message)
             }
             return orderId
           })
@@ -106,7 +106,7 @@ const ButtonWrapper = ({
             // update({...userInfo, subscribed})
             emailjs.send('service_a5wgn62', 'template_1j6whfq', {...userInfo, value}, 'cfXaPyimGdQFLjpA7')
           } catch (error) {
-            console.log(error.message)
+            console.error(error.message)
           }
           navigate("/success", { replace: true })
         })

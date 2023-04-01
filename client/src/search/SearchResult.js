@@ -5,13 +5,13 @@ import { BlogsSearchResultItem,NewsSearchResultItem } from "./SearchResultItem"
 import "../styles/SearchResults.css"
 
 function SearchResult({ searchQuery, blogsIndexStore, newsIndexStore }) {
-  console.log("blogsIndexStore", blogsIndexStore)
+
   const blogsResult = useFlexSearch(
     searchQuery,
     JSON.stringify(blogsIndexStore.index),
     blogsIndexStore.store
   )
-  console.log("bblog result", blogsResult)
+
   const newsResult = useFlexSearch(
     searchQuery,
     JSON.stringify(newsIndexStore.index),
