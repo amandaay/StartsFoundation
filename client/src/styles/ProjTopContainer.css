@@ -17,14 +17,14 @@
   display: flex;
 }
 
-.col.proj-top-left {
+.proj-top-left {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.col.proj-top-right {
+.proj-top-right {
   color: black;
   line-height: 1.5;
   margin: auto;
@@ -32,7 +32,7 @@
   width: clamp(45ch, 50%, 75ch);
 }
 
-.proj-top-img {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+.proj-description {
+  font-size: clamp(10px, 1.5vw, 16px);
+  line-height: 2;
 }
