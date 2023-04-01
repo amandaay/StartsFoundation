@@ -6,7 +6,11 @@ import PortableTextComponent from "../components/PortableText"
 import "../styles/SinglePost.css"
 import Layout from "../components/Layout"
 import { CiCalendarDate } from "react-icons/ci"
+import { SEO } from "../components/SEO"
 
+/**
+ * GraphQL query for news post
+ */
 export const postQuery = graphql`
   query SingleNewsQuery($id: String!) {
     sanityNews(_id: { eq: $id }) {
@@ -23,9 +27,14 @@ export const postQuery = graphql`
     }
   }
 `
+/**
+ * News Post module for single news page
+ * @param {object} graphql data
+ * @returns JSX of single news page
+ */
 function SinglePost({ data }) {
   const { title, date, _rawBody, image, caption } = data.sanityNews
-  console.log("Rawbody type", typeof _rawBody)
+  console.log("rawBODY", _rawBody[0].children)
   return (
     <Layout>
       <div className="blogsContainer d-flex justify-content-center">
@@ -57,6 +66,20 @@ function SinglePost({ data }) {
       </div>
     </Layout>
   )
+}
+
+/**
+ * SEO section
+ */
+export const Head = ({ data }) => {
+  const { title, _rawBody } = data.sanityNews
+
+  const text = _rawBody.reduce((accum, currVal) => {
+    currVal = currVal.children[0].text
+    return accum + currVal
+  }, "")
+  console.log("TEXT", text)
+  return <SEO title={title} content={text} />
 }
 
 SinglePost.propTypes = {

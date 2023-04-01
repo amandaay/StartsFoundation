@@ -3,6 +3,13 @@ import "../../styles/Projects.css"
 import Layout from "../../components/Layout"
 import SmileContentWriting from "../../components/SmileContentWriting"
 import SmileTopContainer from "../../components/SmileTopContainer"
+import { SEO } from "../../components/SEO"
+
+/** SEO section */
+const title = "A Waiting Smile"
+const content =
+  "Starts foundation project for humanitarian work to support marginalized and underserved communities in Nepal"
+export const Head = () => <SEO title={title} content={content} />
 
 /**
  * /Projects/AWaitingSmile page
