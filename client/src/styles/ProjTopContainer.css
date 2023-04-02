@@ -26,13 +26,9 @@
 
 .proj-top-right {
   color: black;
-  line-height: 1.5;
-  margin: auto;
-  padding-right: 2.5em;
-  width: clamp(45ch, 50%, 75ch);
 }
 
 .proj-description {
-  font-size: clamp(10px, 1.5vw, 16px);
+  font-size: clamp(14px, 1.5vw, 16px);
   line-height: 2;
 }

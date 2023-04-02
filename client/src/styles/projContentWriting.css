@@ -50,13 +50,34 @@
 
 .Activities {
   background-color: #b3cee5;
-  border-radius: 0.5em;
-  width: max(100%, 900px);
+  border-radius: 0.8em;
+  width: 85vw;
 }
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .Activities {
+    width: 68vw;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+  .Activities {
+    width: 75vw;
+  }
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  .Activities{
+    width: 80vw;
+  }
+ }
 
 .projText {
   text-align: left;
-  font-size: clamp(10px, 1.5vw, 16px);
+  font-size: clamp(14px, 1.5vw, 16px);
   line-height: 2;
 }
 
@@ -68,6 +89,19 @@
   margin: 1rem;
   padding: 0.5em 1.5em 1em 1.5em;
   justify-content: center;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+}
+
+.stories-img.centered-image {
+  margin: auto;
+  display: block;
 }
 
 .centered-stories {
@@ -80,5 +114,5 @@
 .row.stories-row {
   display: flex;
   justify-content: center;
-  margin: auto;
+  padding: 1rem;
 }
