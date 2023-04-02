@@ -12,7 +12,7 @@
   text-underline-offset: 0.55rem;
   text-decoration-thickness: 0.18rem;
   color: rgb(255, 255, 255);
-  padding-bottom: 2.5%;
+  padding-bottom: 1.5%;
   padding-top: 2%;
   text-align: center;
 }
@@ -54,20 +54,6 @@
   width: 85vw;
 }
 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  .Activities {
-    width: 68vw;
-  }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
-  .Activities {
-    width: 75vw;
-  }
- }
-
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
   .Activities{
@@ -79,6 +65,7 @@
   text-align: left;
   font-size:  clamp(16px, 1.5vw, 18px);
   line-height: 2;
+  padding-right: 2rem;
 }
 
 .life-proj-text {
@@ -114,5 +101,5 @@
 .row.stories-row {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding-bottom: 2rem;
 }

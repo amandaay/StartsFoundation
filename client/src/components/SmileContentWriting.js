@@ -52,11 +52,13 @@ function SmileContentWriting() {
           <h1 className="ContentTitle">{smileData.title}</h1>
           <div className="row stories-row">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 stories-col-div">
+            <div className="centered-image">
               <GatsbyImage
                 className="stories-img"
                 image={getImage(smileData.coverImage.asset.gatsbyImageData)}
                 alt={smileData.coverImage.alt}
               />
+              </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 stories-col-div">
               {smileData.body.map(section => {
