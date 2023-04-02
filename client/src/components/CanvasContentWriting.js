@@ -51,7 +51,7 @@ function CanvasContentWriting() {
         <div className="Activities">
           <h1 className="ContentTitle">{canvasData.title}</h1>
           <div className="row stories-row">
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 stories-col-div">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 stories-col-div">
             <div className="centered-image">
             <GatsbyImage
                 className="stories-img"
@@ -61,7 +61,7 @@ function CanvasContentWriting() {
             </div>
               
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 stories-col-div">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 stories-col-div">
               {canvasData.body.map(section => {
                 return (
                   <div className="centered-stories" key={section._key}>
