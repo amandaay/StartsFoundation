@@ -29,7 +29,7 @@ function CanvasContentWriting() {
           coverImage {
             alt
             asset {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 400, height: 400)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 430, height: 430)
             }
           }
         }
