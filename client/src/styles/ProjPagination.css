@@ -11,6 +11,8 @@
   background-color: transparent;
   display: flex;
   box-shadow: 0 0 18px 3px rgb(13 110 253 / 20%);
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .pagination-content{
