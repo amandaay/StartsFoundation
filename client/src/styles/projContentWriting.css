@@ -12,13 +12,13 @@
   text-underline-offset: 0.55rem;
   text-decoration-thickness: 0.18rem;
   color: rgb(255, 255, 255);
-  padding-bottom: 2.5%;
+  padding-bottom: 1.5%;
   padding-top: 2%;
   text-align: center;
 }
 
 .life-logo-content-title {
-  font-size: 1.5rem;
+  font-size: max(2vh, 1.5em, 1.5em);
   padding-top: 0.5em;
   padding-bottom: 10%;
   color: rgb(255, 255, 255);
@@ -54,20 +54,6 @@
   width: 85vw;
 }
 
-/* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  .Activities {
-    width: 68vw;
-  }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
-  .Activities {
-    width: 75vw;
-  }
- }
-
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
   .Activities{
@@ -77,8 +63,9 @@
 
 .projText {
   text-align: left;
-  font-size: clamp(18px, 1.5vw, 20px);
+  font-size:  clamp(16px, 1.5vw, 18px);
   line-height: 2;
+  padding: 1rem 2rem 0 2rem;
 }
 
 .life-proj-text {
@@ -92,16 +79,23 @@
   width: 50%;
   align-items: center;
   text-align: center;
+  display: flex;
 }
 
 .centered-image {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .stories-img.centered-image {
   margin: auto;
   display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .centered-stories {
@@ -114,5 +108,5 @@
 .row.stories-row {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding-bottom: 2rem;
 }

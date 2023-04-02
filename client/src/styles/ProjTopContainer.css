@@ -26,9 +26,11 @@
 
 .proj-top-right {
   color: black;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .proj-description {
-  font-size: clamp(18px, 1.5vw, 20px);
+  font-size: clamp(16px, 1.5vw, 18px);
   line-height: 2;
 }
