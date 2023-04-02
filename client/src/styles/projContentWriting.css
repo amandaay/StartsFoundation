@@ -89,6 +89,19 @@
   margin: 1rem;
   padding: 0.5em 1.5em 1em 1.5em;
   justify-content: center;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+}
+
+.stories-img.centered-image {
+  margin: auto;
+  display: block;
 }
 
 .centered-stories {

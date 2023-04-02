@@ -29,7 +29,7 @@ function SmileContentWriting() {
           coverImage {
             alt
             asset {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 450, height: 450)
             }
           }
         }
@@ -51,14 +51,14 @@ function SmileContentWriting() {
         <div className="Activities">
           <h1 className="ContentTitle">{smileData.title}</h1>
           <div className="row stories-row">
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-6 stories-col-div">
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 stories-col-div">
               <GatsbyImage
                 className="stories-img"
                 image={getImage(smileData.coverImage.asset.gatsbyImageData)}
                 alt={smileData.coverImage.alt}
               />
             </div>
-            <div className="col-xs-12 col-sm-12 col-md-4 col-lg-6 stories-col-div">
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 stories-col-div">
               {smileData.body.map(section => {
                 return (
                   <div className="centered-stories" key={section._key}>
