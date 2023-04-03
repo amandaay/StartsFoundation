@@ -102,3 +102,9 @@
     color: rgb(60, 59, 59);
   }
 }
+
+@media (max-width: 768px) {
+  .moreBlogsp {
+    font-size: 1em;
+  }
+}

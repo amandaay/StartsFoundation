@@ -145,11 +145,16 @@
   .newsRow{
     transform: translateY(-5vh);
     display: flex;
-    justify-content: center;
+     justify-content: center;
     align-items: center ;
   }
   .moreNews{
     padding-top: 5%;
     padding-bottom: 5%;
+    
   }
+  .moreNewsp{
+   right:5%
+  }
+  
 }
