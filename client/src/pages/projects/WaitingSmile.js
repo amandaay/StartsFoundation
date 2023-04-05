@@ -17,16 +17,16 @@ export const Head = () => <SEO title={title} content={content} />
  */
 function AWaitingSmile() {
   return (
-    <div className="ProjectMainDiv">
-      <Layout>
+    <Layout>
+      <>
         <div className="ProjectContent">
           <SmileTopContainer />
           <div className="ProjectMidContainer">
             <SmileContentWriting />
           </div>
         </div>
-      </Layout>
-    </div>
+      </>
+    </Layout>
   )
 }
 
