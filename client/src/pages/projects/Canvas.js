@@ -17,16 +17,16 @@ export const Head = () => <SEO title={title} content={content} />
  */
 function Canvas() {
   return (
-    <div className="ProjectMainDiv">
-      <Layout>
+    <Layout>
+      <>
         <div className="ProjectContent">
           <CanvasTopContainer />
           <div className="ProjectMidContainer">
             <CanvasContentWriting />
           </div>
         </div>
-      </Layout>
-    </div>
+      </>
+    </Layout>
   )
 }
 

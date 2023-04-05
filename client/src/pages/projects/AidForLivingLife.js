@@ -17,16 +17,16 @@ export const Head = () => <SEO title={title} content={content} />
  */
 function AidForLivingLife() {
   return (
-    <div className="ProjectMainDiv">
-      <Layout>
+    <Layout>
+      <>
         <div className="ProjectContent">
           <LifeTopContainer />
           <div className="ProjectMidContainer">
             <LifeContentWriting />
           </div>
         </div>
-      </Layout>
-    </div>
+      </>
+    </Layout>
   )
 }
 
