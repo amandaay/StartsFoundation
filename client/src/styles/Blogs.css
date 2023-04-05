@@ -24,14 +24,31 @@
   /* height: 100%; */
 }
 
-.inlineImg {
+/* .inlineImg {
   width: 45%;
   float: left;
   margin-right: 1rem;
-}
+} */
 
 .inlineText {
   width: 60%;
   float: left;
   margin: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .inlineImg {
+    width: 45%;
+    float: left;
+    margin-right: 1rem;
+  }
+}
+
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 992px) {
+  .inlineImg {
+    width: 100%;
+    float: left;
+    margin-right: 1rem;
+  }
 }

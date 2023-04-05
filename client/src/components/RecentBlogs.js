@@ -64,13 +64,7 @@ function RecentBlogs() {
     return rightBlogs
   }
 
-  // useEffect(() => {
-  //   const updateWindowDimensions = () => {
-  //     setAmount(countBlogsAmount())
-  //   };
-  //   window.addEventListener("resize", updateWindowDimensions);
-  //   return () => window.removeEventListener("resize", updateWindowDimensions)
-  // }, [blogs, countBlogsAmount])
+
 
   return (
     <div className="BlogsMainDiv px-3 px-md-0">
