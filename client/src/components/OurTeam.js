@@ -24,7 +24,11 @@ export function OurTeam() {
             }
             alt
           }
-          _rawBody
+          body {
+            children {
+              text
+            }
+          }
         }
       }
     }
@@ -46,7 +50,6 @@ export function OurTeam() {
   const amount = countMembersAmount()
 
   const createRightContent = members => {
-    // let amount = blogs.amount > 5 ? 5 : blogs.length
     const rightMembers = []
 
     for (let i = 1; i < amount; i++) {
@@ -55,7 +58,6 @@ export function OurTeam() {
           member={members[i]}
           css="col-6"
           imageCss="memberPic"
-          contextOverflow={"generalOverflow"}
           key={members[i]._id}
         />
       )
@@ -87,13 +89,9 @@ export function OurTeam() {
           <div className="col-12 col-lg-6 d-flex justify-content-center">
             {members.length > 0 && (
               <PersonalInfo
-                // image={members[0].memberPortrait.asset.gatsbyImageData}
-                // alt={members[0].memberPortrait.alt}
-                // name={members[0]}
                 member={members[0]}
                 css="col-12"
                 imageCss="img-fluid w-100 h-100 "
-                contextOverflow={"mainOverflow"}
               />
             )}
           </div>
@@ -110,7 +108,6 @@ export function OurTeam() {
                       member={member}
                       css="col-6 col-lg-3"
                       imageCss="memberPic"
-                      contextOverflow={"generalOverflow"}
                       key={member._id}
                     />
                   )
@@ -120,19 +117,12 @@ export function OurTeam() {
           </div>
         </div>
       </div>
-
-      {/* <div className="mt-4 d-flex justify-content-center">
-        <div className="ourTeamText bg-white text-center fs-5 col-12">
-          Test -
-        </div>
-      </div> */}
     </div>
   )
 }
 
 function PersonalInfo(props) {
   const [showInfo, setShowInfo] = useState(false)
-
   return (
     <div
       className={`${props.css} h-100 `}
@@ -147,10 +137,10 @@ function PersonalInfo(props) {
         />
         {showInfo && (
           <div className="bg-black position-absolute top-0 start-0 w-100 h-100 memberIntro px-3 py-3 d-flex flex-column justify-content-between text-white">
-            <div className={`${props.contextOverflow} w-100`}>
-              <PortableTextComponent value={props.member._rawBody} />
+            <div className="overflow-auto text-size w-100">
+              {props.member.body[0].children[0].text}
             </div>
-            <div className="w-100">
+            <div className="w-100 pt-3">
               <div className="border-bottom border-white"> </div>
               <div className="fs-4 font-weight-bold">
                 {props.member.memberName}
