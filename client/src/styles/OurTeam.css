@@ -38,11 +38,6 @@
   height: 100%;
 }
 
-.memberPic {
-  max-width: 100%;
-  height: 26vh;
-}
-
 .ourTeamText {
   width: 80%;
 }
@@ -80,6 +75,35 @@
   box-shadow: transparent;
 }
 
+@media (min-width: 992px) {
+  .memberPic {
+    max-width: 100%;
+    height: 26vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .memberPic {
+    width: 100%;
+    height: 45vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .memberMainPic {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 992px) {
+  .memberMainPic {
+    width: 100%;
+    height: 45vh;
+    object-fit: fill;
+  }
+}
 
 @media (min-width: 992px) {
   .text-size {
@@ -90,7 +114,7 @@
 /* If the screen size is smaller than 1200px, set the font-size to 80px */
 @media (max-width: 992px) {
   .text-size {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 

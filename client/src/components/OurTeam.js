@@ -56,7 +56,7 @@ export function OurTeam() {
       rightMembers.push(
         <PersonalInfo
           member={members[i]}
-          css="col-6"
+          css="col-12 col-lg-6"
           imageCss="memberPic"
           key={members[i]._id}
         />
@@ -91,7 +91,7 @@ export function OurTeam() {
               <PersonalInfo
                 member={members[0]}
                 css="col-12"
-                imageCss="img-fluid w-100 h-100 "
+                imageCss="memberMainPic "
               />
             )}
           </div>
@@ -106,7 +106,7 @@ export function OurTeam() {
                   return (
                     <PersonalInfo
                       member={member}
-                      css="col-6 col-lg-3"
+                      css="col-12 col-lg-3"
                       imageCss="memberPic"
                       key={member._id}
                     />
