@@ -50,10 +50,15 @@ body {
   width: 100%;
 }
 
+@media (max-width: 992px) {
+  .firstSection {
+    padding-top: 60%;
+  }
+}
+
 .donationBox {
   width: 440px;
   max-width: 440px;
-  min-height: 420px;
   height: 100%;
   background-color: white;
   border: solid 1px white;
@@ -75,7 +80,7 @@ body {
   margin: 0;
 }
 
-.donationForm > h1 {
+.donationForm>h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -120,12 +125,12 @@ body {
   text-align: center;
 }
 
-.secondSectionContent > h1 {
+.secondSectionContent>h1 {
   font-weight: 700;
   color: #1b75bb;
 }
 
-.secondSectionContent > p {
+.secondSectionContent>p {
   margin-top: 12px;
   line-height: 35px;
   font-size: 20px;
@@ -141,7 +146,7 @@ body {
   padding-right: 25px;
 }
 
-.thirdSection > p {
+.thirdSection>p {
   font-size: 16px;
   line-height: 35px;
   margin-bottom: 25px;
