@@ -5,6 +5,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 600;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768) {
