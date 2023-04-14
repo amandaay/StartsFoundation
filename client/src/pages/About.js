@@ -9,7 +9,11 @@ import { SEO } from "../components/SEO"
 const title = "About Starts Foundation"
 const content =
   "Starts was initiated as a pivotal platform to embark much needed journeys towards sustainable development in Nepali society"
-export const Head = () => <SEO title={title} content={content} />
+const keywords =
+  "starts foundation, Starts Foundation, Nepal, NGO, Nonprofit, Nonprofit organization in Nepal, support starts foundation, starts foundation nepal, Starts Foundation Nepal, NGO Nepal, charity, humanitarian, philanthropy, community service, community service in nepal "
+export const Head = () => (
+  <SEO title={title} content={content} keywords={keywords} />
+)
 /**
  * about page
  * @returns JSX of about page
@@ -28,7 +32,7 @@ function About() {
               />
             </div>
             <div className="aboutUsDiv">
-              <h1 className="aboutTitle">About Us</h1>
+              <h1 className="aboutTitle">About Starts Foundation</h1>
               <p className="aboutContent">
                 Starts was initiated as a pivotal platform to embark much needed
                 journeys towards sustainable development in Nepali society. It

@@ -9,7 +9,11 @@ import { SEO } from "../components/SEO"
  */
 const title = "Join Starts Foundation"
 const content = "Join Starts Foundation and support their humanitarian work"
-export const Head = () => <SEO title={title} content={content} />
+const keywords =
+  "starts foundation, Starts Foundation, Nepal, NGO Nepal, Nonprofit Nepal, Nonprofit organization in Nepal, support starts foundation, starts foundation nepal, Starts Foundation Nepal, NGO Nepal, charity, humanitarian, philanthropy, community service, community service in nepal, Kamal Bhattarai, Aid for Living, Project Canvas,www.startsfoundation.org, startsfoundation.org, A waiting smile"
+export const Head = () => (
+  <SEO title={title} content={content} keywords={keywords} />
+)
 
 export default function JoinUs() {
   return (

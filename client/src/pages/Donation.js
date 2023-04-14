@@ -10,7 +10,11 @@ import { SEO } from "../components/SEO"
 const title = "Support and Donate to Starts Foundation"
 const content =
   "Donate and join Starts Foundation to save and support the life of people in Nepal and the foundation's humanitarian work"
-export const Head = () => <SEO title={title} content={content} />
+const keywords =
+  "donate starts foundation, Starts Foundation, Nepal, NGO Nepal, Nonprofit Nepal, Nonprofit organization in Nepal, support starts foundation, starts foundation nepal, Starts Foundation Nepal, NGO Nepal, charity, humanitarian, philanthropy, community service, community service in nepal, Kamal Bhattarai, Aid for Living, Project Canvas,www.startsfoundation.org, startsfoundation.org, A waiting smile"
+export const Head = () => (
+  <SEO title={title} content={content} keywords={keywords} />
+)
 
 /**
  * Donation module
@@ -24,7 +28,7 @@ export default function Donation() {
           <div className={styles.firstSection}>
             <div className={styles.donationBox}>
               <div className={styles.donationForm}>
-                <h1>Donate Now</h1>
+                <h1>Donate Starts Foundation</h1>
                 <div className={styles.subtitle}>
                   Join Starts Foundation to save and support the life of people
                   in Nepal.

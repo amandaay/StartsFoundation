@@ -65,14 +65,6 @@ export function OurTeam() {
     return rightMembers
   }
 
-  // useEffect(() => {
-  //   const updateWindowDimensions = () => {
-  //     setAmount(countMembersAmount())
-  //   };
-  //   window.addEventListener("resize", updateWindowDimensions);
-  //   return () => window.removeEventListener("resize", updateWindowDimensions)
-  // }, [amount, countMembersAmount])
-
   return (
     <div className="ourTeamMainDiv ">
       <h1 className="outTeamTitle py-3">Our Team</h1>
@@ -103,15 +95,15 @@ export function OurTeam() {
             <div className="row g-5">
               {members.length > amount
                 ? members.slice(amount).map(member => {
-                  return (
-                    <PersonalInfo
-                      member={member}
-                      css="col-12 col-lg-3"
-                      imageCss="memberPic"
-                      key={member._id}
-                    />
-                  )
-                })
+                    return (
+                      <PersonalInfo
+                        member={member}
+                        css="col-12 col-lg-3"
+                        imageCss="memberPic"
+                        key={member._id}
+                      />
+                    )
+                  })
                 : null}
             </div>
           </div>

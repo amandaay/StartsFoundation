@@ -282,6 +282,7 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
+  /*nav padding removed*/
   nav {
     padding-bottom: 0;
   }
@@ -314,6 +315,7 @@ img {
   }
 
   .navAll {
+    /*top originally -92%*/
     top: -95vh;
     position: fixed;
     min-width: 100%;

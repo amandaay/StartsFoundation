@@ -31,7 +31,7 @@ function SingleBlog({ data }) {
     <Layout>
       <div className="blogsContainer d-flex justify-content-center">
         <div className="w-75">
-          <h2>{title}</h2>
+          <h1 className="h1-post-title">{title}</h1>
           <h6 className="mt-2 text-secondary">
             {CiCalendarDate()} {_createdAt}
           </h6>
@@ -78,6 +78,7 @@ export const Head = ({ data }) => {
       return accumulative + currentValue
     }, "")
   }
-
-  return <SEO title={title} content={text} />
+  const keywords =
+    "starts foundation, Starts Foundation, Nepal, NGO Nepal, Nonprofit Nepal, Nonprofit organization in Nepal, support starts foundation, starts foundation nepal, Starts Foundation Nepal, NGO Nepal, charity, humanitarian, philanthropy, community service, community service in nepal, Kamal Bhattarai, Aid for Living, Project Canvas,www.startsfoundation.org, startsfoundation.org, A waiting smile"
+  return <SEO title={title} content={text} keywords={keywords} />
 }
